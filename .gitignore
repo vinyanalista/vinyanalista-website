@@ -1,2 +1,3 @@
 _site
+.directory
 .sass-cache
