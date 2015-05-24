@@ -32,7 +32,7 @@ O site não foi construído e o projeto não chegou a ter divulgação fora da i
 
 ### Primeiro trabalho
 
-Vale observar que como se tratava de um programa de iniciação científica júnior, a correção do  trabalho não foi tão criteriosa. Apesar de apresentar uma formatação formal, esse trabalho não segue as [normas da ABNT](http://www.vinyanalista.com.br/blog/2012/04/08/normas-abnt-para-trabalhos-academicos/).
+Vale observar que como se tratava de um programa de iniciação científica júnior, a correção do  trabalho não foi tão criteriosa. Apesar de apresentar uma formatação formal, esse trabalho não segue as [normas da ABNT]({% post_url 2012-04-08-normas-abnt-para-trabalhos-academicos %}).
 
 ### Principais referências
 
