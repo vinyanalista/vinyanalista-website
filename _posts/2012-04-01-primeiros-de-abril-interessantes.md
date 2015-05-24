@@ -11,7 +11,7 @@ Olá, pessoal! É com muito prazer que inauguro esse blog. Espero aqui compartil
 
 E estou inaugurando o blog em uma data oportuna: 1º de abril, o famoso dia da mentira. Não vou entrar na onda de inventar uma mentirinha, mas já venho então compartilhar com vocês algumas histórias de 1º de abril que achei interessantes.
 
-![1º de abril: dia da mentira]({{ site.url }}/assets/2012/04/dia-da-mentira.jpg)
+![1º de abril: dia da mentira]({{ site.url }}/files/2012/04/dia-da-mentira.jpg)
 
 No primeiro lugar da minha lista está o Google: já virou [tradição](http://en.wikipedia.org/wiki/List_of_Google%27s_hoaxes_and_easter_eggs) na empresa divulgar tecnologias mirabolantes todo ano dia 1º de abril. Hoje mesmo o dia começou com o Google anunciando um [Google Maps para o Nintendinho de 8 bits](http://info.abril.com.br/noticias/internet/1-de-abril-do-google-comeca-com-servico-de-mapas-retro-01042012-1.shl), mas se for verdade mesmo o que anuncia a [Wikipedia](http://en.wikipedia.org/wiki/List_of_Google%27s_hoaxes_and_easter_eggs), só hoje já foram 16 piadas. Não quis me dar o trabalho de listá-los, pois esse site já tem uma lista bem completa, que eles estão atualizando desde ontem, aliás (eles levam 1º de abril tão a sério que a piada do Google Maps saiu na verdade ontem, podem conferir a data do vídeo).
 
