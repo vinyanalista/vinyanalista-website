@@ -1,15 +1,42 @@
 ---
 layout: default
 ---
-<div class="post">
 
-  <header class="post-header">
-    <h1 class="post-title">{{ page.title }}</h1>
-    <p class="post-meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
-  </header>
-
-  <article class="post-content">
-    {{ content }}
-  </article>
-
-</div>
+<div class="blog-post panel panel-default">
+    <div class="panel-heading">
+        <h2 class="blog-post-titulo">
+            <a href="{{ post.url | prepend: site.baseurl }}">{{ page.title }}</a>
+        </h2>
+        <div class="blog-post-meta row">
+            <div class='col-sm-6'>
+                <div class='blog-post-data'>
+                    {{ page.date | date: "%d de" }}
+                    {% assign m = page.date | date: "%-m" %}
+                    {% case m %}
+                    {% when '1' %}Janeiro
+                    {% when '2' %}Fevereiro
+                    {% when '3' %}Março
+                    {% when '4' %}Abril
+                    {% when '5' %}Maio
+                    {% when '6' %}Junho
+                    {% when '7' %}Julho
+                    {% when '8' %}Agosto
+                    {% when '9' %}Setembro
+                    {% when '10' %}Outubro
+                    {% when '11' %}Novembro
+                    {% when '12' %}Dezembro
+                    {% endcase %}
+                    {{ page.date | date: "de %Y" }}
+                </div>
+            </div>
+            <div class='col-sm-6'>
+                <div class='blog-post-redes-sociais'>
+                    Fa &nbsp Tw &nbsp G+ &nbsp +
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="blog-post-conteudo panel-body">
+        {{ content }}
+    </div><!-- .blog-post-conteudo -->
+</div><!-- .blog-post -->

@@ -1,14 +1,21 @@
 ---
 layout: default
 ---
-<div class="post">
 
-  <header class="post-header">
-    <h1 class="post-title">{{ page.title }}</h1>
-  </header>
-
-  <article class="post-content">
-    {{ content }}
-  </article>
-
-</div>
+<div class="blog-post panel panel-default">
+    <div class="panel-heading">
+        <h2 class="blog-post-titulo">
+            <a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
+        </h2>
+        <div class="blog-post-meta row">
+            <div class='col-sm-12'>
+                <div class='blog-post-redes-sociais'>
+                    Fa &nbsp Tw &nbsp G+ &nbsp +
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="blog-post-conteudo panel-body">
+        {{ content }}
+    </div><!-- .blog-post-conteudo -->
+</div><!-- .blog-post -->
