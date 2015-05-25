@@ -125,7 +125,7 @@ JAVA_OPTS:  -server -XX:+TieredCompilation -Xms64m -Xmx512m -XX:MaxPermSize=256m
 04:35:36,295 INFO  [org.jboss.as] (Controller Boot Thread) JBAS015874: JBoss AS 7.1.1.Final "Brontes" started in 8025ms - Started 133 of 208 services (74 services are passive or on-demand)
 {% endhighlight %}
 
-Tanto no Windows quanto no Linux, após iniciado o servidor, abra seu navegador de preferência e acesse o endereço “http://localhost:8080” (a porta 8080 é a utilizada pelo JBoss AS por padrão, mas essa porta pode ser alterada na configuração do servidor). Você deve ver a tela de boas vindas do JBoss AS:
+Tanto no Windows quanto no Linux, após iniciado o servidor, abra seu navegador de preferência e acesse o endereço “[http://localhost:8080](http://localhost:8080)” (a porta 8080 é a utilizada pelo JBoss AS por padrão, mas essa porta pode ser alterada na configuração do servidor). Você deve ver a tela de boas vindas do JBoss AS:
 
 ![jboss_as_02]({{ site.url }}/files/2012/04/jboss_as_02.jpg)
 
@@ -198,7 +198,7 @@ O console do JBoss AS deve mostrar que o deploy da aplicação foi realizado com
 13:50:14,539 INFO  [org.jboss.as.server] (management-handler-thread - 2) JBAS018559: Deployed "jboss-as-helloworld-jsf.war"
 {% endhighlight %}
 
-Feito isso, podemos acessar a aplicação usando o navegador através do endereço “http://localhost:8080/jboss-as-helloworld-jsf/“:
+Feito isso, podemos acessar a aplicação usando o navegador através do endereço “[http://localhost:8080/jboss-as-helloworld-jsf/](http://localhost:8080/jboss-as-helloworld-jsf/)“:
 
 ![jboss_as_04]({{ site.url }}/files/2012/04/jboss_as_04.jpg)
 
@@ -210,4 +210,4 @@ Se quisermos, podemos remover a aplicação do servidor (diz-se fazer o undeploy
 $ mvn jboss-as:undeploy
 {% endhighlight %}
 
-Também podemos fazer deploy e undeploy de aplicações no servidor, entre outras configurações, usando o console de administração do JBoss AS. Examinaremos esse console na [segunda parte desse post](http://www.vinyanalista.com.br/blog/2012/07/18/apresentando-o-servidor-de-aplicacao-jboss-as-7-parte-2/).
+Também podemos fazer deploy e undeploy de aplicações no servidor, entre outras configurações, usando o console de administração do JBoss AS. Examinaremos esse console na [segunda parte desse post]({% post_url 2012-07-18-apresentando-o-servidor-de-aplicacao-jboss-as-7-parte-2 %}).
