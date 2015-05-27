@@ -13,3 +13,7 @@ github_username:  vinyanalista
 
 # Build settings
 markdown: kramdown
+
+# Paginação
+paginate: 10
+paginate_path: "/blog/page:num/"

@@ -2,7 +2,7 @@
 layout: default
 ---
 
-{% for post in site.posts %}
+{% for post in paginator.posts %}
 <div class="blog-post panel panel-default">
     <div class="panel-heading">
         <h2 class="blog-post-titulo">
@@ -38,7 +38,46 @@ layout: default
         </div>
     </div>
     <div class="blog-post-conteudo panel-body">
-        {{ post.content }}
+        {{ post.excerpt }}
+        <a href="{{ post.url | prepend: site.baseurl }}">Leia mais >>></a>
     </div><!-- .blog-post-conteudo -->
 </div><!-- .blog-post -->
 {% endfor %}
+
+{% if paginator.total_pages > 1 %}
+<nav>
+    <ul class="pager">
+        {% if paginator.previous_page %}
+        <li class="previous">
+            <a href="{{ '/index.html' | prepend: site.baseurl | replace: '//', '/' }}">← Primeiro</a>
+        </li>
+        <li>
+            <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/'  }}">Anterior</a>
+        </li>
+        {% else %}
+        <li class="disabled previous">
+            <span>← Primeiro</span>
+        </li>
+        <li class="disabled">
+            <span>Anterior</span>
+        </li>
+        {% endif %}
+        
+        {% if paginator.next_page %}
+        <li>
+            <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Próximo</a>
+        </li>
+        <li class="next">
+            <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', paginator.total_pages }}">Último →</a>
+        </li>
+        {% else %}
+        <li class="disabled">
+            <span>Próximo</span>
+        </li>
+        <li class="disabled next">
+            <span>Último →</span>
+        </li>
+        {% endif %}
+    </ul>
+</nav>
+{% endif %}

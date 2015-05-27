@@ -103,7 +103,7 @@ html {
         margin-bottom: 60px;
     }
 
-    .pager > li > a {
+    .pager > li > a, .pager > li > span {
         padding: 10px 20px;
     }
 }
