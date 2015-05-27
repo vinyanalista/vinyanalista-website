@@ -6,7 +6,7 @@ layout: default
 <div class="blog-post panel panel-default">
     <div class="panel-heading">
         <h2 class="blog-post-titulo">
-            <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+            <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">{{ post.title }}</a>
         </h2>
         <div class="blog-post-meta row">
             <div class='col-sm-6'>
@@ -39,7 +39,7 @@ layout: default
     </div>
     <div class="blog-post-conteudo panel-body">
         {{ post.excerpt }}
-        <a href="{{ post.url | prepend: site.baseurl }}">Leia mais >>></a>
+        <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">Leia mais >>></a>
     </div><!-- .blog-post-conteudo -->
 </div><!-- .blog-post -->
 {% endfor %}
@@ -49,10 +49,10 @@ layout: default
     <ul class="pager">
         {% if paginator.previous_page %}
         <li class="previous">
-            <a href="{{ '/index.html' | prepend: site.baseurl | replace: '//', '/' }}">← Primeiro</a>
+            <a href="{{ '/' | prepend: site.baseurl | replace: '//', '/' }}">← Primeiro</a>
         </li>
         <li>
-            <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/'  }}">Anterior</a>
+            <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' | replace: 'index.html', ''  }}">Anterior</a>
         </li>
         {% else %}
         <li class="disabled previous">
