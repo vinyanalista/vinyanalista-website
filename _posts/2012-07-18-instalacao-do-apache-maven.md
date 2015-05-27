@@ -13,6 +13,8 @@ Olá, pessoal, nesse post vocês vão ver como instalar e executar pela primeira
 
 O Maven é uma ferramenta que facilita e automatiza bastante o gerenciamento de projetos em Java, auxiliando os desenvolvedores nas etapas de definição, codificação, compilação, testes, empacotamento, implantação, documentação e distribuição da aplicação.
 
+<!--more-->
+
 Nesse post, demonstrarei como instalar o Maven e como criar um pequeno projeto, apenas para dar uma noção de como funciona a ferramenta.
 
 Antes de começarmos, é necessário que o Java Development Kit (JDK) esteja instalado no computador onde se deseja executar o Maven. Em [outro post]({% post_url 2012-07-10-instalacao-do-java-development-kit-jdk %}) nesse blog expliquei como instalar o JDK e verificar que ele está funcionando perfeitamente. Se você ainda não possui o JDK, prossiga à leitura daquela página primeiro. Se você não tem certeza se o JDK está instalado em seu computador, execute os testes propostos naquela mesma página e, se for o caso, instale-o.

@@ -13,6 +13,8 @@ O [MySQL](http://www.mysql.com/) é um banco de dados de código aberto desenvol
 
 Aqui também há uma dica para usuários do banco de dados [PostgreSQL](http://www.postgresql.org/) que quiserem fazer o mesmo: leiam o final do post!
 
+<!--more-->
+
 No [post anterior]({% post_url 2012-07-18-apresentando-o-servidor-de-aplicacao-jboss-as-7 %}), você foi apresentado ao JBoss AS. Nesse post, veremos como configurar nele uma conexão com o MySQL, e veremos também como configurar uma aplicação Java EE para utilizar essa conexão. Para fins didáticos, vou supor que você possui o JBoss AS e o MySQL instalados em seu computador, e que você criou uma base de dados chamada “teste” (para esse passo-a-passo a estrutura da base de dados não é importante, focaremos na conexão).
 
 Há outras páginas na Internet que explicam exatamente o que vou explicar aqui (como [essa](https://zorq.net/b/2011/07/12/adding-a-mysql-datasource-to-jboss-as-7/), [essa](http://www.messiasbittencourt.com/168/jboss-7-mysql/), [essa](http://filosofisto.wordpress.com/2012/02/13/configurando-mysql-no-jboss-7-as/) e [essa](http://jbossdivers.wordpress.com/2012/01/20/introducao-ao-jboss-as-7-parte-2/), e aproveito para dizer que essas foram algumas das minhas referências na elaboração desse post), porém aqui proponho uma abordagem diferente, que só percebi que era possível quando li mais atentamente o [guia de administração do JBoss AS](https://docs.jboss.org/author/display/AS7/Admin+Guide#AdminGuide-Datasources) (a referência que encerra a lista): realizar toda a configuração da conexão pelo console Web de administração do servidor.

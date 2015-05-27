@@ -13,7 +13,9 @@ Foram também as máquinas que mais evoluíram desde a sua criação, adquirindo
 
 Pode-se definir então **computador** como uma máquina que trabalha com grande quantidade de informações, capaz de receber, processar, armazenar e transmitir dados.
 
-Nesse post, veremos rapidamente quais são os principais componentes de um computador e como eles são organizados. Esse post é um resumo do primeiro capítulo de um trabalho mais completo, que visa apresentar os componentes do computador, em especial o processador, e que pode ser acessado [aqui](http://www.vinyanalista.com.br/blog/2012/04/08/minha-pesquisa-cientifica-sobre-processadores/).
+Nesse post, veremos rapidamente quais são os principais componentes de um computador e como eles são organizados. Esse post é um resumo do primeiro capítulo de um trabalho mais completo, que visa apresentar os componentes do computador, em especial o processador, e que pode ser acessado [aqui]({% post_url 2012-04-08-minha-pesquisa-cientifica-sobre-processadores %}).
+
+<!--more-->
 
 ### Breve história do computador pessoal
 

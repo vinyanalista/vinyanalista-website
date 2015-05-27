@@ -8,11 +8,15 @@ status: publish
 title: Minha pesquisa científica sobre processadores
 ---
 
+![processador]({{ site.url }}/files/2012/04/processador.jpg)
+
 Estava apenas aguardando uma oportunidade de divulgar a pesquisa científica que desenvolvi no IFS no período de 2007 a 2009, e penso que a hora é agora (com a prova de [Arquitetura de Computadores I](http://200.17.141.88/index.php/EmentasCC#Arquitetura_de_Computadores_I) chegando aí, hein?), então disponibilizei o [trabalho no Scribd](http://pt.scribd.com/doc/88465424/) e estou aqui para falar um pouco mais sobre ele. O resumo do trabalho diz o seguinte:
 
 > Este trabalho apresenta os processadores para computadores pessoais baseados no IBM PC, seus componentes, seu funcionamento, suas características e sua evolução. O trabalho apresentado tem como objetivo principal auxiliar a compreensão do funcionamento dos componentes do computador, em especial do processador, e esclarecer as diferenças entre as tecnologias que se encontram hoje disponíveis no mercado. São colocadas considerações referentes às características, inovações e funcionamento dos processadores, de modo que seja possível compará-los em termos de avanço tecnológico, desempenho e custo-benefício.
 
 Resumindo ainda mais, o trabalho apresenta os processadores da Intel fabricados para a arquitetura IBM PC. Muitas explicações que servem para essa arquitetura servem também para outras, de maneira geral. Para ler o trabalho completo, clique no link a seguir (também é possível baixar o arquivo em PDF na [página do Scribd](http://pt.scribd.com/doc/88465424/)). Para mais informações sobre o trabalho, continue lendo.
+
+<!--more-->
 
 <p  style=" margin: 12px auto 6px auto; font-family: Helvetica,Arial,Sans-serif; font-style: normal; font-variant: normal; font-weight: normal; font-size: 14px; line-height: normal; font-size-adjust: none; font-stretch: normal; -x-system-font: none; display: block;">
     <a title="View Pesquisa Científica - Processadores (2009) on Scribd" href="https://pt.scribd.com/doc/88465424/Pesquisa-Cientifica-Processadores-2009"  style="text-decoration: underline;" >Pesquisa Científica - Processadores (2009)</a> by <a title="View Antonio Vinicius Menezes Medeiros's profile on Scribd" href="https://www.scribd.com/vinyanalista"  style="text-decoration: underline;" >Antonio Vinicius Menezes Medeiros</a>

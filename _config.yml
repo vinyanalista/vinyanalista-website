@@ -12,7 +12,8 @@ twitter_username: vinyanalista
 github_username:  vinyanalista
 
 # Build settings
-exclude: online
+excerpt_separator: <!--more-->
+exclude: [online]
 markdown: kramdown
 
 # Paginação

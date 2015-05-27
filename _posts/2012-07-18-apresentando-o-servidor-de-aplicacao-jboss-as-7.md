@@ -11,6 +11,8 @@ O [JBoss Application Server](http://www.jboss.org/jbossas/) (ou, abreviadamente,
 
 ![jboss_as_01]({{ site.url }}/files/2012/07/jboss_as_01.jpg)
 
+<!--more-->
+
 O JBoss AS 7 é completamente compatível com a especificação Java EE 6 (diz-se “Java EE 6 Full Profile”), tendo recebido inclusive [certificação da Oracle](http://www.oracle.com/technetwork/java/javaee/overview/compatibility-jsp-136984.html). Assim, ao executar nossas aplicações Web nesse servidor, se elas foram desenvolvidas obedecendo aos padrões da plataforma, teremos a certeza de que elas funcionarão como desejamos (é claro que eventualmente erros de lógica podem ser cometidos por programadores, o fato de uma aplicação atender à especificação não garante que ela esteja livre desses erros, rsrsrs).
 
 É necessário que o Java Development Kit (JDK) esteja instalado no computador para que o JBoss AS possa ser executado. Também é importante que a variável de ambiente JAVA_HOME esteja configurada, o JBoss AS obtém o valor dessa variável e o utiliza para saber a localização do JDK no sistema. Se precisar de ajuda com relação a isso, leia [esse outro post]({% post_url 2012-07-10-instalacao-do-java-development-kit-jdk %}), no qual explico como instalar e testar o JDK.

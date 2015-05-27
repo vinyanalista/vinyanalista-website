@@ -13,6 +13,8 @@ O [JBoss Application Server](http://www.jboss.org/jbossas/) (ou, abreviadamente,
 
 Essa é a segunda parte de dois posts que visam apresentar o JBoss AS 7. Se você desejava acessar a primeira parte, [clique aqui]({% post_url 2012-07-18-apresentando-o-servidor-de-aplicacao-jboss-as-7 %}). Senão, continue lendo.
 
+<!--more-->
+
 ### Console de administração Web do JBoss AS
 
 Podemos gerenciar o servidor de aplicação JBoss AS através de um console Web, que nos permite realizar, entre outras configurações, deploy e undeploy de aplicações, iniciar ou interromper a execução de aplicações, verificar o consumo de memória do servidor, configurar datasources, etc. Esse console, por padrão (se você não alterar as configurações de portas) é acessado através do endereço “[http://localhost:9990/](http://localhost:9990/)“.

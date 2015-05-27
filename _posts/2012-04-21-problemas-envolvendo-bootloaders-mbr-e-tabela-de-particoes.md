@@ -7,7 +7,11 @@ status: publish
 title: Problemas envolvendo bootloaders, MBR e tabela de parti&ccedil;&otilde;es
 ---
 
+![computador-maluco]({{ site.url }}/files/2012/04/computador-maluco.jpg)
+
 Gente, a tarde de ontem foi um sufoco! Acidentalmente excluí a tabela de partições de um dos meus HDs, pensei que já tinha perdido todos os meus arquivos e passei várias horas tentando recuperá-la. Tentei ferramentas do Windows, do Linux, e acabei conseguindo. Venho compartilhar nesse post o que houve, como resolvi e algumas observações curiosas sobre o ocorrido.
+
+<!--more-->
 
 É algo que não desejo a ninguém, mas se algum dia alguém vier a passar pelo que eu passei (ou algo parecido) pode ler as páginas aqui indicadas e ver se alguma das soluções propostas por elas se aplica ao caso.
 

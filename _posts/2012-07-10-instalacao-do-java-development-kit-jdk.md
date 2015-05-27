@@ -13,6 +13,8 @@ A seguir, forneço instruções para instalar, configurar e executar a versão m
 
 ![Java]({{ site.url }}/files/2012/07/java.jpg)
 
+<!--more-->
+
 ### Download e instalação do JDK
 
 O primeiro passo é baixar o JDK. Vá até a [página de downloads do Java SE](http://www.oracle.com/technetwork/java/javase/downloads/), aceite o contrato de licença e escolha a versão do JDK apropriada para o seu sistema:

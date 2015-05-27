@@ -11,6 +11,8 @@ title: Reduzindo o tamanho de discos r&iacute;gidos virtuais do VirtualBox
 
 ![VirtualBox]({{ site.url }}/files/2014/01/virtualbox.png)
 
+<!--more-->
+
 Primeiro, é necessário executar um utilitário na **máquina virtual** (*guest*), que vai transformar todo o espaço livre em *bits* zero no disco rígido virtual. Se sua máquina virtual roda Linux, esse utilitário é o **zerofree**, se roda Windows, há o **SDelete**.
 
 A [página na qual descobri o zerofree](http://www.thelinuxdaily.com/2010/02/shrinking-a-dynamic-virtualbox-disk-image/) recomenda reiniciar o Linux (da máquina virtual) no modo de recuperação (*safe mode* ou *recovery mode*) para executar o **zerofree**. Pra simplificar a vida, eu prefiro inicializar a máquina virtual utilizando um LiveCD.
