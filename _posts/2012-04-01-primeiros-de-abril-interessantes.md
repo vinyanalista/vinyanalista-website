@@ -17,19 +17,19 @@ E estou inaugurando o blog em uma data oportuna: 1º de abril, o famoso dia da m
 
 No primeiro lugar da minha lista está o Google: já virou [tradição](http://en.wikipedia.org/wiki/List_of_Google%27s_hoaxes_and_easter_eggs) na empresa divulgar tecnologias mirabolantes todo ano dia 1º de abril. Hoje mesmo o dia começou com o Google anunciando um [Google Maps para o Nintendinho de 8 bits](http://info.abril.com.br/noticias/internet/1-de-abril-do-google-comeca-com-servico-de-mapas-retro-01042012-1.shl), mas se for verdade mesmo o que anuncia a [Wikipedia](http://en.wikipedia.org/wiki/List_of_Google%27s_hoaxes_and_easter_eggs), só hoje já foram 16 piadas. Não quis me dar o trabalho de listá-los, pois esse site já tem uma lista bem completa, que eles estão atualizando desde ontem, aliás (eles levam 1º de abril tão a sério que a piada do Google Maps saiu na verdade ontem, podem conferir a data do vídeo).
 
-{% include youtube.html id="rznYifPHxDg" %}
+{% youtube rznYifPHxDg %}
 
 Vale à pena relembrar algumas das pegadinhas do Google no 1º de abril. Ano passado mesmo eu morri de rir com o [GMail Motion](http://info.abril.com.br/noticias/internet/google-apresenta-gmail-motion-no-1-de-abril-01042011-0.shl) (se vocês quiserem ver mais, [o site ainda está no ar](https://mail.google.com/mail/help/motion.html)):
 
-{% include youtube.html id="Bu927_ul_X0" %}
+{% youtube Bu927_ul_X0 %}
 
 O pior é que isso acabou virando realidade nas mãos de um nerd que decidiu [pôr em prática o GMail Motion usando um Kinect](http://info.abril.com.br/noticias/blogs/omg/internet/pegadinha-do-gmail-vira-realidade/):
 
-{% include youtube.html id="Lfso7_i9Ko8" %}
+{% youtube Lfso7_i9Ko8 %}
 
 Também foi bastante engraçada a história que [o Google estava à procura de pessoas para trabalhar no recurso de autocompleção](http://info.abril.com.br/noticias/carreira/google-busca-autocompletador-no-1-de-abril-01042011-9.shl) (imagina se aquilas sugestões todas que aparece quando você digita são informadas manualmente!), a empresa já até [mudou de nome por um dia]() e até a INFO já quis entrar na onda anunciando que o [Orkut tinha sido vendido para o Facebook](http://info.abril.com.br/noticias/blogs/nalinhadogoogle/orkut/exclusivo-google-vende-orkut-para-facebook/)!
 
-{% include youtube.html id="blB_X38YSxQ" %}
+{% youtube blB_X38YSxQ %}
 
 Outro caso que eu particulamente achei interessante é o jornal britânico [The Guardian](http://www.guardian.co.uk/): eles possuem um [suposto jornalista que só posta 1º de abril](http://www.guardian.co.uk/profile/olaf-priol). Todos os anos nessa data há uma notícia dele, mas vale observar: ele só aparece nessa data! Em 2009, esse jornalista anunciou que após 188 anos de jornal impresso, o [The Guardian passaria a publicar notícias apenas pelo Twitter](http://www.guardian.co.uk/media/2009/apr/01/guardian-twitter-media-technology). Vale enfatizar: apenas pelo Twitter, sem link nenhum para ler mais. Segundo a notícia, “especialistas dizem que qualquer história pode ser contada em 140 caracteres”.
 

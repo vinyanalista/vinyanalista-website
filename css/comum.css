@@ -30,22 +30,8 @@ html {
     color: #444;
 }
 
-/* http://embedresponsively.com/ */
-.embed-container {
-    height: 0;
-    max-width: 100%;
-    overflow: hidden;
+.embed-responsive {
     margin: 0px 0px 1em;
-    position: relative;
-    padding-bottom: 56.25%;
-}
-
-.embed-container embed, .embed-container iframe, .embed-container object {
-    height: 100%;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 100%;
 }
 
 .footer {
