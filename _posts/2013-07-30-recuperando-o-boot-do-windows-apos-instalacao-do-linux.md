@@ -7,7 +7,7 @@ status: publish
 title: Recuperando o boot do Windows ap&oacute;s instala&ccedil;&atilde;o do Linux
 ---
 
-![windows-startup-recovery1]({{ site.url }}/files/2013/07/windows-startup-recovery1.jpg)
+{% include image.html src="/files/2013/07/windows-startup-recovery1.jpg" %}
 
 É, pessoal, sei que é uma situação um tanto inusitada, mas aconteceu comigo hoje, quando tentei instalar o [openSUSE](http://www.opensuse.org/) 12.3 no meu computador, que até então só tinha o Windows 7. O problema mais comum é quando [o Linux já está instalado e então instalamos o Windows](http://www.vivaolinux.com.br/dica/Restaurando-o-GRUB-apos-a-instalacao-de-outro-sistema-operacional), que a princípio impede que outros sistemas sejam inicializados, reservando o computador para si. Mas hoje comigo aconteceu isso: após instalar o openSUSE 12.3, o menu do [GRUB2](http://en.opensuse.org/GRUB) não oferecia a opção de inicializar o Windows. Venho aqui (tentar) descrever a solução.
 
@@ -53,19 +53,19 @@ Na busca por soluções, encontrei [este site](http://www.howtogeek.com/howto/33
 
 1. Iniciei o computador pelo DVD de instalação do Windows 7. Na tela inicial, escolhi meu idioma (que não é inglês, quero reconhecer [o crédito do autor das imagens](http://www.howtogeek.com/howto/33433/restore-the-windows-boot-loader-after-an-ubuntu-update/)) e cliquei em “Avançar”:
 
-![windows-startup-recovery2]({{ site.url }}/files/2013/07/windows-startup-recovery2.jpg)
+{% include image.html src="/files/2013/07/windows-startup-recovery2.jpg" %}
 
 2. Em seguida, cliquei em “Reparar o computador”:
 
-![windows-startup-recovery3]({{ site.url }}/files/2013/07/windows-startup-recovery3.jpg)
+{% include image.html src="/files/2013/07/windows-startup-recovery3.jpg" %}
 
 3. Nessa tela, escolhi a primeira opção, não selecionei nada na lista, e cliquei em “Avançar”:
 
-![windows-startup-recovery4]({{ site.url }}/files/2013/07/windows-startup-recovery4.jpg)
+{% include image.html src="/files/2013/07/windows-startup-recovery4.png" %}
 
 4. Finalmente, nessa tela, diferentemente do autor, escolhi a primeira opção, “Startup Recovery”:
 
-![windows-startup-recovery5]({{ site.url }}/files/2013/07/windows-startup-recovery5.jpg)
+{% include image.html src="/files/2013/07/windows-startup-recovery5.png" %}
 
 A instalação executou seus procedimentos de manutenção, após os quais reiniciei o computador. Ainda nada de Windows, e agora ele não exibia mais nem o menu do GRUB2, acusando que havia múltiplas partições ativas.
 

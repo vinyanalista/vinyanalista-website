@@ -23,9 +23,9 @@ Há muito tempo os computadores eram feitos de grandes empresas para grandes emp
 
 Com o passar do tempo, os computadores foram se tornando menores, mais baratos e foram surgindo várias facilidades no uso, como o sistema operacional, a interface gráfica e o mouse, que possibilitaram sua popularização, principalmente após a invenção dos primeiros computadores pessoais na década de 70, como o Altair e o Macintosh.
 
-![O Altair 8800, de 1975, foi o primeiro computador pessoal comercializado]({{ site.url }}/files/2012/04/altair-8800-1975.jpg)
+{% include image.html caption="O Altair 8800, de 1975, foi o primeiro computador pessoal comercializado" src="/files/2012/04/altair-8800-1975.jpg" %}
 
-![O Macintosh (1984) foi o primeiro computador a usar interface gráfica e mouse.]({{ site.url }}/files/2012/04/macintosh-1984.jpg)
+{% include image.html caption="O Macintosh (1984) foi o primeiro computador a usar interface gráfica e mouse." src="/files/2012/04/macintosh-1984.jpg" %}
 
 Na década de 80, a IBM, que era então a maior empresa de informática e é, ainda hoje, uma das líderes de mercado, lançou seu modelo de computador pessoal, o IBM PC, que até hoje é o padrão dos computadores pessoais, com vários aperfeiçoamentos, é claro. A sigla PC vem do inglês *Personal Computer*, que significa “Computador Pessoal”.
 
@@ -43,27 +43,27 @@ Os componentes básicos de um computador podem ser divididos em dois grandes gru
 
 **Hardware** é um termo em inglês que não tem uma tradução específica, deriva da palavra *hard* em inglês, que significa duro. É usado para definir todos os componentes físicos (mecânicos, magnéticos e eletrônicos) de um computador, ou seja, a máquina propriamente dita. O hardware de um computador pode ser dividido basicamente em quatro categorias: processador, placa-mãe, memória e dispositivos de entrada e saída.
 
-![Alguns componentes de um computador: Monitor (1), placa-mãe (2), processador (3), memória RAM (4), placas de expansão (5), fonte de alimentação (6), unidade de CD/DVD (7), disco rígido (8), teclado (9) e mouse (10)]({{ site.url }}/files/2012/04/componentes-do-computador.png)
+{% include image.html caption="Alguns componentes de um computador: Monitor (1), placa-mãe (2), processador (3), memória RAM (4), placas de expansão (5), fonte de alimentação (6), unidade de CD/DVD (7), disco rígido (8), teclado (9) e mouse (10)" src="/files/2012/04/componentes-do-computador.png" %}
 
 O **processador**, também chamado de Unidade Central de Processamento (UCP), do inglês *Central Processing Unit* (CPU), é o principal componente eletrônico de um computador. Ele fica acoplado na placa-mãe e é o responsável pela execução, com auxílio da memória e dos dispositivos de entrada e saída, de todas as operações no computador. Pode ser considerado o “cérebro” do computador.
 
-![Processadores da Intel e da AMD]({{ site.url }}/files/2012/04/processadores.jpg)
+{% include image.html caption="Processadores da Intel e da AMD" src="/files/2012/04/processadores.jpg" %}
 
 A **memória** do computador é formada por todos os dispositivos que são utilizados para armazenar dados e instruções, seja de forma temporária ou permanente. Pode-se dizer que depois do processador, a parte mais importante de um computador é a sua memória. Há diversos dispositivos submetidos a uma hierarquia formando a memória do computador, mas para se ter uma visão inicial simplificada, é possível dividi-los em dois grandes grupos principais: a memória principal e a memória secundária.
 
 A **memória principal** é aquela que é acessada diretamente pelo processador e armazena os dados de forma eletrônica. Apresenta alta velocidade e baixa capacidade de armazenamento. É formada pela **memória RAM** (do inglês *Random Access Memory*, que significa “memória de acesso aleatório”), que armazena as informações que são utilizadas no trabalho do processador; e pela **memória ROM** (*Read Only Memory*, “memória somente para leitura”), que armazena as instruções de inicialização do computador.
 
-![Pente de memória RAM]({{ site.url }}/files/2012/04/memoria-ram.jpg)
+{% include image.html caption="Pente de memória RAM" src="/files/2012/04/memoria-ram.jpg" %}
 
 A **memória secundária**, também chamada memória de massa, apresenta alta capacidade de armazenamento e baixa velocidade. É usada para gravar grande quantidade de dados por um período longo de tempo e não é acessada diretamente pelo processador. Quando necessita de uma informação armazenada nessa memória, o processador a copia anteriormente para a memória principal. São exemplos de memória de massa as unidades de fita, os disquetes, os discos rígidos, os discos óticos (CDs, DVDs e Blu-rays) e os discos removíveis (pendrives, cartões de memória, etc.).
 
-![O que se pensa ser o disco rígido (abaixo) na verdade é uma "caixa", dentro da qual está protegido o disco rígido (acima).]({{ site.url }}/files/2012/04/disco-rigido.jpg)
+{% include image.html caption='O que se pensa ser o disco rígido (abaixo) na verdade é uma "caixa", dentro da qual está protegido o disco rígido (acima).' src="/files/2012/04/disco-rigido.jpg" %}
 
 Os **dispositivos de entrada e saída** (do inglês *input/output devices*), também chamados de **periféricos**, permitem a comunicação entre o processador e os demais componentes do computador, assim como entre o computador e o meio externo (entre o computador e seus usuários ou entre o computador e outros computadores). Podem ser considerados os “olhos, ouvidos e boca” do processador. Exemplos de periféricos são o [teclado](http://www.ufpa.br/dicas/mic/mic-tecl.htm), o [mouse](http://www.ufpa.br/dicas/mic/mic-e-s.htm#Mouse), o [microfone](http://www.ufpa.br/dicas/mic/mic-e-s.htm#fone), a *webcam* (ou [câmera de vídeo](http://www.ufpa.br/dicas/mic/mic-e-s.htm#fone)), o [monitor](http://www.ufpa.br/dicas/mic/mic-e-s.htm#monitor), a [impressora](http://www.ufpa.br/dicas/mic/mic-e-s.htm#Impressora) e as caixas de som.
 
 Finalmente, há a **placa-mãe**, do inglês *motherboard*, também chamada *mainboard* (inglês para “placa principal”), é a principal placa do computador, responsável pela interconexão de todos os dispositivos que o compõem. Se o processador é o “cérebro” do computador, pode-se comparar a placa-mãe a um “sistema nervoso”.
 
-![Uma placa-mãe]({{ site.url }}/files/2012/04/placa-mae.jpg)
+{% include image.html caption="Uma placa-mãe" src="/files/2012/04/placa-mae.jpg" %}
 
 ### Software – a inteligência do computador
 

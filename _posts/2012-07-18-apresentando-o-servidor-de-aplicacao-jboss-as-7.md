@@ -9,7 +9,7 @@ title: Apresentando o servidor de aplica&ccedil;&atilde;o JBoss AS 7
 
 O [JBoss Application Server](http://www.jboss.org/jbossas/) (ou, abreviadamente, JBoss AS) é um servidor de aplicação de código aberto desenvolvido pela [JBoss](http://www.jboss.org/) (atualmente, uma divisão da [Red Hat](http://www.redhat.com/)) para a plataforma [Java EE](http://www.oracle.com/technetwork/java/javaee/). Ele oferece toda a infraestrutura necessária para executar aplicações Web desenvolvidas sobre essa plataforma. Nesse post, você saberá o necessário para começar a desenvolver aplicações Java para a Web utilizando esse servidor.
 
-![jboss_as_01]({{ site.url }}/files/2012/07/jboss_as_01.jpg)
+{% include image.html src="/files/2012/07/jboss_as_01.jpg" %}
 
 <!--more-->
 
@@ -129,7 +129,7 @@ JAVA_OPTS:  -server -XX:+TieredCompilation -Xms64m -Xmx512m -XX:MaxPermSize=256m
 
 Tanto no Windows quanto no Linux, após iniciado o servidor, abra seu navegador de preferência e acesse o endereço “[http://localhost:8080](http://localhost:8080)” (a porta 8080 é a utilizada pelo JBoss AS por padrão, mas essa porta pode ser alterada na configuração do servidor). Você deve ver a tela de boas vindas do JBoss AS:
 
-![jboss_as_02]({{ site.url }}/files/2012/07/jboss_as_02.jpg)
+{% include image.html src="/files/2012/07/jboss_as_02.jpg" %}
 
 ### Executando uma aplicação Web
 
@@ -139,7 +139,7 @@ As instruções fornecidas aqui se aplicam tanto ao Windows quanto ao Linux, mas
 
 Vá até a [página das aplicações de exemplo do JBoss AS](http://www.jboss.org/jdf/quickstarts/jboss-as-quickstart/) e clique em “Get the source”. Depois, clique em “Source zip”:
 
-![jboss_as_03]({{ site.url }}/files/2012/07/jboss_as_03.jpg)
+{% include image.html src="/files/2012/07/jboss_as_03.jpg" %}
 
 Você está baixando um arquivo **.zip** (no momento da escrita deste post, nomeado “jboss-jdf-jboss-as-quickstart-7.1.1.Final-0-gbcbcf69.zip”) com todas as aplicações de exemplo do JBoss AS (se quiser por curiosidade conferir a lista, são todas essas que aparecem listadas nessa mesma página).
 
@@ -202,7 +202,7 @@ O console do JBoss AS deve mostrar que o deploy da aplicação foi realizado com
 
 Feito isso, podemos acessar a aplicação usando o navegador através do endereço “[http://localhost:8080/jboss-as-helloworld-jsf/](http://localhost:8080/jboss-as-helloworld-jsf/)“:
 
-![jboss_as_04]({{ site.url }}/files/2012/07/jboss_as_04.jpg)
+{% include image.html src="/files/2012/07/jboss_as_04.jpg" %}
 
 Essa é uma aplicação Web 2.0 com [AJAX](http://www.w3schools.com/ajax/default.asp) na qual ao digitar um nome no campo de texto, ele reproduz esse nome em uma mensagem de olá do lado direito desse campo. É realmente a única coisa que essa aplicação faz. Os componentes exibidos na tela são estilizados por causa da utilização do framework de apresentação [Richfaces](http://www.jboss.org/richfaces/) para renderizar esses componentes.
 

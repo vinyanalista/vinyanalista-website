@@ -7,7 +7,7 @@ status: publish
 title: Problemas envolvendo bootloaders, MBR e tabela de parti&ccedil;&otilde;es
 ---
 
-![computador-maluco]({{ site.url }}/files/2012/04/computador-maluco.jpg)
+{% include image.html src="/files/2012/04/computador-maluco.jpg" %}
 
 Gente, a tarde de ontem foi um sufoco! Acidentalmente excluí a tabela de partições de um dos meus HDs, pensei que já tinha perdido todos os meus arquivos e passei várias horas tentando recuperá-la. Tentei ferramentas do Windows, do Linux, e acabei conseguindo. Venho compartilhar nesse post o que houve, como resolvi e algumas observações curiosas sobre o ocorrido.
 
@@ -75,7 +75,7 @@ Inseri o DVD de instalação do Windows 7 e tentei a recuperação de inicializa
 4. Na lista em que ele manda selecionar o sistema operacional, eu não selecionei nenhum (sem a tabela de partições ele não conseguiria identificar o sistema que estava instalado) e cliquei em Avançar;
 5. Eis que apareceu a seguinte tela com as opções de recuperação oferecidas pelo DVD de instalação do Windows 7 (volto a falar dela já já):
 
-![Ferramentas de recuperação disponibilizadas no DVD de instalação do Windows 7]({{ site.url }}/files/2012/04/win7-system-recovery-options.jpg)
+{% include image.html caption="Ferramentas de recuperação disponibilizadas no DVD de instalação do Windows 7" src="/files/2012/04/win7-system-recovery-options.jpg" %}
 
 Eu cliquei em “Startup Repair”, esperei ele concluir o reparo, e após isso, reiniciei o computador, mas nada mudou.
 
@@ -113,11 +113,11 @@ Eis que decidi instalar o Ubuntu para ter ao menos um sistema operacional funcio
 
 Imaginava que agora eu conseguiria acessar o Windows, mas esbarrei em um novo problema. A tela exibida quando eu iniciava o computador e escolhia o Windows na lista do GRUB era a seguinte (clique na imagem para ampliar):
 
-![Erro 0xc000000e]({{ site.url }}/files/2012/04/erro-0xc000000e.jpg)
+{% include image.html caption="Erro 0xc000000e" src="/files/2012/04/erro-0xc000000e.jpg" %}
 
 Mais uma rodada de tentativas executando aqueles comandos que eu mostrei acima, e dessa vez houve algum resultado: só que o sistema ainda não funcionou, o erro foi que mudou. Agora a tela exibia:
 
-![BOOTMGR is missing]({{ site.url }}/files/2012/04/erro-bootmgr.png)
+{% include image.html caption="BOOTMGR is missing" src="/files/2012/04/erro-bootmgr.png" %}
 
 Encontrei algumas soluções na Internet, mas decidi tentar primeiro a que tinha [no site da Microsoft](http://support.microsoft.com/kb/2622803): tentei o método 2 fornecido nessa página, que consiste em executar, da mesma forma que os comandos anteriores, o comando:
 
@@ -140,9 +140,9 @@ Simples assim! Reiniciei o computador e ele carregou o sistema operacional do me
 
 Só que essa solução me trouxe dois problemas: o GRUB sumiu (imagina só: agora que eu consegui acessar o Windows, não consigo mais acessar o Linux!) e aquela imagem da bandeira do Windows brilhando não aparece mais na inicialização, ao invés disso, é a barra verde do Vista (isso não chega a ser um problema, mas não deveria acontecer, veja nas imagens a seguir o antes e o depois).
 
-![O que aparecia antes enquanto o Windows 7 era carregado]({{ site.url }}/files/2012/04/win7-boot.jpg)
+{% include image.html caption="O que aparecia antes enquanto o Windows 7 era carregado" src="/files/2012/04/win7-boot.jpg" %}
 
-![O que aparece agora]({{ site.url }}/files/2012/04/winvista-boot.jpg)
+{% include image.html caption="O que aparece agora" src="/files/2012/04/winvista-boot.jpg" %}
 
 Eu poderia [facilmente recuperar o GRUB](http://www.vivaolinux.com.br/dica/Restaurando-o-GRUB-apos-a-instalacao-de-outro-sistema-operacional) para conseguir acessar o Linux, mas como a instalação do Ubuntu era provisória, preferi gravar o CD do openSUSE e instalá-lo por cima do Ubuntu, o que devolveu o GRUB ao MBR e o atualizou para fornecer o Windows 7 e o openSUSE como opções. Desliguei o computador, devolvi o cabo de força do outro HD, liguei de novo pra ver se estava tudo bem, ele reconheceu o “novo” disco rígido… Agora está tudo como era antes, e com o Linux novo, como eu queria.
 

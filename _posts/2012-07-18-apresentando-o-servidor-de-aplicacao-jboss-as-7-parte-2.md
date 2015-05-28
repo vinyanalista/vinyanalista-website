@@ -9,7 +9,7 @@ title: Apresentando o servidor de aplica&ccedil;&atilde;o JBoss AS 7 (parte 2)
 
 O [JBoss Application Server](http://www.jboss.org/jbossas/) (ou, abreviadamente, JBoss AS) é um servidor de aplicação de código aberto desenvolvido pela [JBoss](http://www.jboss.org/) (atualmente, uma divisão da [Red Hat](http://www.redhat.com/)) para a plataforma [Java EE](http://www.oracle.com/technetwork/java/javaee/). Ele oferece toda a infraestrutura necessária para executar aplicações Web desenvolvidas sobre essa plataforma. Nesse post, você saberá o necessário para começar a desenvolver aplicações Java para a Web utilizando esse servidor.
 
-![jboss_as_01]({{ site.url }}/files/2012/07/jboss_as_01.jpg)
+{% include image.html src="/files/2012/07/jboss_as_01.jpg" %}
 
 Essa é a segunda parte de dois posts que visam apresentar o JBoss AS 7. Se você desejava acessar a primeira parte, [clique aqui]({% post_url 2012-07-18-apresentando-o-servidor-de-aplicacao-jboss-as-7 %}). Senão, continue lendo.
 
@@ -21,7 +21,7 @@ Podemos gerenciar o servidor de aplicação JBoss AS através de um console Web,
 
 Na primeira vez em que você tentar acessar esse console, no entanto, ele emitirá uma mensagem de erro (é bonita, eu sei, mas se você examinar seu conteúdo, verá que é uma mensagem de erro, rsrsrs):
 
-![jboss_as_05]({{ site.url }}/files/2012/07/jboss_as_05.jpg)
+{% include image.html src="/files/2012/07/jboss_as_05.jpg" %}
 
 Esse aviso nos diz que é necessário definir um usuário e uma senha para acessar o console de administração Web. Vamos fazer isso.
 
@@ -56,17 +56,17 @@ Se não houver nada errado, uma mensagem de confirmação será exibida na tela.
 
 Feito isso, nós já podemos acessar o console de administração Web, informando o usuário e senha criados quando solicitados (lembrando que o endereço é “[http://localhost:9990/](http://localhost:9990/)“):
 
-![jboss_as_06]({{ site.url }}/files/2012/07/jboss_as_06.jpg)
+{% include image.html src="/files/2012/07/jboss_as_06.jpg" %}
 
 Vamos fazer undeploy e deploy da aplicação usando o console de administração Web. Para isso, no menu do lado esquerdo, clique em “Manage Deployments”. É exibida uma lista das aplicações instaladas no servidor:
 
-![jboss_as_07]({{ site.url }}/files/2012/07/jboss_as_07.jpg)
+{% include image.html src="/files/2012/07/jboss_as_07.jpg" %}
 
 Clicando em “Disable”, interromperíamos a aplicação, fazendo com que ela não ficasse mais disponível ao usuário final, mas ainda permanecesse no servidor. Não é o que queremos aqui. Clique em “Remove” para de fato remover a aplicação do servidor. Aparece uma mensagem de confirmação na tela, clique em “Confirm”.
 
 Feito isso a aplicação desaparece da lista, ela já não está mais no servidor (e muito menos acessível):
 
-![jboss_as_08]({{ site.url }}/files/2012/07/jboss_as_08.jpg)
+{% include image.html src="/files/2012/07/jboss_as_08.jpg" %}
 
 Se você tentar acessá-la pelo seu endereço (“[http://localhost:8080/jboss-as-helloworld-jsf/](http://localhost:8080/jboss-as-helloworld-jsf/)“), visualizará uma página de erro no navegador.
 
@@ -74,19 +74,19 @@ De volta ao console de administração Web, clique no botão “Add Content” p
 
 O primeiro passo é selecionar o arquivo que você deseja fazer deploy. Na janela que aparece, clique em “Browse…”, navegue até a pasta do exemplo (aqui, “/home/vinicius/jboss-jdf-jboss-as-quickstart-8505020/helloworld-jsf/”) e, dentro da pasta “target”, escolha o arquivo “jboss-as-helloworld-jsf.war”, que representa a aplicação compilada e empacotada em um formato próprio de aplicação Web (arquivo **.war**), análogo ao formato de aplicação Desktop (arquivo **.jar**). Por último, clique em “Next”:
 
-![jboss_as_09]({{ site.url }}/files/2012/07/jboss_as_09.jpg)
+{% include image.html src="/files/2012/07/jboss_as_09.jpg" %}
 
 Ele pede para confirmar as informações. Simplesmente clique em “Save”:
 
-![jboss_as_10]({{ site.url }}/files/2012/07/jboss_as_10.jpg)
+{% include image.html src="/files/2012/07/jboss_as_10.jpg" %}
 
 De volta à lista de aplicações, a aplicação foi instalada no servidor, mas não foi iniciada:
 
-![jboss_as_11]({{ site.url }}/files/2012/07/jboss_as_11.jpg)
+{% include image.html src="/files/2012/07/jboss_as_11.jpg" %}
 
 Clique em Enable para iniciá-la. Aparece uma mensagem de confirmação na tela, clique em “Confirm”. Feito isso a aplicação passa a aparecer na lista como habilitada:
 
-![jboss_as_12]({{ site.url }}/files/2012/07/jboss_as_12.jpg)
+{% include image.html src="/files/2012/07/jboss_as_12.jpg" %}
 
 Agora é possível acessá-la novamente pelo endereço “[http://localhost:8080/jboss-as-helloworld-jsf/](http://localhost:8080/jboss-as-helloworld-jsf/)“.
 

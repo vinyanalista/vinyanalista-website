@@ -11,7 +11,7 @@ Olá, pessoal! É com muito prazer que inauguro esse blog. Espero aqui compartil
 
 E estou inaugurando o blog em uma data oportuna: 1º de abril, o famoso dia da mentira. Não vou entrar na onda de inventar uma mentirinha, mas já venho então compartilhar com vocês algumas histórias de 1º de abril que achei interessantes.
 
-![1º de abril: dia da mentira]({{ site.url }}/files/2012/04/dia-da-mentira.jpg)
+{% include image.html caption="1º de abril: dia da mentira" src="/files/2012/04/dia-da-mentira.jpg" %}
 
 <!--more-->
 

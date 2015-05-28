@@ -9,7 +9,7 @@ title: Configurando um datasource do MySQL no JBoss AS
 
 O [MySQL](http://www.mysql.com/) é um banco de dados de código aberto desenvolvido pela [Oracle](http://www.oracle.com/). Ele se tornou um dos bancos de dados mais utilizados no mundo devido ao fato de se integrar perfeitamente ao [PHP](http://www.php.net/), sendo oferecido pela maioria dos serviços de hospedagem de sites em conjunto com o suporte a essa linguagem. Nesse post, você verá como utilizá-lo em conjunto com o servidor de aplicação [JBoss AS](http://www.jboss.org/jbossas/) para satisfazer as necessidades de armazenamento de dados de suas aplicações [Java EE](http://www.oracle.com/technetwork/java/javaee/).
 
-![jboss_as_mysql_01]({{ site.url }}/files/2012/07/jboss_as_mysql_01.jpg)
+{% include image.html src="/files/2012/07/jboss_as_mysql_01.jpg" %}
 
 Aqui também há uma dica para usuários do banco de dados [PostgreSQL](http://www.postgresql.org/) que quiserem fazer o mesmo: leiam o final do post!
 
@@ -31,49 +31,49 @@ Quando o conteúdo do arquivo é extraído, é criada uma pasta “mysql-connect
 
 Ao final do processo, o driver JDBC do MySQL deve aparecer habilitado na lista de aplicações implantadas, como mostra a figura (curiosamente, a [aplicação de exemplo](http://www.jboss.org/jdf/quickstarts/jboss-as-quickstart/helloworld-jsf/) que implantamos [naquele post]({% post_url 2012-07-18-apresentando-o-servidor-de-aplicacao-jboss-as-7-parte-2 %}) ainda está no servidor):
 
-![jboss_as_mysql_02]({{ site.url }}/files/2012/07/jboss_as_mysql_02.jpg)
+{% include image.html src="/files/2012/07/jboss_as_mysql_02.jpg" %}
 
 ### Criação do datasource
 
 No painel superior do console Web, clique em “Profile”, e em seguida, no menu da esquerda, clique em “Datasources”. É exibida uma lista com todos os datasources configurados (nesse caso, só há o [datasource de exemplo](https://docs.jboss.org/author/display/AS7/Getting+Started+Guide#GettingStartedGuide-ModifyingtheExampleDataSource), que já vem configurado com o servidor de aplicação):
 
-![jboss_as_mysql_03]({{ site.url }}/files/2012/07/jboss_as_mysql_03.jpg)
+{% include image.html src="/files/2012/07/jboss_as_mysql_03.jpg" %}
 
 Clique em “Add”. Na caixa de diálogo que aparece, forneça ao datasource um nome (esse nome não afeta a conexão, serve apenas para distinguir o datasource na lista, aqui forneci “TesteDS”) e um nome [JNDI](http://www.oracle.com/technetwork/java/jndi/) (esse sim importa à conexão, é usado para localizar um recurso na rede e deve começar sempre com “java:/” ou “java:jboss/”, aqui digitei “java:/teste”), e em seguida clique em “Next”:
 
-![jboss_as_mysql_04]({{ site.url }}/files/2012/07/jboss_as_mysql_04.jpg)
+{% include image.html src="/files/2012/07/jboss_as_mysql_04.jpg" %}
 
 Selecione um driver JDBC na lista de drivers disponíveis. No nosso caso, devemos selecionar o MySQL Connector/J. Depois clique em “Next”:
 
-![jboss_as_mysql_05]({{ site.url }}/files/2012/07/jboss_as_mysql_05.jpg)
+{% include image.html src="/files/2012/07/jboss_as_mysql_05.jpg" %}
 
 Finalmente, devemos informar os detalhes da conexão: o endereço JDBC de acesso ao banco (aqui, preenchi com “jdbc:mysql://localhost:3306/teste”, o formato desse endereço é “jdbc:mysql://servidor:porta/base”), o usuário e a senha que serão utilizados. Depois de preencher os campos, clique em “Done”:
 
-![jboss_as_mysql_06]({{ site.url }}/files/2012/07/jboss_as_mysql_06.jpg)
+{% include image.html src="/files/2012/07/jboss_as_mysql_06.jpg" %}
 
 O datasource é criado e passa a aparecer na lista, mas ainda não está habilitado:
 
-![jboss_as_mysql_07]({{ site.url }}/files/2012/07/jboss_as_mysql_07.jpg)
+{% include image.html src="/files/2012/07/jboss_as_mysql_07.jpg" %}
 
 Antes de habilitá-lo, tornando-o assim disponível para conexão, vamos permitir que esse datasource seja gerenciado pela API de transações do Java ([Java Transaction API](http://www.oracle.com/technetwork/java/javaee/jta/index.html), ou JTA). Selecione-o na lista e, descendo na página, clique na aba “Connection”. Perceba que a JTA está desabilitada para esse datasource. Clique em “Edit” para alterar isso:
 
-![jboss_as_mysql_08]({{ site.url }}/files/2012/07/jboss_as_mysql_08.jpg)
+{% include image.html src="/files/2012/07/jboss_as_mysql_08.jpg" %}
 
 Marque as duas últimas opções e clique em “Save”:
 
-![jboss_as_mysql_09]({{ site.url }}/files/2012/07/jboss_as_mysql_09.jpg)
+{% include image.html src="/files/2012/07/jboss_as_mysql_09.jpg" %}
 
 Agora a JTA está habilitada:
 
-![jboss_as_mysql_10]({{ site.url }}/files/2012/07/jboss_as_mysql_10.jpg)
+{% include image.html src="/files/2012/07/jboss_as_mysql_10.jpg" %}
 
 Agora sim vamos habilitar o datasource: ainda com ele selecionado, clique no botão “Enable”, acima da lista. O datasource é então habilitado:
 
-![jboss_as_mysql_11]({{ site.url }}/files/2012/07/jboss_as_mysql_11.jpg)
+{% include image.html src="/files/2012/07/jboss_as_mysql_11.jpg" %}
 
 Ainda com o datasource selecionado na lista e a aba “Connection” aberta na parte de baixo, clique no botão “Test Connection”. Se você forneceu os dados corretamente, o servidor de aplicação conseguirá estabelecer uma conexão com o banco de dados, e a seguinte mensagem será exibida:
 
-![jboss_as_mysql_12]({{ site.url }}/files/2012/07/jboss_as_mysql_12.jpg)
+{% include image.html src="/files/2012/07/jboss_as_mysql_12.jpg" %}
 
 Da parte do servidor está tudo OK. Agora é só configurar a aplicação para utilizar o datasource.
 

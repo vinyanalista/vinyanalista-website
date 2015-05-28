@@ -11,7 +11,7 @@ Para começar a programar em [Java](http://www.oracle.com/technetwork/java/index
 
 A seguir, forneço instruções para instalar, configurar e executar a versão mais recente do JDK (atualmente, a **1.7.0_05**) em sistemas Windows e Linux.
 
-![Java]({{ site.url }}/files/2012/07/java.jpg)
+{% include image.html src="/files/2012/07/java.jpg" %}
 
 <!--more-->
 
@@ -19,7 +19,7 @@ A seguir, forneço instruções para instalar, configurar e executar a versão m
 
 O primeiro passo é baixar o JDK. Vá até a [página de downloads do Java SE](http://www.oracle.com/technetwork/java/javase/downloads/), aceite o contrato de licença e escolha a versão do JDK apropriada para o seu sistema:
 
-![jdk7_1]({{ site.url }}/files/2012/07/jdk7_1.jpg)
+{% include image.html src="/files/2012/07/jdk7_1.jpg" %}
 
 #### Download e instalação do JDK no Windows
 
@@ -77,31 +77,31 @@ A seguir, instruções para configurar essas variáveis tanto no Windows quanto 
 
 Caso sua Área de Trabalho apresente o ícone do Meu Computador, clique com o botão direito nesse ícone e clique em Propriedades. Caso contrário, abra o Menu Iniciar, clique em Painel de Controle e, na janela que se abre, procure a opção Sistema.
 
-![jdk7_2]({{ site.url }}/files/2012/07/jdk7_2.jpg)
+{% include image.html src="/files/2012/07/jdk7_2.jpg" %}
 
 Na janela Sistema, clique na opção Configurações avançadas do sistema, no painel esquerdo.
 
-![jdk7_3]({{ site.url }}/files/2012/07/jdk7_3.jpg)
+{% include image.html src="/files/2012/07/jdk7_3.jpg" %}
 
 Na caixa de diálogo Propriedades do Sistema, clique no botão Variáveis de Ambiente.
 
-![jdk7_4]({{ site.url }}/files/2012/07/jdk7_4.jpg)
+{% include image.html src="/files/2012/07/jdk7_4.jpg" %}
 
 Na caixa de diálogo Variáveis de Ambiente, na seção Variáveis do sistema, clique no botão Novo.
 
-![jdk7_5]({{ site.url }}/files/2012/07/jdk7_5.jpg)
+{% include image.html src="/files/2012/07/jdk7_5.jpg" %}
 
 Informe JAVA_HOME como nome da variável e no campo valor digite a localização do JDK (no meu caso, ele foi instalado em “C:\Program Files (x86)\Java\jdk1.7.0_05″). Quando acabar de digitar esses valores, clique em OK.
 
-![jdk7_6]({{ site.url }}/files/2012/07/jdk7_6.jpg)
+{% include image.html src="/files/2012/07/jdk7_6.jpg" %}
 
 De volta à caixa de diálogo Variáveis de Ambiente, também na seção Variáveis do sistema, procure na lista a variável Path, selecione-a e clique no botão Editar.
 
-![jdk7_7]({{ site.url }}/files/2012/07/jdk7_7.jpg)
+{% include image.html src="/files/2012/07/jdk7_7.jpg" %}
 
 Posicione o cursor no início do valor da variável, insira o texto “%JAVA_HOME\bin;” (não inclua as aspas e não esqueça do ponto-e-vírgula) e clique em OK.
 
-![jdk7_8]({{ site.url }}/files/2012/07/jdk7_8.jpg)
+{% include image.html src="/files/2012/07/jdk7_8.jpg" %}
 
 De volta à caixa de diálogo Variáveis de Ambiente, clique em OK. Em seguida, você pode fechar a janela Sistema. A partir de agora, qualquer nova janela de terminal aberta ou comando invocado refletirá essas alterações.
 
@@ -176,10 +176,10 @@ No Linux, esse plugin acompanha o JDK, mas é necessário criar um link simbóli
 
 Para verificar que o navegador reconhece o plugin, digite na aba de endereços “about:plugins” e tecle Enter. O plugin do Java deve aparecer na lista de plugins instalados:
 
-![jdk7_9]({{ site.url }}/files/2012/07/jdk7_9.jpg)
+{% include image.html src="/files/2012/07/jdk7_9.jpg" %}
 
 É possível também verificar na [página de teste do Java](http://www.java.com/pt_BR/download/testjava.jsp) se a versão do plugin instalada no seu sistema corresponde à mais atual:
 
-![jdk7_10]({{ site.url }}/files/2012/07/jdk7_10.jpg)
+{% include image.html src="/files/2012/07/jdk7_10.jpg" %}
 
 Espero que esse post possa ser útil a programadores Java iniciantes de uma maneira em geral. Agradeço previamente opiniões e críticas construtivas. Ofereço o espaço para perguntas também. Abraço a todos e até a próxima!

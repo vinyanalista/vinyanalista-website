@@ -7,7 +7,7 @@ status: publish
 title: Onde reciclar pilhas, baterias e celulares em Aracaju
 ---
 
-![reciclagem-de-pilhas]({{ site.url }}/files/2012/04/reciclagem-de-pilhas.jpg)
+{% include image.html src="/files/2012/04/reciclagem-de-pilhas.jpg" %}
 
 Quem tem consciência e tenta reduzir o problema do [lixo eletrônico](http://ambiente.hsw.uol.com.br/lixo-eletronico.htm) (que, aliás, [no nosso país já é muito grave](http://www.estadao.com.br/noticias/vidae,brasil-e-o-campeao-do-lixo-eletronico-entre-emergentes,514495,0.htm)) não descarta seus aparelhos no lixo comum. O que fazer então com as pilhas, os celulares e as baterias destes quando eles não têm mais utilidade ou não é possível repassá-los a alguém?
 
@@ -15,7 +15,7 @@ Quem tem consciência e tenta reduzir o problema do [lixo eletrônico](http://am
 
 Bem, aqui em [Aracaju](http://maps.google.com/maps/place?q=aracaju), pelo menos, eu conheço um lugar. Quando estive hoje de manhã no [Shopping Riomar](http://www.riomararacaju.com.br/) descobri que a [C&A](http://www.cea.com.br/) realiza coleta desses três tipos de lixo eletrônico. A atendente me informou que a C&A do [Shopping Jardins](http://www.shoppingjardins.com.br/) também possui um desse:
 
-![Coleta de baterias]({{ site.url }}/files/2012/04/coleta-de-baterias.jpg)
+{% include image.html caption="Coleta de baterias" src="/files/2012/04/coleta-de-baterias.jpg" %}
 
 **C&A do Shopping Jardins**
 

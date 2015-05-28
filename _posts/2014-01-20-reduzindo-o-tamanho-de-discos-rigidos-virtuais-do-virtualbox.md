@@ -9,7 +9,7 @@ title: Reduzindo o tamanho de discos r&iacute;gidos virtuais do VirtualBox
 
 É verdade que quando criamos um disco rígido virtual dinamicamente alocado no [VirtualBox](http://www.virtualbox.org/), ele cresce à medida em que arquivos são gravados. No entanto, seu tamanho não diminui à medida em que excluímos arquivos. Veja agora como é possível reduzir discos rígidos desse tipo no VirtualBox.
 
-![VirtualBox]({{ site.url }}/files/2014/01/virtualbox.png)
+{% include image.html src="/files/2014/01/virtualbox.png" %}
 
 <!--more-->
 
