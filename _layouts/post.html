@@ -10,33 +10,60 @@ layout: default
         <div class="blog-post-meta row">
             <div class='col-sm-6'>
                 <div class='blog-post-data'>
-                    {{ page.date | date: "%d de" }}
-                    {% assign m = page.date | date: "%-m" %}
-                    {% case m %}
-                    {% when '1' %}Janeiro
-                    {% when '2' %}Fevereiro
-                    {% when '3' %}Março
-                    {% when '4' %}Abril
-                    {% when '5' %}Maio
-                    {% when '6' %}Junho
-                    {% when '7' %}Julho
-                    {% when '8' %}Agosto
-                    {% when '9' %}Setembro
-                    {% when '10' %}Outubro
-                    {% when '11' %}Novembro
-                    {% when '12' %}Dezembro
-                    {% endcase %}
-                    {{ page.date | date: "de %Y" }}
+                    <p>
+                        {{ page.date | date: "%d de" }}
+                        {% assign m = page.date | date: "%-m" %}
+                        {% case m %}
+                        {% when '1' %}Janeiro
+                        {% when '2' %}Fevereiro
+                        {% when '3' %}Março
+                        {% when '4' %}Abril
+                        {% when '5' %}Maio
+                        {% when '6' %}Junho
+                        {% when '7' %}Julho
+                        {% when '8' %}Agosto
+                        {% when '9' %}Setembro
+                        {% when '10' %}Outubro
+                        {% when '11' %}Novembro
+                        {% when '12' %}Dezembro
+                        {% endcase %}
+                        {{ page.date | date: "de %Y" }}
+                    </p>
                 </div>
             </div>
             <div class='col-sm-6'>
                 <div class='blog-post-redes-sociais'>
-                    Fa &nbsp Tw &nbsp G+ &nbsp +
+                    <!-- AddThis Button BEGIN -->
+                    <div class="addthis_toolbox addthis_default_style"  addthis:url="{{ post.url }}" addthis:title="{{ post.title }}" addthis:description="{{ post.excerpt | strip_html | strip_html | truncatewords: 50 }}">
+                        <a class="addthis_button_facebook"></a>
+                        <a class="addthis_button_twitter" data-via="{{ site.twitter_username }}"></a>
+                        <a class="addthis_button_google_plusone_share"></a>
+                        <a class="addthis_button_favorites"></a>
+                        <a class="addthis_button_compact"></a>
+                        <a class="addthis_counter addthis_bubble_style"></a>
+                    </div>
+                    <!-- AddThis Button END -->
                 </div>
             </div>
         </div>
     </div>
     <div class="blog-post-conteudo panel-body">
         {{ content }}
+        <div class="gap"></div>
+        
+        <h3>Gostou? Então compartilha!</h3>
+        <!-- AddThis Button BEGIN -->
+        <div class="addthis_toolbox addthis_default_style addthis_32x32_style">
+            <a class="addthis_button_facebook"></a>
+            <a class="addthis_button_twitter"></a>
+            <a class="addthis_button_google_plusone_share"></a>
+            <a class="addthis_button_email"></a>
+            <a class="addthis_button_favorites"></a>
+            <a class="addthis addthis_button_print"></a>
+            <a class="addthis_button_pdfonline"></a>
+            <a class="addthis_button_compact"></a>
+            <a class="addthis_counter addthis_bubble_style"></a>
+        </div>
+        <!-- AddThis Button END -->
     </div><!-- .blog-post-conteudo -->
 </div><!-- .blog-post -->

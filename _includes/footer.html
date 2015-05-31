@@ -11,3 +11,14 @@
 <script src="{{ "/lib/bootstrap/3.3.4/js/bootstrap.min.js" | prepend: site.baseurl }}"></script>
 <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 <script src="{{ "/lib/bootstrap/3.3.4/js/ie10-viewport-bug-workaround.js" | prepend: site.baseurl }}"></script>
+<!-- AddThis -->
+<script type="text/javascript" src="http://s7.addthis.com/js/300/addthis_widget.js#pubid={{ site.addthis_profile_id }}" async="async"></script>
+<script type="text/javascript">
+    var addthis_share = {
+        url: "{{ page.url }}",
+        title: document.title,
+        description: "{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}"
+    };
+</script>
+<!-- Comum -->
+<script src="{{ "/js/comum.js" | prepend: site.baseurl }}"></script>
