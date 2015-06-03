@@ -5,6 +5,7 @@ layout: post
 published: true
 status: publish
 title: Configurando um datasource do MySQL no JBoss AS
+image: /files/2012/07/jboss_as_mysql_01.jpg
 ---
 
 O [MySQL](http://www.mysql.com/) é um banco de dados de código aberto desenvolvido pela [Oracle](http://www.oracle.com/). Ele se tornou um dos bancos de dados mais utilizados no mundo devido ao fato de se integrar perfeitamente ao [PHP](http://www.php.net/), sendo oferecido pela maioria dos serviços de hospedagem de sites em conjunto com o suporte a essa linguagem. Nesse post, você verá como utilizá-lo em conjunto com o servidor de aplicação [JBoss AS](http://www.jboss.org/jbossas/) para satisfazer as necessidades de armazenamento de dados de suas aplicações [Java EE](http://www.oracle.com/technetwork/java/javaee/).

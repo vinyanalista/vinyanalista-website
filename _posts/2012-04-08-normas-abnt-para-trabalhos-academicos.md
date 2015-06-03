@@ -4,16 +4,17 @@ date_gmt: '2012-04-08 16:33:07 -0300'
 layout: post
 published: true
 status: publish
-title: Normas ABNT para trabalhos acad&ecirc;micos
+title: Normas ABNT para trabalhos acadêmicos
+image: /files/2012/04/abnt2.jpg
 ---
 
 Hoje venho ressucitar [um post de um dos meus blogs](http://jornalnerds.blogspot.com.br/2010/12/normas-abnt-para-trabalhos-academicos.html) (quem me conhece há algum tempo sabe que já tive alguns, todos eles estão desatualizados hoje), que acho que merece ser relembrado (da série *old but gold*). [Esse trabalho](http://argoslan.sourceforge.net/argos-1.0-especificacao.pdf) eu fiz seguindo quase todas essas normas (a Instituição de ensino pode definir suas próprias, e você deve seguir). Vale observar também que (ouvi dizer) as normas da ABNT foram atualizadas. Assim que eu tiver o link para as novas normas eu atualizo esse post. Segue o post antigo na íntegra.
 
 {% include image.html src="/files/2012/04/abnt1.jpg" %}
 
-<!--more-->
-
 Final de ano, final de curso... quem faz curso técnico ou faculdade sabe muito bem o que isso significa: Trabalho de Conclusão de Curso! Eu mesmo estou desenvolvendo um, que vocês podem conhecer [nesse site](http://argoslan.sourceforge.net/). Uma das observações feitas pelo professor orientador sobre ele foi que a formatação do trabalho não estava de acordo com as normas da [ABNT – Associação Brasileira de Normas Técnicas](http://www.abnt.org.br/). Foi então que tive que pesquisar na Internet sobre essas normas e venho através desse post compartilhar com vocês o que eu achei.
+
+<!--more-->
 
 Os padrões para trabalhos acadêmicos produzidos no Brasil são regidos pelas seguintes normas da ABNT (se você clicar em um dos links abaixo, será aberta a respectiva norma em uma nova janela):
 

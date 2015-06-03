@@ -5,6 +5,7 @@ layout: post
 published: true
 status: publish
 title: Primeiros de abril interessantes
+image: /files/2012/04/dia-da-mentira.jpg
 ---
 
 Olá, pessoal! É com muito prazer que inauguro esse blog. Espero aqui compartilhar com vocês um pouco do que estudo, um pouco do que faço, um pouco do que acho interessante na Internet, sem muito compromisso em escrever muito elaborado, como faço nos [meus artigos e dicas do Viva o Linux](http://www.vivaolinux.com.br/~vinyanalista), assim posso postar com mais frequência.

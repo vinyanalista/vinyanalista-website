@@ -4,7 +4,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="author" content="Antônio Vinícius Menezes Medeiros">
-    <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+    <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncatewords: 55 }}{% else %}{{ site.description }}{% endif %}">
+    <meta property="og:url" content="{{ page.url }}" />
+    <meta property="og:type" content="{% if page.is_post %}{{ "article" }}{% else %}{{ "website" }}{% endif %}"/>
+    <meta property="og:title" content="{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}" />
+    <meta property="og:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncatewords: 55 }}{% else %}{{ site.description }}{% endif %}" />
+    <meta property="og:image" content="{{ page.image }}" />
 
     <link rel="apple-touch-icon" href="{{ "/img/favicon.png" | prepend: site.baseurl }}">
     <link rel="icon" href="{{ "/img/favicon.png" | prepend: site.baseurl }}">

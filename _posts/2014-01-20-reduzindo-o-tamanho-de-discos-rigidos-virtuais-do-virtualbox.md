@@ -4,14 +4,15 @@ date_gmt: '2014-01-20 03:53:32 -0300'
 layout: post
 published: true
 status: publish
-title: Reduzindo o tamanho de discos r&iacute;gidos virtuais do VirtualBox
+title: Reduzindo o tamanho de discos rígidos virtuais do VirtualBox
+image: /files/2014/01/virtualbox.png
 ---
 
 É verdade que quando criamos um disco rígido virtual dinamicamente alocado no [VirtualBox](http://www.virtualbox.org/), ele cresce à medida em que arquivos são gravados. No entanto, seu tamanho não diminui à medida em que excluímos arquivos. Veja agora como é possível reduzir discos rígidos desse tipo no VirtualBox.
 
-{% include image.html src="/files/2014/01/virtualbox.png" %}
-
 <!--more-->
+
+{% include image.html src="/files/2014/01/virtualbox.png" %}
 
 Primeiro, é necessário executar um utilitário na **máquina virtual** (*guest*), que vai transformar todo o espaço livre em *bits* zero no disco rígido virtual. Se sua máquina virtual roda Linux, esse utilitário é o **zerofree**, se roda Windows, há o **SDelete**.
 

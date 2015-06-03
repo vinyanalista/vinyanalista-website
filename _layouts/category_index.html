@@ -5,8 +5,8 @@ layout: default
 {% for post in site.categories.[page.category] %}
 <div class="blog-post panel panel-default">
     <div class="panel-heading">
-        <h2 class="blog-post-titulo">
-            <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        <h3 class="blog-post-titulo">
+            <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">{{ post.title }}</a>
         </h2>
         <div class="blog-post-meta row">
             <div class='col-sm-6'>
@@ -35,7 +35,7 @@ layout: default
             <div class='col-sm-6'>
                 <div class='blog-post-redes-sociais'>
                     <!-- AddThis Button BEGIN -->
-                    <div class="addthis_toolbox addthis_default_style" addthis:url="{{ post.url }}" addthis:title="{{ post.title }}" addthis:description="{{ post.excerpt | strip_html | strip_html | truncatewords: 50 }}">
+                    <div class="addthis_toolbox addthis_default_style" addthis:url="{{ post.url }}" addthis:title="{{ post.title }}" addthis:description="{{ post.excerpt | strip_html | strip_html | truncatewords: 55 }}">
                         <a class="addthis_button_facebook"></a>
                         <a class="addthis_button_twitter" data-via="{{ site.twitter_username }}"></a>
                         <a class="addthis_button_google_plusone_share"></a>
@@ -49,8 +49,13 @@ layout: default
         </div>
     </div>
     <div class="blog-post-conteudo panel-body">
-        {{ post.excerpt }}
-        <a href="{{ post.url | prepend: site.baseurl }}">Leia mais >>></a>
+        <div class='col-sm-4'>
+            {% include image.html src=post.image %}
+        </div>
+        <div class='col-sm-8'>
+            <p>{{ post.excerpt | strip_html | strip_newlines | truncatewords: 55 }}</p>
+            <a class='btn btn-primary pull-right' href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">Leia mais ></a>
+        </div>
     </div><!-- .blog-post-conteudo -->
 </div><!-- .blog-post -->
 {% endfor %}

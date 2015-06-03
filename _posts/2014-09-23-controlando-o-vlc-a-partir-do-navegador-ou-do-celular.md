@@ -5,11 +5,10 @@ layout: post
 published: true
 status: publish
 title: Controlando o VLC a partir do navegador ou do celular
+image: /files/2014/09/vlc_remoto_00.jpg
 ---
 
 O [VLC](http://www.videolan.org/vlc/) é o verdadeiro canivete suíço dos vídeos, é um player com vários recursos interessantes, dentre eles a possibilidade de controlar a reprodução remotamente, através do navegador ou do celular. A depender de como você o usa para reproduzir seus arquivos multimídia, isso pode ser interessante. Veja aqui como fazê-lo.
-
-{% include image.html src="/files/2014/09/vlc_remoto_00.jpg" %}
 
 <!--more-->
 

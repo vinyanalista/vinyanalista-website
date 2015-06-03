@@ -5,6 +5,7 @@ layout: post
 published: true
 status: publish
 title: Instalação do Java Development Kit (JDK)
+image: /files/2012/07/java.jpg
 ---
 
 Para começar a programar em [Java](http://www.oracle.com/technetwork/java/index.html), seja para [Desktop](http://www.oracle.com/technetwork/java/javase/), [Web](http://www.oracle.com/technetwork/java/javaee/) ou [celular](http://developer.android.com/), devemos instalar no computador o Java Development Kit (abreviadamente, JDK), que nada mais é que um conjunto de ferramentas que nos auxilia a compilar, testar e documentar programas escritos na linguagem Java. Ele também traz embutido o Java Runtime Environment (JRE), assim não é necessário instalar os dois para desenvolver e executar programas Java.

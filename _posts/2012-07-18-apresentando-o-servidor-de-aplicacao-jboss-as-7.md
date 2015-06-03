@@ -4,7 +4,8 @@ date_gmt: '2012-07-18 22:18:38 -0300'
 layout: post
 published: true
 status: publish
-title: Apresentando o servidor de aplica&ccedil;&atilde;o JBoss AS 7
+title: Apresentando o servidor de aplicação JBoss AS 7
+image: /files/2012/07/jboss_as_01.jpg
 ---
 
 O [JBoss Application Server](http://www.jboss.org/jbossas/) (ou, abreviadamente, JBoss AS) é um servidor de aplicação de código aberto desenvolvido pela [JBoss](http://www.jboss.org/) (atualmente, uma divisão da [Red Hat](http://www.redhat.com/)) para a plataforma [Java EE](http://www.oracle.com/technetwork/java/javaee/). Ele oferece toda a infraestrutura necessária para executar aplicações Web desenvolvidas sobre essa plataforma. Nesse post, você saberá o necessário para começar a desenvolver aplicações Java para a Web utilizando esse servidor.

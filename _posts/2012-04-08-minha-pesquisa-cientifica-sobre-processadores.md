@@ -6,6 +6,7 @@ layout: post
 published: true
 status: publish
 title: Minha pesquisa científica sobre processadores
+image: /files/2012/04/processador.jpg
 ---
 
 {% include image.html src="/files/2012/04/processador.jpg" %}
@@ -16,13 +17,13 @@ Estava apenas aguardando uma oportunidade de divulgar a pesquisa científica que
 
 Resumindo ainda mais, o trabalho apresenta os processadores da Intel fabricados para a arquitetura IBM PC. Muitas explicações que servem para essa arquitetura servem também para outras, de maneira geral. Para ler o trabalho completo, clique no link a seguir (também é possível baixar o arquivo em PDF na [página do Scribd](http://pt.scribd.com/doc/88465424/)). Para mais informações sobre o trabalho, continue lendo.
 
-<!--more-->
-
 <p  style=" margin: 12px auto 6px auto; font-family: Helvetica,Arial,Sans-serif; font-style: normal; font-variant: normal; font-weight: normal; font-size: 14px; line-height: normal; font-size-adjust: none; font-stretch: normal; -x-system-font: none; display: block;">
     <a title="View Pesquisa Científica - Processadores (2009) on Scribd" href="https://pt.scribd.com/doc/88465424/Pesquisa-Cientifica-Processadores-2009"  style="text-decoration: underline;" >Pesquisa Científica - Processadores (2009)</a> by <a title="View Antonio Vinicius Menezes Medeiros's profile on Scribd" href="https://www.scribd.com/vinyanalista"  style="text-decoration: underline;" >Antonio Vinicius Menezes Medeiros</a>
 </p>
 <iframe class="gap scribd_iframe_embed" src="https://www.scribd.com/embeds/88465424/content?start_page=1&view_mode=scroll&access_key=key-9zvuzkb612ddvcamw2b&show_recommendations=false" data-auto-height="false" data-aspect-ratio="0.75" scrolling="no" id="doc_70789" width="100%" height="600" frameborder="0">
 </iframe>
+
+<!--more-->
 
 ### Como surgiu
 

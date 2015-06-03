@@ -5,6 +5,7 @@ layout: post
 published: true
 status: publish
 title: 'Componentes de um computador: hardware e software'
+image: /files/2012/04/componentes-do-computador.png
 ---
 
 Segundo o dicionário Michaelis, [computar](http://michaelis.uol.com.br/moderno/portugues/index.php?lingua=portugues-portugues&palavra=computar) pode significar calcular, avaliar, contar. Os computadores foram criados a princípio para facilitar operações matemáticas, fornecendo os resultados das mesmas com rapidez e precisão.

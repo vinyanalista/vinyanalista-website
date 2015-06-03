@@ -4,14 +4,11 @@ date_gmt: '2013-07-30 02:50:45 -0300'
 layout: post
 published: true
 status: publish
-title: Recuperando o boot do Windows ap&oacute;s instala&ccedil;&atilde;o do Linux
+title: Recuperando o boot do Windows após instalação do Linux
+image: /files/2013/07/windows-startup-recovery1.jpg
 ---
 
-{% include image.html src="/files/2013/07/windows-startup-recovery1.jpg" %}
-
 É, pessoal, sei que é uma situação um tanto inusitada, mas aconteceu comigo hoje, quando tentei instalar o [openSUSE](http://www.opensuse.org/) 12.3 no meu computador, que até então só tinha o Windows 7. O problema mais comum é quando [o Linux já está instalado e então instalamos o Windows](http://www.vivaolinux.com.br/dica/Restaurando-o-GRUB-apos-a-instalacao-de-outro-sistema-operacional), que a princípio impede que outros sistemas sejam inicializados, reservando o computador para si. Mas hoje comigo aconteceu isso: após instalar o openSUSE 12.3, o menu do [GRUB2](http://en.opensuse.org/GRUB) não oferecia a opção de inicializar o Windows. Venho aqui (tentar) descrever a solução.
-
-<!--more-->
 
 ### Instalação do openSUSE
 

@@ -16,6 +16,11 @@ linkedin_username: vinyanalista
 twitter_username: vinyanalista
 youtube_username: viniciusifse
 
+# Plugins
+gems:
+    - jekyll-auto-image
+image: "/img/favicon.png"
+
 # Build settings
 excerpt_separator: <!--more-->
 exclude: [online]
@@ -33,4 +38,5 @@ defaults:
             path: ""
             type: "posts"
         values:
+            is_post: true # http://stackoverflow.com/questions/18675610/jekyll-change-layout-if-page-is-a-post
             permalink: "/blog/:year/:month/:day/:title/"
