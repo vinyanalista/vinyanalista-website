@@ -28,30 +28,30 @@ Esse aviso nos diz que é necessário definir um usuário e uma senha para acess
 
 Execute o script “add-user” dentro da pasta “bin” do servidor (“C:\jboss-as\bin\add-user.bat” no Windows, e “/home/vinicius/jboss-as/bin/add-user.sh” no Linux):
 
-{% highlight bash %}
+```
 $ /home/vinicius/jboss-as/bin/add-user.sh
-{% endhighlight %}
+```
 
 Após iniciar o script, você será guiado no processo de adicionar um novo usuário:
 
-{% highlight text %}
+```
 What type of user do you wish to add?
 a) Management User (mgmt-users.properties)
 b) Application User (application-users.properties)
 (a):
-{% endhighlight %}
+```
 
 Nesse caso, como estamos criando um usuário com a finalidade de administrar o servidor, escolhemos a opção “a”. Ela já é a opção padrão, apenas tecle Enter.
 
 Você será solicitado a fornecer informações sobre o novo usuário. Quando questionado sobre o domínio do usuário (Realm), aceite a opção padrão (ManagementRealm), para isso basta teclar Enter quando chegar nesse campo. No mais, digite nome de usuário, senha e confirme a senha.
 
-{% highlight text %}
+```
 Enter the details of the new user to add.
 Realm (ManagementRealm) :
 Username :
 Password :
 Re-enter Password :
-{% endhighlight %}
+```
 
 Se não houver nada errado, uma mensagem de confirmação será exibida na tela.
 
@@ -97,7 +97,7 @@ Encerrar o servidor, tanto no Windows quanto no Linux, é um procedimento bastan
 
 Aqui ele encerrou o servidor em pequeníssimos 143 milissegundos:
 
-{% highlight text %}
+<script type="syntaxhighlighter" class="brush: text"><![CDATA[
 15:09:21,996 INFO  [org.jboss.as.osgi] (MSC service thread 1-1) JBAS011942: Stopping OSGi Framework
 15:09:22,034 INFO  [org.jboss.as.logging] JBAS011503: Restored bootstrap log handlers
 15:09:22,044 INFO  [org.jboss.weld.deployer] JBAS016009: Stopping weld service for deployment jboss-as-helloworld-jsf.war
@@ -111,7 +111,7 @@ JBAS014776:    Newly corrected services:
 service jboss.server.controller.management.security_realm.ApplicationRealm.properties_authentication (new available)
 
 15:09:22,121 INFO  [org.jboss.as] JBAS015950: JBoss AS 7.1.1.Final "Brontes" stopped in 143ms
-{% endhighlight %}
+]]></script>
 
 ### Mais informações sobre o JBoss AS
 

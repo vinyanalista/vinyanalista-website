@@ -28,9 +28,9 @@ Nesse passo-a-passo, precisaremos ainda do código-fonte da aplicação de exemp
 
 Os links para download direto dos arquivos mencionados acima são [esse](http://download.jboss.org/jbossas/7.1/jboss-as-7.1.1.Final/jboss-as-7.1.1.Final.zip) e [esse](http://download.jboss.org/jbossas/7.1/jboss-as-7.1.1.Final/jboss-as-7.1.1.Final.tar.gz). No caso do Linux, é possível baixar este arquivo pelo terminal usando o comando **wget**:
 
-{% highlight bash %}
+```
 $ wget http://download.jboss.org/jbossas/7.1/jboss-as-7.1.1.Final/jboss-as-7.1.1.Final.tar.gz
-{% endhighlight %}
+```
 
 ### Instalação do JBoss AS
 
@@ -42,17 +42,17 @@ No Windows, fiz a extração do arquivo na raiz do disco “C:\” e renomeei a 
 
 No Linux é mais prático fazer a instalação na pasta home do usuário. Se a finalidade de usar o JBoss AS é didática, recomendo essa instalação, porque é mais fácil de manter (não é necessário obter privilégios de administrador sempre que for necessário alterar algum arquivo à mão, por exemplo). No terminal, os comandos para download e extração seriam (já estou incluindo o comando para renomear a pasta, conforme sugeri):
 
-{% highlight bash %}
+```
 $ cd /home/vinicius/
 $ wget http://download.jboss.org/jbossas/7.1/jboss-as-7.1.1.Final/jboss-as-7.1.1.Final.tar.gz
 $ tar zxvf jboss-as-7.1.1.Final.tar.gz
 $ mv jboss-as-7.1.1.Final jboss-as
 $ rm jboss-as-7.1.1.Final.tar.gz
-{% endhighlight %}
+```
 
 É possível instalar também em uma localização global, visível a todos os usuários. No caso específico do JBoss AS, já que estamos falando de um servidor, talvez essa seja a instalação mais comum. Para fazer isso, o procedimento é parecido, mas é necessário ter permissões de administrador:
 
-{% highlight bash %}
+```
 $ cd /home/vinicius/
 $ wget http://download.jboss.org/jbossas/7.1/jboss-as-7.1.1.Final/jboss-as-7.1.1.Final.tar.gz
 # mv jboss-as-7.1.1.Final.tar.gz /opt
@@ -60,7 +60,7 @@ $ wget http://download.jboss.org/jbossas/7.1/jboss-as-7.1.1.Final/jboss-as-7.1.1
 # tar zxvf jboss-as-7.1.1.Final.tar.gz
 # mv jboss-as-7.1.1.Final jboss-as
 # rm jboss-as-7.1.1.Final.tar.gz
-{% endhighlight %}
+```
 
 No primeiro caso, o caminho para o JBoss AS passa a ser “/home/vinicius/jboss-as” e, no segundo, “/opt/jboss-as”.
 
@@ -72,21 +72,21 @@ Para iniciar o servidor dessa maneira, no Windows, usando o Windows Explorer mes
 
 No Windows, também é possível iniciar o JBoss AS pela linha de comando, invocando esse mesmo script. Nesse caso, a própria janela de terminal na qual o comando é invocado passa a exibir a saída do servidor (é importante observar que não é possível executar nenhum outro comando nessa mesma janela enquanto o servidor estiver em execução). O comando fica:
 
-{% highlight powershell %}
+```
 > C:\jboss-as\bin\standalone.bat
-{% endhighlight %}
+```
 
 No Linux, para iniciar o JBoss AS em modo standalone, devemos executar em uma janela de terminal o seguinte comando (supondo que o JBoss AS esteja instalado na pasta “/home/vinicius/jboss-as”):
 
-{% highlight bash %}
+```
 $ ./home/vinicius/jboss-as/bin/standalone.sh
-{% endhighlight %}
+```
 
 Nesse caso, a própria janela de terminal na qual o comando é invocado passa a exibir a saída do servidor e, assim como acontece no Windows, não é possível executar nenhum outro comando nessa mesma janela enquanto o servidor estiver em execução.
 
 O terminal deve exibir uma saída parecida com essa, resultado da inicialização do servidor:
 
-{% highlight text %}
+<script type="syntaxhighlighter" class="brush: text"><![CDATA[
 =========================================================================
 
 JBoss Bootstrap Environment
@@ -126,7 +126,7 @@ JAVA_OPTS:  -server -XX:+TieredCompilation -Xms64m -Xmx512m -XX:MaxPermSize=256m
 04:35:36,270 INFO  [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-2) JBAS010400: Bound data source 1
 04:35:36,294 INFO  [org.jboss.as] (Controller Boot Thread) JBAS015951: Admin console listening on http://127.0.0.1:9990
 04:35:36,295 INFO  [org.jboss.as] (Controller Boot Thread) JBAS015874: JBoss AS 7.1.1.Final "Brontes" started in 8025ms - Started 133 of 208 services (74 services are passive or on-demand)
-{% endhighlight %}
+]]></script>
 
 Tanto no Windows quanto no Linux, após iniciado o servidor, abra seu navegador de preferência e acesse o endereço “[http://localhost:8080](http://localhost:8080)” (a porta 8080 é a utilizada pelo JBoss AS por padrão, mas essa porta pode ser alterada na configuração do servidor). Você deve ver a tela de boas vindas do JBoss AS:
 
@@ -146,25 +146,25 @@ Você está baixando um arquivo **.zip** (no momento da escrita deste post, nome
 
 Quando o download acabar, extraia o conteúdo desse arquivo para uma pasta de fácil acesso. No Linux, o comando para extração desse arquivo é:
 
-{% highlight bash %}
+```
 $ unzip jboss-jdf-jboss-as-quickstart-7.1.1.Final-0-gbcbcf69.zip
-{% endhighlight %}
+```
 
 Isso cria uma pasta contendo as aplicações de exemplo (aqui se chama “jboss-jdf-jboss-as-quickstart-8505020″), entre nessa pasta e, em seguida, entre na pasta “helloworld-jsf” (usuários de Windows também devem entrar nessa pasta pelo terminal, já que vamos executar um comando do Maven dentro dela):
 
-{% highlight bash %}
+```
 $ cd jboss-jdf-jboss-as-quickstart-8505020/helloworld-jsf
-{% endhighlight %}
+```
 
 Certifique-se de que o JBoss AS esteja em execução e invoque o seguinte comando do Maven, que compilará, testará, empacotará e realizará o deploy da aplicação no servidor:
 
-{% highlight bash %}
+```
 $ mvn package jboss-as:deploy
-{% endhighlight %}
+```
 
 Ao final do processo, o console do Maven deve mostrar uma saída parecida com essa, informando que tudo ocorreu conforme o esperado:
 
-{% highlight text %}
+<script type="syntaxhighlighter" class="brush: text"><![CDATA[
 Jul 18, 2012 1:50:00 PM org.xnio.Xnio
 INFO: XNIO Version 3.0.3.GA
 Jul 18, 2012 1:50:00 PM org.xnio.nio.NioXnio
@@ -178,11 +178,11 @@ INFO: JBoss Remoting version 3.2.3.GA
 [INFO] Finished at: Wed Jul 18 13:50:14 GMT+00:00 2012
 [INFO] Final Memory: 9M/41M
 [INFO] ------------------------------------------------------------------------
-{% endhighlight %}
+]]></script>
 
 O console do JBoss AS deve mostrar que o deploy da aplicação foi realizado com sucesso:
 
-{% highlight text %}
+<script type="syntaxhighlighter" class="brush: text"><![CDATA[
 13:50:04,206 INFO  [org.jboss.as.repository] (management-handler-thread - 2) JBAS014900: Content added at location /root/jboss-as/standalone/data/content/1d/9f4c3c67cd2fb194ee4aacb3d990ab70da0b48/content
 13:50:04,261 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-2) JBAS015876: Starting deployment of "jboss-as-helloworld-jsf.war"
 13:50:06,650 INFO  [org.jboss.weld.deployer] (MSC service thread 1-2) JBAS016002: Processing weld deployment jboss-as-helloworld-jsf.war
@@ -199,7 +199,7 @@ O console do JBoss AS deve mostrar que o deploy da aplicação foi realizado com
 13:50:14,435 INFO  [javax.enterprise.resource.webcontainer.jsf.config] (MSC service thread 1-2) Monitoring jndi:/default-host/jboss-as-helloworld-jsf/WEB-INF/faces-config.xml for modifications
 13:50:14,487 INFO  [org.jboss.web] (MSC service thread 1-2) JBAS018210: Registering web context: /jboss-as-helloworld-jsf
 13:50:14,539 INFO  [org.jboss.as.server] (management-handler-thread - 2) JBAS018559: Deployed "jboss-as-helloworld-jsf.war"
-{% endhighlight %}
+]]></script>
 
 Feito isso, podemos acessar a aplicação usando o navegador através do endereço “[http://localhost:8080/jboss-as-helloworld-jsf/](http://localhost:8080/jboss-as-helloworld-jsf/)“:
 
@@ -209,8 +209,8 @@ Essa é uma aplicação Web 2.0 com [AJAX](http://www.w3schools.com/ajax/default
 
 Se quisermos, podemos remover a aplicação do servidor (diz-se fazer o undeploy) através do Maven, usando o comando (deve ser executado da pasta que contém o código-fonte da aplicação):
 
-{% highlight text %}
+```
 $ mvn jboss-as:undeploy
-{% endhighlight %}
+```
 
 Também podemos fazer deploy e undeploy de aplicações no servidor, entre outras configurações, usando o console de administração do JBoss AS. Examinaremos esse console na [segunda parte desse post]({% post_url 2012-07-18-apresentando-o-servidor-de-aplicacao-jboss-as-7-parte-2 %}).

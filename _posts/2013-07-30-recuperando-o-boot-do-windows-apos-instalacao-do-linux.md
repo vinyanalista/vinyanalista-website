@@ -16,7 +16,7 @@ A configuração dos meus HDs é bastante semelhante àquela encontrada ano pass
 
 Executando o comando **fdisk**, obtenho o seguinte:
 
-{% highlight bash %}
+<script type="syntaxhighlighter" class="brush: text"><![CDATA[
 Disk /dev/sda: 1000.2 GB, 1000204886016 bytes
 255 heads, 63 sectors/track, 121601 cylinders, total 1953525168 sectors
 Units = sectors of 1 * 512 = 512 bytes
@@ -40,7 +40,7 @@ Disk identifier: 0x1ba01b9f
 
    Device Boot      Start         End      Blocks   Id  System
 /dev/sdb1            2048   488396799   244197376    7  HPFS/NTFS/exFAT
-{% endhighlight %}
+]]></script>
 
 Durante a instalação do openSUSE 12.3, não alterei as configurações do *bootloader*. O instalador automaticamente selecionou a melhor configuração para o meu computador (que no caso de o Linux estar em uma partição estendida, é [instalar o *bootloader* na partição estendida](http://en.opensuse.org/SDB:Prefered_bootloader_options)).
 
@@ -68,9 +68,9 @@ A instalação executou seus procedimentos de manutenção, após os quais reini
 
 Executei novamente os passos 1 a 3 acima, até chegar naquela tela em que cliquei em “Startup Recovery”, mas dessa vez escolhi “Command Prompt”. Executei o seguinte comando e reiniciei o computador:
 
-{% highlight powershell %}
+```
 > bootrec /rebuildbcd
-{% endhighlight %}
+```
 
 Nada mudou: além de não conseguir acessar o Windows, não conseguia acessar o menu do GRUB2, e ainda havia a reclamação de duas partições ativas. Agora vejo no meu post anterior que [eu poderia ter tentado outros comandos](http://www.vinyanalista.com.br/blog/2012/04/21/problemas-envolvendo-bootloaders-mbr-e-tabela-de-particoes/), mas enfim… hoje o que eu executei foi esse e consegui resolver. Não após ele, ainda falta alguns passos da minha solução...
 
@@ -84,9 +84,9 @@ Reiniciei novamente o computador e dessa vez consegui o menu do GRUB2, ainda sem
 
 Iniciei o computador pelo openSUSE instalado no HD. Após pesquisar e ler um bocadinho, descobri que o comando responsável pela reconfiguração do GRUB2 no openSUSE é o seguinte:
 
-{% highlight bash %}
+```
 # grub2-mkconfig -o /boot/grub2/grub.cfg
-{% endhighlight %}
+```
 
 Reiniciei o computador, mas nada mudou... iniciei o openSUSE novamente. Agora não me perguntem por que cargas d’água, **esse comando só funcionou depois que eu montei a partição do Windows** (isso pode ser feito pelo Dolphin, ao tentar abrir a partição do Windows, ou, para os mais experientes, usando o comando **mount**). Montei a partição do Windows, executei a reconfiguração do GRUB2 novamente e, dessa vez, quando reiniciei o computador, tudo estava normal de novo…
 

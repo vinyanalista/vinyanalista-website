@@ -44,27 +44,27 @@ Se sua distribuição não provê um meio padrão de instalar o JDK (ou se por q
 
 Para instalar o JDK dessa maneira, baixe-o da [página de downloads do Java SE](http://www.vinyanalista.com.br/blog/2012/07/10/instalacao-do-java-development-kit-jdk/www.oracle.com/technetwork/java/javase/downloads/) utilizando o navegador de sua preferência ou o comando **wget** no terminal (a seguir, forneço o link para download direto da versão do JDK usada nesse tutorial):
 
-{% highlight bash %}
+```
 $ cd /home/vinicius/
 $ wget http://download.oracle.com/otn-pub/java/jdk/7u5-b05/jdk-7u5-linux-i586.tar.gz
-{% endhighlight %}
+```
 
 No Linux, é possível instalar o JDK em um local global, de forma que todos os usuários do sistema possam utilizá-lo (requer permissão de administrador), ou na sua pasta pessoal, de forma que apenas você possa utilizá-lo (não requer permissão, além de ser mais simples para iniciantes).
 
 Para demonstrar como instalar o JDK numa localização global, vou utilizar a pasta “/opt”. Para fazer isso, mova o arquivo baixado (no nosso exemplo aqui, “jdk-7u5-linux-i586.tar.gz”) para essa pasta e lá extraia seu conteúdo. O caminho para o JDK será então “/opt/jdk1.7.0_05″ (se atente a esse caminho). Após a extração, o arquivo baixado pode ser excluído. Os comandos de terminal para realizar esses procedimentos são:
 
-{% highlight bash %}
+```
 # mv /home/vinicius/jdk-7u5-linux-i586.tar.gz /opt
 # cd /opt
 # tar zxvf jdk-7u5-linux-i586.tar.gz
 # rm jdk-7u5-linux-i586.tar.gz
-{% endhighlight %}
+```
 
 Para instalar o JDK na sua pasta pessoal o procedimento é parecido. No meu caso, como já baixei o JDK nessa pasta, apenas precisei descompactá-lo. O comando que utilizei para isso foi:
 
-{% highlight bash %}
+```
 $ tar zxvf jdk-7u5-linux-i586.tar.gz
-{% endhighlight %}
+```
 
 Nesse caso, o caminho para o JDK será “/home/vinicius/jdk1.7.0_05″.
 
@@ -112,21 +112,21 @@ Se você instalou o JDK utilizando o mecanismo preferido de sua distribuição, 
 
 Se você instalou o JDK para todos os usuários, abra com o seu editor de preferência o arquivo “/etc/profile” e acrescente as seguintes linhas no final (você deve substituir, se necessário, a localização do JDK, que no nosso exemplo foi “/opt/jdk1.7.0_05″):
 
-{% highlight bash %}
+<script type="syntaxhighlighter" class="brush: bash; gutter: false"><![CDATA[
 export JAVA_HOME="/opt/jdk1.7.0_05"
 export CLASSPATH="$JAVA_HOME/lib"
 export PATH="$PATH:$JAVA_HOME/bin"
 export MANPATH="$MANPATH:$JAVA_HOME/man"
-{% endhighlight %}
+]]></script>
 
 Se você instalou o JDK apenas para o seu usuário, a alteração deve ocorrer no arquivo “~/.bashrc”. Abra esse arquivo com o seu editor de preferência e acrescente as seguintes linhas no final (você deve substituir, se necessário, a localização do JDK, que no nosso exemplo foi “/home/vinicius/jdk1.7.0_05″):
 
-{% highlight bash %}
+<script type="syntaxhighlighter" class="brush: bash; gutter: false"><![CDATA[
 export JAVA_HOME="/home/vinicius/jdk1.7.0_05"
 export CLASSPATH="$JAVA_HOME/lib"
 export PATH="$PATH:$JAVA_HOME/bin"
 export MANPATH="$MANPATH:$JAVA_HOME/man"
-{% endhighlight %}
+]]></script>
 
 Em qualquer um dos dois casos, as alterações serão aplicadas a qualquer nova janela de terminal aberta.
 
@@ -134,32 +134,32 @@ Em qualquer um dos dois casos, as alterações serão aplicadas a qualquer nova 
 
 As instruções a seguir servem para Windows e Linux. Para testar a instalação do JDK, abra uma janela de terminal e execute o comando a seguir, que deve informar a versão do JDK instalado no seu computador:
 
-{% highlight bash %}
+```
 $ javac -version
-{% endhighlight %}
+```
 
 Como teste, também podemos criar um pequeno programa Java, compilá-lo e executá-lo. Em alguma pasta à qual você tenha acesso (aqui utilizarei minha pasta pessoal no Linux, “/home/vinicius”), crie um arquivo de texto simples chamado “Teste.java”. Abra esse arquivo com um editor de texto e insira o seguinte conteúdo:
 
-{% highlight java %}
+<script type="syntaxhighlighter" class="brush: java; gutter: false"><![CDATA[
 public class Teste {
     public static void main(String args[]) {
         System.out.println("Olá!");
     }
 }
-{% endhighlight %}
+]]></script>
 
 Agora no terminal, entre nessa pasta e invoque o compilador do Java (**javac**) passando o arquivo que você acabou de criar como parâmetro:
 
-{% highlight bash %}
+```
 $ cd /home/vinicius/
 $ javac Teste.java
-{% endhighlight %}
+```
 
 Perceba que um arquivo “Teste.class” é criado como resultado da compilação. Ainda no terminal, invoque a máquina virtual Java (**java**) passando o nome da classe compilada como parâmetro:
 
-{% highlight bash %}
+```
 $ java Teste
-{% endhighlight %}
+```
 
 Se a mensagem “Olá!” apareceu na tela, tudo está funcionando perfeitamente.
 
@@ -171,9 +171,9 @@ No Windows, o instalador do JDK já se encarrega de instalar e configurar o plug
 
 No Linux, esse plugin acompanha o JDK, mas é necessário criar um link simbólico na pasta onde o Firefox está instalado para que o navegador consiga localizar o plugin. Para isso, supondo que o JDK encontra-se em “/opt/jdk1.7.0_5/” e o Firefox em “/usr/lib/mozilla”, basta executar o seguinte comando no terminal:
 
-{% highlight bash %}
+```
 # ln -s /opt/jdk1.7.0_5/jre/lib/i386/libnpjp2.so /usr/lib/mozilla/plugins/
-{% endhighlight %}
+```
 
 Para verificar que o navegador reconhece o plugin, digite na aba de endereços “about:plugins” e tecle Enter. O plugin do Java deve aparecer na lista de plugins instalados:
 

@@ -82,7 +82,7 @@ Da parte do servidor está tudo OK. Agora é só configurar a aplicação para u
 
 Agora nós precisamos configurar nossa aplicação para se comunicar com a base de dados utilizando o datasource configurado no servidor de aplicação. O arquivo central da configuração da JPA ([Java Persistence API](http://docs.oracle.com/javaee/6/tutorial/doc/bnbpy.html)) no projeto, o “META-INF/persistence.xml”, vai sofrer algumas alterações. Observe as linhas destacadas:
 
-{% highlight xml %}
+<script type="syntaxhighlighter" class="brush: xml; highlight: [6, 8]"><![CDATA[
 <?xml version="1.0" encoding="UTF-8"?>
 <persistence xmlns="http://java.sun.com/xml/ns/persistence"
    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -97,23 +97,23 @@ Agora nós precisamos configurar nossa aplicação para se comunicar com a base 
       </properties>
    </persistence-unit>
 </persistence>
-{% endhighlight %}
+]]></script>
 
 Observe que estou utilizando o [Hibernate](http://www.hibernate.org/) como implementação JPA, já que estamos utilizando o JBoss AS como servidor de aplicação.
 
 No código-fonte da aplicação, sempre for necessário um [EntityManager](http://docs.oracle.com/javaee/6/api/javax/persistence/EntityManager.html) para [manusear entidades JPA](http://docs.oracle.com/javaee/6/tutorial/doc/bnbqw.html), você pode solicitar ao servidor de aplicação que injete-o (isso significa que você não precisa criar o objeto manualmente, o servidor de aplicação cria o objeto para você) anotando sua variável com [@PersistenceContext](http://docs.oracle.com/javaee/6/api/javax/persistence/PersistenceContext.html) e especificando o nome da persistence-unit, como definida no arquivo “META-INF/persistence.xml”:
 
-{% highlight java %}
+<script type="syntaxhighlighter" class="brush: java; gutter: false"><![CDATA[
 @PersistenceContext(name="TestePU")
 EntityManager entityManager;
-{% endhighlight %}
+]]></script>
 
 Se sua aplicação possui apenas uma persistence-unit, essa informação pode ser omitida:
 
-{% highlight java %}
+<script type="syntaxhighlighter" class="brush: java; gutter: false"><![CDATA[
 @PersistenceContext
 EntityManager entityManager;
-{% endhighlight %}
+]]></script>
 
 ### Aplicação de exemplo
 
@@ -123,9 +123,9 @@ Entre na pasta da aplicação (no meu caso, “/home/vinicius/jboss-jdf-jboss-as
 
 Pronto! Agora é só implantar a aplicação com o [Maven](http://maven.apache.org/) (caso você não tenha o Maven em seu computador, leia [esse post](http://www.vinyanalista.com.br/blog/2012/07/18/instalacao-do-apache-maven/)):
 
-{% highlight bash %}
-$ mvn package jboss-as:deploy
-{% endhighlight %}
+```
+mvn package jboss-as:deploy
+```
 
 Se tudo ocorrer conforme o esperado, a aplicação de exemplo poderá ser acessada através do endereço “[http://localhost:8080/jboss-as-greeter/](http://localhost:8080/jboss-as-greeter/)“.
 

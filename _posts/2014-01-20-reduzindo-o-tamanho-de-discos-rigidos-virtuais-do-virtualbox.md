@@ -20,39 +20,39 @@ A [página na qual descobri o zerofree](http://www.thelinuxdaily.com/2010/02/shr
 
 Se você tiver um LiveCD do Ubuntu, o **zerofree** pode ser instalado nele via:
 
-{% highlight bash %}
+```
 # apt-get install zerofree
-{% endhighlight %}
+```
 
 O openSUSE também possui o **zerofree** nos repositórios oficiais da distribuição:
 
-{% highlight bash %}
+```
 # zypper in zerofree
-{% endhighlight %}
+```
 
 Se for usar o LiveCD de outra distribuição, pesquise na Internet como obter o **zerofree** para a sua distribuição.
 
 Se você não souber identificar o disco rígido, o utilitário **fdisk** pode dar uma pista:
 
-{% highlight bash %}
+```
 # fdisk -l
-{% endhighlight %}
+```
 
 No meu caso, vou compactar o **/dev/sda1**.
 
 Montamos o disco rígido como somente leitura em uma pasta temporária e executamos o **zerofree** nele:
 
-{% highlight bash %}
+```
 # mkdir /mnt/tmp
 # mount -o ro /dev/sda1 /mnt/tmp
 # zerofree /dev/sda1
-{% endhighlight %}
+```
 
 Se sua máquina virtual roda Windows, você deve baixar o [SDelete](http://technet.microsoft.com/en-us/sysinternals/bb897443.aspx), abrir o Prompt de Comando, ir até a pasta onde o **SDelete** foi baixado e executar o comando:
 
-{% highlight powershell %}
+```
 > sdelete -c C:/
-{% endhighlight %}
+```
 
 Onde **C** é a letra da unidade cujo espaço livre deseja-se converter em **bits** zero.
 
@@ -60,16 +60,16 @@ Após executar o **zerofree** ou o **SDelete**, devemos voltar à **máquina rea
 
 Se sua máquina real roda Linux:
 
-{% highlight bash %}
+```
 $ VBoxManage modifyhd /caminho/para/o/hd/virtual.vdi --compact
-{% endhighlight %}
+```
 
 Se sua máquina real roda Windows, provavelmente você terá que ir até a pasta do VirtualBox para executar o comando:
 
-{% highlight powershell %}
+```
 > cd "C:\Program Files\Oracle\VirtualBox"
 > VBoxManage modifyhd "C:\caminho\para\o\hd\virtual.vdi" --compact
-{% endhighlight %}
+```
 
 Foi assim que hoje consegui reduzir um disco rígido virtual de 6,5GB para 5GB. Foi uma redução pequena, mas isso varia de um caso para outro. O autor [desse post no Make Tech Easier](http://www.maketecheasier.com/shrink-your-virtualbox-vm) conseguiu uma redução de 45% no espaço que o disco rígido virtual ocupava (de 10GB para 5,5GB).
 

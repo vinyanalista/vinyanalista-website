@@ -20,7 +20,7 @@ Gente, a tarde de ontem foi um sufoco! Acidentalmente excluí a tabela de parti�
 
 Vou tentar ser breve nessa explicação (realmente é uma longa história, se estiverem mais interessados nas possíveis soluções para o problema, podem pular pros próximos tópicos). Tenho dois HDs, particionados como mostra a saída do comando `fdisk` no Linux a seguir. Em resumo, são duas partições pros sistemas operacionais (Windows 7 e [Debian](http://www.debian.org/)) e duas partições para arquivos pessoais.
 
-{% highlight text linenos %}
+<script type="syntaxhighlighter" class="brush: text; gutter: false"><![CDATA[
 Disk /dev/sdb: 250.1 GB, 250059350016 bytes
 255 heads, 63 sectors/track, 30401 cylinders, total 488397168 sectors
 Units = sectors of 1 * 512 = 512 bytes
@@ -44,7 +44,7 @@ Device    Boot      Start         End      Blocks   Id  System
 /dev/sda3      1468010496  1887440895   209715200    7  HPFS/NTFS/exFAT
 /dev/sda4   *  1887442942  1953523711    33040385    5  Extended
 /dev/sda5      1887442944  1953523711    33040384   83  Linux
-{% endhighlight %}
+]]></script>
 
 Como estou pensando em mudar de distribuição, hoje decidi instalar o [openSUSE](http://www.opensuse.org/) no lugar do Debian. Gravei o CD do openSUSE, nenhum procedimento de backup, já que estou acostumado a formatações (um erro, admito), iniciei o computador pelo CD, respondi a todas as perguntas do instalador, iniciou-se a cópia dos arquivos, até aí tudo bem.
 
@@ -54,15 +54,15 @@ Só que a essa altura do campeonato o instalador já tinha formatado a partiçã
 
 O comando que eu queria executar deveria apagar apenas o gerenciador de boot (bootloader) do Linux, o GRUB, no entanto ele apagou a MBR inteira, incluindo a tabela de partições. O comando que eu utilizei foi:
 
-{% highlight bash %}
+```
 # dd if=/dev/null of=/dev/sda bs=512 count=1
-{% endhighlight %}
+```
 
 Quando deveria ser (esses comandos eu obtive [aqui](http://www.cyberciti.biz/faq/linux-how-to-uninstall-grub/), por que o cidadão que escreveu aquele tutorial tinha que ter colocado aquele comando primeiro, hein?):
 
-{% highlight bash %}
+```
 # dd if=/dev/null of=/dev/sda bs=446 count=1
-{% endhighlight %}
+```
 
 Quando reiniciei o computador, aparece na tela a mensagem de sistema operacional ausente. Foi então que executando o [GParted](http://gparted.sourceforge.net/) através de um LiveCD do [Ubuntu](http://www.ubuntu.com/) percebi o engano: ele informava que o HD não tinha uma tabela de partições (já citei aqui quatro distribuições, perceberam? rsrsrs).
 
@@ -82,21 +82,21 @@ Eu cliquei em “Startup Repair”, esperei ele concluir o reparo, e após isso,
 
 Depois disso iniciei novamente o computador pelo DVD do Windows 7 e tentei reparar manualmente o MBR, como sugerido [nesse outro site](http://www.howtogeek.com/howto/32523/how-to-manually-repair-windows-7-boot-loader-problems/). Os primeiros passos são os mesmos, exceto que, chegando na tela da imagem acima, ao invés de clicar em “Startup Repair” eu cliquei em “Command Prompt” para digitar os comandos manualmente. Tentei o seguinte comando, reiniciei pra ver se algo mudou, e vi que o erro permanecia.
 
-{% highlight powershell %}
+```
 > bootrec /fixmbr
-{% endhighlight %}
+```
 
 Repeti os passos, executei esse outro comando, reiniciei novamente, e nada mudou:
 
-{% highlight powershell %}
+```
 > bootrec /fixboot
-{% endhighlight %}
+```
 
 Por último, testei esse outro comando de terminal sugerido [nessa página](http://www.ehow.com/how_4836283_repair-mbr-windows.html), seguindo praticamente os mesmos procedimentos (só mudou o comando, claro), e aparentemente nada mudou, de novo:
 
-{% highlight powershell %}
+```
 > bootsect /nt60 all
-{% endhighlight %}
+```
 
 Inseri o LiveCD do Ubuntu na unidade e iniciei o Linux por ele. Já estava disposto a tentar alguma ferramenta Linux, quando abri o [Nautilus](http://live.gnome.org/Nautilus) e verifiquei que todas as partições estavam listadas. Eu as abri, abri algumas pastas, abri alguns arquivos, tudo aparentemente estava no lugar.
 
@@ -122,18 +122,18 @@ Mais uma rodada de tentativas executando aqueles comandos que eu mostrei acima, 
 
 Encontrei algumas soluções na Internet, mas decidi tentar primeiro a que tinha [no site da Microsoft](http://support.microsoft.com/kb/2622803): tentei o método 2 fornecido nessa página, que consiste em executar, da mesma forma que os comandos anteriores, o comando:
 
-{% highlight powershell %}
+```
 > Bootrec /RebuildBcd
-{% endhighlight %}
+```
 
 Executei, reiniciei o computador e, novamente, **nada**! Em dois fóruns ([aqui](http://www.tomshardware.com/forum/6610-63-0xc000000e-caused-media-drive) e [aqui](http://forum.clubedohardware.com.br/resolvido-bootmgr-is/674691)) eu vi a sugestão de desconectar todos os HDs e dispositivos removíveis (pendrives, cartões de memória, etc.) antes de executar o comando acima, deixando apenas o disco que se quer recuperar. Desliguei meu computador, abri o gabinete, retirei o cabo de força do outro HD que eu tenho, tirei o pendrive que tinha o Slax, reiniciei o procedimento e... **nada**!
 
 A última sugestão que eu tentei foi a solução definitiva. [Nesse site](http://www.pcdicasuteis.com/bootmgr-is-missing-press-ctrlaltdel-to-restart-windows-7), eles indicam copiar o arquivo BOOTMGR do DVD de instalação do Windows pro HD no qual ele está faltando. Eu iniciei o computador por esse DVD, abri o terminal (como indicado acima) e executei os seguintes comandos (suponha que `D:` seja a sua unidade de CD/DVD na qual se encontra o DVD de instalação do Windows 7 e `C:` seja o disco rígido que você pretende reparar):
 
-{% highlight powershell %}
+```
 > cd D:
 > copy bootmgr C:
-{% endhighlight %}
+```
 
 Simples assim! Reiniciei o computador e ele carregou o sistema operacional do mesmo jeito que estava antes.
 
@@ -149,9 +149,9 @@ Eu poderia [facilmente recuperar o GRUB](http://www.vivaolinux.com.br/dica/Resta
 
 Antes de instalar o openSUSE, obviamente, eu fiz uma [cópia do MBR](http://www.hardware.com.br/dicas/fazendo-backup-recuperando-mbr-tabela-particoes.html), já pensou se eu tivesse problemas com isso de novo? Para isso, usei o próprio LiveCD do openSUSE, executando o seguinte comando como root em uma janela de terminal (suponha que `/dev/sda` seja o caminho para o HD cujo MBR você deseja copiar):
 
-{% highlight bash %}
+```
 # dd if=/dev/sda of=backup.mbr bs=512 count=1
-{% endhighlight %}
+```
 
 Aqui fica uma dica aos que um dia precisarem fazer algum dia o backup de um MBR: por motivos óbvios, você não deve salvar esse backup no mesmo disco (não falo na mesma partição não, é no mesmo disco, mesmo!). Se acidentalmente o MBR desse disco for excluído, como você vai conseguir acessar dentro do disco o arquivo que contém o backup para restaurá-lo? O trauma com essa experiência foi tão grande que o backup que eu fiz do MBR eu salvei nos meus dois pendrives.
 
