@@ -24,7 +24,7 @@ image: "/img/favicon.png"
 # Build settings
 excerpt_separator: <!--more-->
 exclude: [online]
-markdown: kramdown
+markdown: redcarpet
 
 # Paginação
 category_title_prefix: 'Posts na categoria '

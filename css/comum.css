@@ -52,6 +52,45 @@ h2.blog-post-titulo {
     margin-bottom: 30px;
 }
 
+/* https://demisx.github.io/jekyll/2014/01/13/improve-code-highlighting-in-jekyll.html */
+
+.highlight .lineno,
+.syntaxhighlighter td.number {
+    -moz-user-select: none;
+    -o-user-select: none;
+    -webkit-user-select: none;
+    color: #ccc;
+}
+
+.highlight .lineno::-moz-selection,
+.highlight .lineno::selection,
+.syntaxhighlighter td.number::-moz-selection,
+.syntaxhighlighter td.number::selection {
+    background-color: transparent;
+}
+
+.highlight .lineno {
+    border-right:1px solid #ccc;
+    display: inline-block;
+    padding: 0 5px;
+}
+
+.highlight pre code {
+    display: block;
+    overflow-x: auto;
+    white-space: pre;
+    word-wrap: normal;
+}
+
+.syntaxhighlighter {
+    border: 1px solid #DDD !important;
+    border-radius: 3px;
+}
+
+.syntaxhighlighter * {
+    box-sizing: content-box;
+}
+
 #blog-principal {
     line-height: 1.5;
 }
