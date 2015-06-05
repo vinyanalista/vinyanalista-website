@@ -67,33 +67,57 @@ layout: default
     <ul class="pager">
         {% if paginator.previous_page %}
         <li class="previous">
-            <a href="{{ '/' | prepend: site.baseurl | replace: '//', '/' }}">← Primeiro</a>
+            <a href="{{ '/' | prepend: site.baseurl | replace: '//', '/' }}">
+                <span class="visible-xs-inline">&lt;&lt;</span>
+                <span class="hidden-xs">← Primeiro</span>
+            </a>
         </li>
         <li>
-            <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' | replace: 'index.html', ''  }}">Anterior</a>
+            <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' | replace: 'index.html', ''  }}">
+                <span class="visible-xs-inline">&lt;</span>
+                <span class="hidden-xs">Anterior</span>
+            </a>
         </li>
         {% else %}
         <li class="disabled previous">
-            <span>← Primeiro</span>
+            <span>
+                <span class="visible-xs-inline">&lt;&lt;</span>
+                <span class="hidden-xs">← Primeiro</span>
+            </span>
         </li>
         <li class="disabled">
-            <span>Anterior</span>
+            <span>
+                <span class="visible-xs-inline">&lt;</span>
+                <span class="hidden-xs">Anterior</span>
+            </span>
         </li>
         {% endif %}
         
         {% if paginator.next_page %}
         <li>
-            <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Próximo</a>
+            <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">
+                <span class="visible-xs-inline">&gt;</span>
+                <span class="hidden-xs">Próximo</span>
+            </a>
         </li>
         <li class="next">
-            <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', paginator.total_pages }}">Último →</a>
+            <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', paginator.total_pages }}">
+                <span class="visible-xs-inline">&gt;&gt;</span>
+                <span class="hidden-xs">Último →</span>
+            </a>
         </li>
         {% else %}
         <li class="disabled">
-            <span>Próximo</span>
+            <span>
+                <span class="visible-xs-inline">&gt;</span>
+                <span class="hidden-xs">Próximo</span>
+            </span>
         </li>
         <li class="disabled next">
-            <span>Último →</span>
+            <span>
+                <span class="visible-xs-inline">&gt;&gt;</span>
+                <span class="hidden-xs">Último →</span>
+            </span>
         </li>
         {% endif %}
     </ul>

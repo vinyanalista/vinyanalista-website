@@ -95,6 +95,10 @@ h2.blog-post-titulo {
     word-wrap: normal;
 }
 
+.pager > li > a, .pager > li > span {
+    padding: 10px 20px;
+}
+
 /* http://getbootstrap.com/getting-started/#third-parties */
 
 .reset-box-sizing,
@@ -115,44 +119,10 @@ h2.blog-post-titulo {
     line-height: 1.5;
 }
 
-@media (max-width: 329px) {
-    .pager {
-        font-size: 9px;
-    }
-}
-
-@media (min-width: 330px) and (max-width: 339px) {
-    .pager {
-        font-size: 10px;
-    }
-}
-
-@media (min-width: 340px) and (max-width: 359px) {
-    .pager {
-        font-size: 11px;
-    }
-}
-
 @media (min-width: 350px) {
     a.navbar-brand {
         background: url(../img/favicon.png) 15px no-repeat;
         padding-left: 60px;
-    }
-}
-
-@media (min-width: 360px) and (max-width: 379px) {
-    .pager {
-        font-size: 12px;
-    }
-}
-
-@media (min-width: 380px) {
-    .pager {
-        margin-bottom: 60px;
-    }
-
-    .pager > li > a, .pager > li > span {
-        padding: 10px 20px;
     }
 }
 
@@ -197,6 +167,10 @@ h2.blog-post-titulo {
 
     .blog-post-redes-sociais {
         float: right !important;
+    }
+    
+    .pager {
+        margin-bottom: 60px;
     }
 }
 
