@@ -48,5 +48,17 @@
 <script type="text/javascript" src="{{ "/lib/syntaxhighlighter/2.1.382/scripts/shBrushVb.js" | prepend: site.baseurl }}"></script>-->
 <script type="text/javascript" src="{{ "/lib/syntaxhighlighter/2.1.382/scripts/shBrushXml.js" | prepend: site.baseurl }}"></script>
 
+<!-- AdSense -->
+<script type="text/javascript">
+    var adsense_editor_id = "{{ site.adsense_editor_id }}",
+        adsense_ad_units = [
+            "{{ site.adsense_ad_unit_1 }}",
+            "{{ site.adsense_ad_unit_2 }}",
+            "{{ site.adsense_ad_unit_3 }}"
+        ];
+</script>
+<script src="{% if page.is_post %}{{ "/js/adsense_post.js" | prepend: site.baseurl }}{% else %}{{ "/js/adsense_page.js" | prepend: site.baseurl }}{% endif %}"></script>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
 <!-- Comum -->
 <script src="{{ "/js/comum.js" | prepend: site.baseurl }}"></script>

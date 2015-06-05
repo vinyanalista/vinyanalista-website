@@ -49,12 +49,14 @@ layout: default
         </div>
     </div>
     <div class="blog-post-conteudo panel-body">
-        <div class='col-sm-4'>
-            {% include image.html src=post.image %}
-        </div>
-        <div class='col-sm-8'>
-            <p>{{ post.excerpt | strip_html | strip_newlines | truncatewords: 55 }}</p>
-            <a class='btn btn-primary pull-right' href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">Leia mais ></a>
+        <div class='row'>
+            <div class='col-sm-4'>
+                {% include image.html src=post.image %}
+            </div>
+            <div class='col-sm-8'>
+                <p>{{ post.excerpt | strip_html | strip_newlines | truncatewords: 55 }}</p>
+                <a class='btn btn-primary pull-right' href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">Leia mais ></a>
+            </div>
         </div>
     </div><!-- .blog-post-conteudo -->
 </div><!-- .blog-post -->

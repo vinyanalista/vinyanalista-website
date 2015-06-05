@@ -8,6 +8,10 @@ description: > # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://vinyanalista.github.io" # the base hostname & protocol for your site
 addthis_profile_id: ra-4f7774466af48b4f
+adsense_editor_id: ca-pub-5193467168351289
+adsense_ad_unit_1: 4511719452
+adsense_ad_unit_2: 5988452654
+adsense_ad_unit_3: 7465185857
 facebook_username: vinyanalista
 foursquare_username: vinyanalista
 github_username: vinyanalista
