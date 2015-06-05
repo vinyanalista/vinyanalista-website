@@ -19,6 +19,14 @@ html {
 
 .adsbygoogle {
     display: block;
+}
+
+.adsbygoogle.anuncio-na-pagina {
+    margin-top: 1em;
+}
+
+.adsbygoogle.anuncio-no-post {
+    margin-bottom: 1em;
     margin-top: 1em;
 }
 

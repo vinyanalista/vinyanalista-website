@@ -16,13 +16,13 @@ $(document).ready(function(){
         paragrafo1 = 1;
     }
     
-    var $anuncio_1 = $('<ins class="adsbygoogle" id="ad_unit_2" data-ad-format="auto"></ins>');
+    var $anuncio_1 = $('<ins class="adsbygoogle anuncio-no-post" id="ad_unit_2" data-ad-format="auto"></ins>');
     $paragrafos.eq(paragrafo1 - 1).after($anuncio_1);
     
     if (quantidade_de_paragrafos < 2) {
         return;
     }
     
-    var $anuncio_2 = $('<ins class="adsbygoogle" id="ad_unit_3" data-ad-format="auto"></ins>');
+    var $anuncio_2 = $('<ins class="adsbygoogle anuncio-no-post" id="ad_unit_3" data-ad-format="auto"></ins>');
     $paragrafos.eq(paragrafo2 - 1).after($anuncio_2);
 });
