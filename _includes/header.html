@@ -23,9 +23,9 @@
                 </li>
             </ul>
             
-            <form class="navbar-form navbar-right" role="search">
+            <form action="{{ "/busca/" | prepend: site.baseurl }}" class="navbar-form navbar-right" method="get" role="search">
                 <div class="input-group" id="grupo_pesquisar">
-                    <input type="text" class="form-control"  name="q" placeholder="Pesquisar" />
+                    <input type="text" class="form-control" name="q" placeholder="Pesquisar" />
                     <div class="input-group-btn">
                         <button class="btn btn-default" type="submit">
                             <span class="glyphicon glyphicon-search"></span>

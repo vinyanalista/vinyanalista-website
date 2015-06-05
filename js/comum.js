@@ -17,6 +17,7 @@ SyntaxHighlighter.config.strings.noBrush = 'Não foi possível localizar o brush
 SyntaxHighlighter.config.strings.print = 'Imprimir';
 SyntaxHighlighter.config.strings.viewSource = 'Nova janela';
 SyntaxHighlighter.defaults['auto-links'] = true;
+SyntaxHighlighter.defaults['class-name'] = 'reset-box-sizing';
 SyntaxHighlighter.defaults['pad-line-numbers'] = false;
 SyntaxHighlighter.defaults['wrap-lines'] = false;
 SyntaxHighlighter.all();
