@@ -3,8 +3,18 @@
         <h4>Sobre mim</h4>
     </div>
     <div class="panel-body">
-        <p>
-            Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.
+	<p class='text-center'>
+	    <a href='{{ site.gravatar_email | to_gravatar }}' title='{{ site.author }}'>
+		<img src='{{ site.gravatar_email | to_gravatar }}' alt='{{ site.author }}' class='avatar img-responsive img-thumbnail'>
+	    </a>
+	</p>
+        <p class='text-center'>
+            <strong>{{ site.author }}</strong>
+        </p>
+        <p class='text-center'>
+            <a href='http://lattes.cnpq.br/2162371468280338' title='Currículo Lattes'>
+		<img src='{{ "/img/curriculo_lattes.png" | prepend: site.baseurl | replace: '//', '/' }}' alt='Currículo Lattes' class='img-responsive lattes'>
+	    </a>
         </p>
         <!-- AddThis Follow BEGIN -->
         <div class="addthis_toolbox addthis_32x32_style addthis_default_style center-block">
