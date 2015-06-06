@@ -2,12 +2,68 @@
 layout: default
 ---
 
-{% for post in site.categories.[page.category] %}
+{% case page.type %}
+{% when 'year' %}
+    {% capture titulo %}Posts publicados em {{ page.date | date: "%Y" }}{% endcapture %}
+{% when 'month' %}
+    {% capture titulo %}
+        Posts publicados em 
+        {% assign m = page.date | date: "%-m" %}
+        {% case m %}
+        {% when '1' %}janeiro
+        {% when '2' %}fevereiro
+        {% when '3' %}março
+        {% when '4' %}abril
+        {% when '5' %}maio
+        {% when '6' %}junho
+        {% when '7' %}julho
+        {% when '8' %}agosto
+        {% when '9' %}setembro
+        {% when '10' %}outubro
+        {% when '11' %}novembro
+        {% when '12' %}dezembro
+        {% endcase %}
+        {{ page.date | date: "de %Y" }}
+    {% endcapture %}
+{% when 'day' %}
+    {% capture titulo %}
+        Posts publicados em 
+        {{ page.date | date: "%d de " }}
+        {% assign m = page.date | date: "%-m" %}
+        {% case m %}
+        {% when '1' %}janeiro
+        {% when '2' %}fevereiro
+        {% when '3' %}março
+        {% when '4' %}abril
+        {% when '5' %}maio
+        {% when '6' %}junho
+        {% when '7' %}julho
+        {% when '8' %}agosto
+        {% when '9' %}setembro
+        {% when '10' %}outubro
+        {% when '11' %}novembro
+        {% when '12' %}dezembro
+        {% endcase %}
+        {{ page.date | date: "de %Y" }}
+    {% endcapture %}
+{% when 'category' %}
+    {% capture titulo %}Posts na categoria {{ page.title }}{% endcapture %}
+{% else %}
+    {% assign titulo = page.title %}
+{% endcase %}
+
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h2 class="blog-arquivo-titulo">{{ titulo }}</h2>
+    </div>
+</div>
+
+{% for post in page.posts %}
 <div class="blog-post panel panel-default">
     <div class="panel-heading">
         <h3 class="blog-post-titulo">
             <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">{{ post.title }}</a>
-        </h2>
+        </h3>
         <div class="blog-post-meta row">
             <div class='col-sm-6'>
                 <div class='blog-post-data'>
@@ -54,7 +110,7 @@ layout: default
                 {% include image.html src=post.image %}
             </div>
             <div class='col-sm-8'>
-                <p>{{ post.excerpt | strip_html | strip_newlines | truncatewords: 55 }}</p>
+                <!--<p>{{ post.excerpt | strip_html | strip_newlines | truncatewords: 55 }}</p>--><!-- TODO Verificar -->
                 <a class='btn btn-primary pull-right' href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">Leia mais ></a>
             </div>
         </div>

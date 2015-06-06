@@ -33,61 +33,32 @@
     </div>
     <div class="panel-body">
         <ol class="list-unstyled">
-            <li>
-                <a href="#">March 2014</a>
-            </li>
-            <li>
-                <a href="#">February 2014</a>
-            </li>
-            <li>
-                <a href="#">January 2014</a>
-            </li>
-            <li>
-                <a href="#">December 2013</a>
-            </li>
-            <li>
-                <a href="#">November 2013</a>
-            </li>
-            <li>
-                <a href="#">October 2013</a>
-            </li>
-            <li>
-                <a href="#">September 2013</a>
-            </li>
-            <li>
-                <a href="#">August 2013</a>
-            </li>
-            <li>
-                <a href="#">July 2013</a>
-            </li>
-            <li>
-                <a href="#">June 2013</a>
-            </li>
-            <li>
-                <a href="#">May 2013</a>
-            </li>
-            <li>
-                <a href="#">April 2013</a>
-            </li>
-        </ol>
-    </div>
-</div>
-
-<div class="panel panel-default">
-    <div class="panel-heading">
-        <h4>Elsewhere</h4>
-    </div>
-    <div class="panel-body">
-        <ol class="list-unstyled">
-            <li>
-                <a href="https://facebook.com/{{ site.facebook_username }}">Facebook</a>
-            </li>
-            <li>
-                <a href="https://github.com/{{ site.github_username }}">GitHub</a>
-            </li>
-            <li>
-                <a href="https://twitter.com/{{ site.twitter_username }}">Twitter</a>
-            </li>
+            {% for post in site.posts %}
+                {% capture mes %}{{ post.date | date: '%m%Y' }}{% endcapture %}
+                {% capture proximo_mes %}{{ post.next.date | date: '%m%Y' }}{% endcapture %}
+                {% if mes != proximo_mes %}
+                    <li>
+                        <a href="{{ "/blog/" | prepend: site.baseurl | replace: '//', '/' }}{{ post.date | date: "%Y/%m" }}/">
+                            {% assign m = post.date | date: "%-m" %}
+                            {% case m %}
+                            {% when '1' %}Janeiro
+                            {% when '2' %}Fevereiro
+                            {% when '3' %}Março
+                            {% when '4' %}Abril
+                            {% when '5' %}Maio
+                            {% when '6' %}Junho
+                            {% when '7' %}Julho
+                            {% when '8' %}Agosto
+                            {% when '9' %}Setembro
+                            {% when '10' %}Outubro
+                            {% when '11' %}Novembro
+                            {% when '12' %}Dezembro
+                            {% endcase %}
+                            {{ post.date | date: "de %Y" }}
+                        </a>
+                    </li>
+                {% endif %}
+            {% endfor %}
         </ol>
     </div>
 </div>

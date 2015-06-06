@@ -23,7 +23,20 @@ youtube_username: viniciusifse
 
 # Plugins
 gems:
+    - jekyll-archives
     - jekyll-auto-image
+jekyll-archives:
+    enabled:
+        - year
+        - month
+        - day
+        - categories
+    layout: 'archive'
+    permalinks:
+        year: '/blog/:year/'
+        month: '/blog/:year/:month/'
+        day: '/blog/:year/:month/:day/'
+        category: '/blog/category/:name/'
 image: "/img/favicon.png"
 
 # Build settings
@@ -32,8 +45,6 @@ exclude: [online]
 markdown: redcarpet
 
 # Paginação
-category_title_prefix: 'Posts na categoria '
-category_dir: "/blog/category/"
 paginate: 10
 paginate_path: "/blog/page/:num/"
 
