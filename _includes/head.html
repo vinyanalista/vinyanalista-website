@@ -11,9 +11,26 @@
     <meta property="og:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncatewords: 55 }}{% else %}{{ site.description }}{% endif %}" />
     <meta property="og:image" content="{{ page.image | prepend: site.baseurl | replace: '//', '/' | prepend: site.url }}" />
 
-    <link rel="apple-touch-icon" href="{{ "/img/favicon.png" | prepend: site.baseurl }}">
-    <link rel="icon" href="{{ "/img/favicon.png" | prepend: site.baseurl }}">
-    <link rel="shortcut icon" href="{{ "/img/favicon.png" | prepend: site.baseurl }}">
+    <!-- Favicons (by realfavicongenerator.net) -->
+    <link rel="apple-touch-icon" sizes="57x57" href="{{ "/apple-touch-icon-57x57.png?v=2" | prepend: site.baseurl }}">
+    <link rel="apple-touch-icon" sizes="60x60" href="{{ "/apple-touch-icon-60x60.png?v=2" | prepend: site.baseurl }}">
+    <link rel="apple-touch-icon" sizes="72x72" href="{{ "/apple-touch-icon-72x72.png?v=2" | prepend: site.baseurl }}">
+    <link rel="apple-touch-icon" sizes="76x76" href="{{ "/apple-touch-icon-76x76.png?v=2" | prepend: site.baseurl }}">
+    <link rel="apple-touch-icon" sizes="114x114" href="{{ "/apple-touch-icon-114x114.png?v=2" | prepend: site.baseurl }}">
+    <link rel="apple-touch-icon" sizes="120x120" href="{{ "/apple-touch-icon-120x120.png?v=2" | prepend: site.baseurl }}">
+    <link rel="apple-touch-icon" sizes="144x144" href="{{ "/apple-touch-icon-144x144.png?v=2" | prepend: site.baseurl }}">
+    <link rel="apple-touch-icon" sizes="152x152" href="{{ "/apple-touch-icon-152x152.png?v=2" | prepend: site.baseurl }}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ "/apple-touch-icon-180x180.png?v=2" | prepend: site.baseurl }}">
+    <link rel="icon" type="image/png" href="{{ "/favicon-32x32.png?v=2" | prepend: site.baseurl }}" sizes="32x32">
+    <link rel="icon" type="image/png" href="{{ "/favicon-194x194.png?v=2" | prepend: site.baseurl }}" sizes="194x194">
+    <link rel="icon" type="image/png" href="{{ "/favicon-96x96.png?v=2" | prepend: site.baseurl }}" sizes="96x96">
+    <link rel="icon" type="image/png" href="{{ "/android-chrome-192x192.png?v=2" | prepend: site.baseurl }}" sizes="192x192">
+    <link rel="icon" type="image/png" href="{{ "/favicon-16x16.png?v=2" | prepend: site.baseurl }}" sizes="16x16">
+    <link rel="manifest" href="{{ "/manifest.json?v=2" | prepend: site.baseurl }}">
+    <link rel="shortcut icon" href="{{ "/favicon.ico?v=2" | prepend: site.baseurl }}">
+    <meta name="msapplication-TileColor" content="#2d89ef">
+    <meta name="msapplication-TileImage" content="{{ "/mstile-144x144.png?v=2" | prepend: site.baseurl }}">
+    <meta name="theme-color" content="#2196f3">
 
     <title>{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
 

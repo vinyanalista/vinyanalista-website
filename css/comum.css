@@ -141,7 +141,7 @@ h2.blog-post-titulo {
 
 @media (min-width: 350px) {
     a.navbar-brand {
-        background: url(../img/favicon.png) 15px no-repeat;
+        background: url(../favicon-32x32.png) 15px no-repeat;
         padding-left: 60px;
     }
 }
