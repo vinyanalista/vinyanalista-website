@@ -39,7 +39,7 @@ jekyll-archives:
         month: '/blog/:year/:month/'
         day: '/blog/:year/:month/:day/'
         category: '/blog/category/:name/'
-image: "/img/favicon.png"
+image: "/favicon.png"
 
 # Build settings
 excerpt_separator: <!--more-->
