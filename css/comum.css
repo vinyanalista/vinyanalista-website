@@ -73,6 +73,10 @@ h2.blog-post-titulo {
     margin-bottom: 30px;
 }
 
+.gap-small {
+    margin-bottom: 15px;
+}
+
 /* https://demisx.github.io/jekyll/2014/01/13/improve-code-highlighting-in-jekyll.html */
 
 .highlight .lineno,
@@ -101,6 +105,12 @@ h2.blog-post-titulo {
     overflow-x: auto;
     white-space: pre;
     word-wrap: normal;
+}
+
+/* http://zpao.com/posts/adding-line-highlights-to-markdown-code-fences/ */
+
+.highlight .hll {
+    background-color: #ffffcc;
 }
 
 .lattes {
