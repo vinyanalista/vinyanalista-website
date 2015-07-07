@@ -4,8 +4,8 @@
     </div>
     <div class="panel-body">
 	<p class='text-center'>
-	    <a href='{{ site.gravatar_email | to_gravatar }}' title='{{ site.author }}'>
-		<img src='{{ site.gravatar_email | to_gravatar }}' alt='{{ site.author }}' class='avatar img-responsive img-thumbnail'>
+	    <a href='{{ site.gravatar_email | to_secure_gravatar }}' title='{{ site.author }}'>
+		<img src='{{ site.gravatar_email | to_secure_gravatar }}' alt='{{ site.author }}' class='avatar img-responsive img-thumbnail'>
 	    </a>
 	</p>
         <p class='text-center'>
