@@ -3,3 +3,6 @@
         Copyright &copy; {{ site.time | date: '%Y' }}. <a href='#sobre'>{{ site.author }}</a>. Todos os direitos reservados. Blog construído sobre o <a href="http://jekyllrb.com/" target='_blank'>Jekyll</a>. Tema <a href="https://bootswatch.com/paper/" target='_blank'>Paper</a>.
     </div>
 </footer>
+{% if page.is_post %}
+<input type="hidden" id="is_post" value="true">
+{% endif %}

@@ -76,9 +76,9 @@
                 "{{ site.adsense_ad_unit_3 }}"
             ];
     </script>
-    <script src="{% if page.is_post %}{{ "/js/adsense_post.js" | prepend: site.baseurl }}{% else %}{{ "/js/adsense_page.js" | prepend: site.baseurl }}{% endif %}"></script>
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 
     <!-- Comum -->
     <script src="{{ "/js/comum.js" | prepend: site.baseurl }}"></script>
+    <script src="{{ "/js/adsense.js" | prepend: site.baseurl }}"></script>
 </head>

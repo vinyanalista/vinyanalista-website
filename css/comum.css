@@ -54,6 +54,11 @@ h2.blog-post-titulo {
     color: #444;
 }
 
+em.caption {
+    display: block;
+    margin-top: 1em;
+}
+
 .embed-responsive {
     margin: 0px 0px 1em;
 }
