@@ -97,7 +97,7 @@ Encerrar o servidor, tanto no Windows quanto no Linux, é um procedimento bastan
 
 Aqui ele encerrou o servidor em pequeníssimos 143 milissegundos:
 
-<script type="syntaxhighlighter" class="brush: text"><![CDATA[
+```
 15:09:21,996 INFO  [org.jboss.as.osgi] (MSC service thread 1-1) JBAS011942: Stopping OSGi Framework
 15:09:22,034 INFO  [org.jboss.as.logging] JBAS011503: Restored bootstrap log handlers
 15:09:22,044 INFO  [org.jboss.weld.deployer] JBAS016009: Stopping weld service for deployment jboss-as-helloworld-jsf.war
@@ -111,7 +111,7 @@ JBAS014776:    Newly corrected services:
 service jboss.server.controller.management.security_realm.ApplicationRealm.properties_authentication (new available)
 
 15:09:22,121 INFO  [org.jboss.as] JBAS015950: JBoss AS 7.1.1.Final "Brontes" stopped in 143ms
-]]></script>
+```
 
 ### Mais informações sobre o JBoss AS
 

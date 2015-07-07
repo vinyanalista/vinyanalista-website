@@ -47,10 +47,6 @@
         <script src="{{ "/lib/respond/1.4.2/respond.min.js" | prepend: site.baseurl }}"></script>
     <![endif]-->
 
-    <!-- SyntaxHighlighter CSS -->
-    <link type="text/css" rel="stylesheet" href="{{ "/lib/syntaxhighlighter/2.1.382/styles/shCore.css" | prepend: site.baseurl }}"/>
-    <link type="text/css" rel="stylesheet" href="{{ "/lib/syntaxhighlighter/2.1.382/styles/shThemeDefault.css" | prepend: site.baseurl }}"/>
-
     <!-- Custom styles for this template -->
     <link href="{{ "/css/syntax.css" | prepend: site.baseurl }}" rel="stylesheet">
     <link href="{{ "/css/comum.css" | prepend: site.baseurl }}" rel="stylesheet">
@@ -61,34 +57,8 @@
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="{{ "/lib/bootstrap/3.3.4/js/ie10-viewport-bug-workaround.js" | prepend: site.baseurl }}"></script>
 
-    <!-- SyntaxHighlighter JS -->
-    <script type="text/javascript" src="{{ "/lib/syntaxhighlighter/2.1.382/scripts/shCore.js" | prepend: site.baseurl }}"></script>
-    <!--<script type="text/javascript" src="{{ "/lib/syntaxhighlighter/2.1.382/scripts/shBrushAS3.js" | prepend: site.baseurl }}"></script>-->
-    <script type="text/javascript" src="{{ "/lib/syntaxhighlighter/2.1.382/scripts/shBrushBash.js" | prepend: site.baseurl }}"></script>
-    <!--<script type="text/javascript" src="{{ "/lib/syntaxhighlighter/2.1.382/scripts/shBrushColdFusion.js" | prepend: site.baseurl }}"></script>
-    <script type="text/javascript" src="{{ "/lib/syntaxhighlighter/2.1.382/scripts/shBrushCpp.js" | prepend: site.baseurl }}"></script>
-    <script type="text/javascript" src="{{ "/lib/syntaxhighlighter/2.1.382/scripts/shBrushCSharp.js" | prepend: site.baseurl }}"></script>
-    <script type="text/javascript" src="{{ "/lib/syntaxhighlighter/2.1.382/scripts/shBrushCss.js" | prepend: site.baseurl }}"></script>
-    <script type="text/javascript" src="{{ "/lib/syntaxhighlighter/2.1.382/scripts/shBrushDelphi.js" | prepend: site.baseurl }}"></script>
-    <script type="text/javascript" src="{{ "/lib/syntaxhighlighter/2.1.382/scripts/shBrushDiff.js" | prepend: site.baseurl }}"></script>
-    <script type="text/javascript" src="{{ "/lib/syntaxhighlighter/2.1.382/scripts/shBrushErlang.js" | prepend: site.baseurl }}"></script>
-    <script type="text/javascript" src="{{ "/lib/syntaxhighlighter/2.1.382/scripts/shBrushGroovy.js" | prepend: site.baseurl }}"></script>-->
-    <script type="text/javascript" src="{{ "/lib/syntaxhighlighter/2.1.382/scripts/shBrushJava.js" | prepend: site.baseurl }}"></script>
-    <!--<script type="text/javascript" src="{{ "/lib/syntaxhighlighter/2.1.382/scripts/shBrushJavaFX.js" | prepend: site.baseurl }}"></script>
-    <script type="text/javascript" src="{{ "/lib/syntaxhighlighter/2.1.382/scripts/shBrushJScript.js" | prepend: site.baseurl }}"></script>
-    <script type="text/javascript" src="{{ "/lib/syntaxhighlighter/2.1.382/scripts/shBrushPerl.js" | prepend: site.baseurl }}"></script>
-    <script type="text/javascript" src="{{ "/lib/syntaxhighlighter/2.1.382/scripts/shBrushPhp.js" | prepend: site.baseurl }}"></script>-->
-    <script type="text/javascript" src="{{ "/lib/syntaxhighlighter/2.1.382/scripts/shBrushPlain.js" | prepend: site.baseurl }}"></script>
-    <!--<script type="text/javascript" src="{{ "/lib/syntaxhighlighter/2.1.382/scripts/shBrushPowerShell.js" | prepend: site.baseurl }}"></script>
-    <script type="text/javascript" src="{{ "/lib/syntaxhighlighter/2.1.382/scripts/shBrushPython.js" | prepend: site.baseurl }}"></script>
-    <script type="text/javascript" src="{{ "/lib/syntaxhighlighter/2.1.382/scripts/shBrushRuby.js" | prepend: site.baseurl }}"></script>
-    <script type="text/javascript" src="{{ "/lib/syntaxhighlighter/2.1.382/scripts/shBrushScala.js" | prepend: site.baseurl }}"></script>
-    <script type="text/javascript" src="{{ "/lib/syntaxhighlighter/2.1.382/scripts/shBrushSql.js" | prepend: site.baseurl }}"></script>
-    <script type="text/javascript" src="{{ "/lib/syntaxhighlighter/2.1.382/scripts/shBrushVb.js" | prepend: site.baseurl }}"></script>-->
-    <script type="text/javascript" src="{{ "/lib/syntaxhighlighter/2.1.382/scripts/shBrushXml.js" | prepend: site.baseurl }}"></script>
-
     <!-- AddThis -->
-    <script type="text/javascript" src="http://s7.addthis.com/js/300/addthis_widget.js#pubid={{ site.addthis_profile_id }}" async="async"></script>
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid={{ site.addthis_profile_id }}" async="async"></script>
     <script type="text/javascript">
         var addthis_share = {
             url: "{{ page.url | prepend: site.baseurl | replace: '//', '/' | prepend: site.url }}",

@@ -80,17 +80,17 @@ No Windows, o procedimento é bem semelhante ao [descrito no post anterior]({% p
 
 No Linux, se você instalou o Maven apenas para o seu usuário,  abra com o seu editor de preferência o arquivo “~/.bashrc” e acrescente as seguintes linhas no final do arquivo (você deve substituir, se necessário, a localização do Maven, que no nosso exemplo foi “/home/vinicius/apache-maven-3.0.4″):
 
-<script type="syntaxhighlighter" class="brush: bash; gutter: false"><![CDATA[
+```sh
 export M2_HOME="/home/vinicius/apache-maven-3.0.4"
 export PATH="$PATH:$M2_HOME/bin"
-]]></script>
+```
 
 Se você instalou o Maven para todos os usuários, a alteração deve ocorrer no arquivo “/etc/profile”. Abra esse arquivo com o seu editor de preferência e acrescente as seguintes linhas no final do arquivo (você deve substituir, se necessário, a localização do Maven, que no nosso exemplo foi “/opt/apache-maven-3.0.4″):
 
-<script type="syntaxhighlighter" class="brush: bash; gutter: false"><![CDATA[
+```sh
 export M2_HOME="/opt/apache-maven-3.0.4"
 export PATH="$PATH:$M2_HOME/bin"
-]]></script>
+```
 
 ### Teste do Maven
 
@@ -102,14 +102,14 @@ $ mvn -v
 
 A saída deve ser algo parecido com isso:
 
-<script type="syntaxhighlighter" class="brush: text"><![CDATA[
+```
 Apache Maven 3.0.4 (r1232337; 2012-01-17 08:44:56+0000)
 Maven home: /home/vinicius/apache-maven-3.0.4
 Java version: 1.7.0_147-icedtea, vendor: Oracle Corporation
 Java home: /usr/lib/jvm/java-7-openjdk-i386/jre
 Default locale: en_US, platform encoding: UTF-8
 OS name: "linux", version: "3.0.0-12-generic", arch: "i386", family: "unix"
-]]></script>
+```
 
 Como teste, também vamos criar um pequeno projeto Java, compilá-lo, empacotá-lo e executá-lo. Em alguma pasta à qual você tenha acesso (aqui utilizarei minha pasta pessoal no Linux, “/home/vinicius”), execute o seguinte comando:
 

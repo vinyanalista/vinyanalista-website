@@ -82,7 +82,7 @@ Da parte do servidor está tudo OK. Agora é só configurar a aplicação para u
 
 Agora nós precisamos configurar nossa aplicação para se comunicar com a base de dados utilizando o datasource configurado no servidor de aplicação. O arquivo central da configuração da JPA ([Java Persistence API](http://docs.oracle.com/javaee/6/tutorial/doc/bnbpy.html)) no projeto, o “META-INF/persistence.xml”, vai sofrer algumas alterações. Observe as linhas destacadas:
 
-<script type="syntaxhighlighter" class="brush: xml; highlight: [6, 8]"><![CDATA[
+```xml{6,8}
 <?xml version="1.0" encoding="UTF-8"?>
 <persistence xmlns="http://java.sun.com/xml/ns/persistence"
    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -97,23 +97,23 @@ Agora nós precisamos configurar nossa aplicação para se comunicar com a base 
       </properties>
    </persistence-unit>
 </persistence>
-]]></script>
+```
 
 Observe que estou utilizando o [Hibernate](http://www.hibernate.org/) como implementação JPA, já que estamos utilizando o JBoss AS como servidor de aplicação.
 
 No código-fonte da aplicação, sempre for necessário um [EntityManager](http://docs.oracle.com/javaee/6/api/javax/persistence/EntityManager.html) para [manusear entidades JPA](http://docs.oracle.com/javaee/6/tutorial/doc/bnbqw.html), você pode solicitar ao servidor de aplicação que injete-o (isso significa que você não precisa criar o objeto manualmente, o servidor de aplicação cria o objeto para você) anotando sua variável com [@PersistenceContext](http://docs.oracle.com/javaee/6/api/javax/persistence/PersistenceContext.html) e especificando o nome da persistence-unit, como definida no arquivo “META-INF/persistence.xml”:
 
-<script type="syntaxhighlighter" class="brush: java; gutter: false"><![CDATA[
+```java
 @PersistenceContext(name="TestePU")
 EntityManager entityManager;
-]]></script>
+```
 
 Se sua aplicação possui apenas uma persistence-unit, essa informação pode ser omitida:
 
-<script type="syntaxhighlighter" class="brush: java; gutter: false"><![CDATA[
+```java
 @PersistenceContext
 EntityManager entityManager;
-]]></script>
+```
 
 ### Aplicação de exemplo
 

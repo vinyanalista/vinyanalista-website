@@ -16,7 +16,7 @@ A configuração dos meus HDs é bastante semelhante àquela encontrada ano pass
 
 Executando o comando **fdisk**, obtenho o seguinte:
 
-<script type="syntaxhighlighter" class="brush: text"><![CDATA[
+```
 Disk /dev/sda: 1000.2 GB, 1000204886016 bytes
 255 heads, 63 sectors/track, 121601 cylinders, total 1953525168 sectors
 Units = sectors of 1 * 512 = 512 bytes
@@ -40,7 +40,7 @@ Disk identifier: 0x1ba01b9f
 
    Device Boot      Start         End      Blocks   Id  System
 /dev/sdb1            2048   488396799   244197376    7  HPFS/NTFS/exFAT
-]]></script>
+```
 
 Durante a instalação do openSUSE 12.3, não alterei as configurações do *bootloader*. O instalador automaticamente selecionou a melhor configuração para o meu computador (que no caso de o Linux estar em uma partição estendida, é [instalar o *bootloader* na partição estendida](http://en.opensuse.org/SDB:Prefered_bootloader_options)).
 

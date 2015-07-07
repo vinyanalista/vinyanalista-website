@@ -112,21 +112,21 @@ Se você instalou o JDK utilizando o mecanismo preferido de sua distribuição, 
 
 Se você instalou o JDK para todos os usuários, abra com o seu editor de preferência o arquivo “/etc/profile” e acrescente as seguintes linhas no final (você deve substituir, se necessário, a localização do JDK, que no nosso exemplo foi “/opt/jdk1.7.0_05″):
 
-<script type="syntaxhighlighter" class="brush: bash; gutter: false"><![CDATA[
+```sh
 export JAVA_HOME="/opt/jdk1.7.0_05"
 export CLASSPATH="$JAVA_HOME/lib"
 export PATH="$PATH:$JAVA_HOME/bin"
 export MANPATH="$MANPATH:$JAVA_HOME/man"
-]]></script>
+```
 
 Se você instalou o JDK apenas para o seu usuário, a alteração deve ocorrer no arquivo “~/.bashrc”. Abra esse arquivo com o seu editor de preferência e acrescente as seguintes linhas no final (você deve substituir, se necessário, a localização do JDK, que no nosso exemplo foi “/home/vinicius/jdk1.7.0_05″):
 
-<script type="syntaxhighlighter" class="brush: bash; gutter: false"><![CDATA[
+```sh
 export JAVA_HOME="/home/vinicius/jdk1.7.0_05"
 export CLASSPATH="$JAVA_HOME/lib"
 export PATH="$PATH:$JAVA_HOME/bin"
 export MANPATH="$MANPATH:$JAVA_HOME/man"
-]]></script>
+```
 
 Em qualquer um dos dois casos, as alterações serão aplicadas a qualquer nova janela de terminal aberta.
 
@@ -140,13 +140,13 @@ $ javac -version
 
 Como teste, também podemos criar um pequeno programa Java, compilá-lo e executá-lo. Em alguma pasta à qual você tenha acesso (aqui utilizarei minha pasta pessoal no Linux, “/home/vinicius”), crie um arquivo de texto simples chamado “Teste.java”. Abra esse arquivo com um editor de texto e insira o seguinte conteúdo:
 
-<script type="syntaxhighlighter" class="brush: java; gutter: false"><![CDATA[
+```java
 public class Teste {
     public static void main(String args[]) {
         System.out.println("Olá!");
     }
 }
-]]></script>
+```
 
 Agora no terminal, entre nessa pasta e invoque o compilador do Java (**javac**) passando o arquivo que você acabou de criar como parâmetro:
 

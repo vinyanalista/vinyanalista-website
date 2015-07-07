@@ -20,7 +20,7 @@ Gente, a tarde de ontem foi um sufoco! Acidentalmente excluí a tabela de parti�
 
 Vou tentar ser breve nessa explicação (realmente é uma longa história, se estiverem mais interessados nas possíveis soluções para o problema, podem pular pros próximos tópicos). Tenho dois HDs, particionados como mostra a saída do comando `fdisk` no Linux a seguir. Em resumo, são duas partições pros sistemas operacionais (Windows 7 e [Debian](http://www.debian.org/)) e duas partições para arquivos pessoais.
 
-<script type="syntaxhighlighter" class="brush: text; gutter: false"><![CDATA[
+```
 Disk /dev/sdb: 250.1 GB, 250059350016 bytes
 255 heads, 63 sectors/track, 30401 cylinders, total 488397168 sectors
 Units = sectors of 1 * 512 = 512 bytes
@@ -44,7 +44,7 @@ Device    Boot      Start         End      Blocks   Id  System
 /dev/sda3      1468010496  1887440895   209715200    7  HPFS/NTFS/exFAT
 /dev/sda4   *  1887442942  1953523711    33040385    5  Extended
 /dev/sda5      1887442944  1953523711    33040384   83  Linux
-]]></script>
+```
 
 Como estou pensando em mudar de distribuição, hoje decidi instalar o [openSUSE](http://www.opensuse.org/) no lugar do Debian. Gravei o CD do openSUSE, nenhum procedimento de backup, já que estou acostumado a formatações (um erro, admito), iniciei o computador pelo CD, respondi a todas as perguntas do instalador, iniciou-se a cópia dos arquivos, até aí tudo bem.
 

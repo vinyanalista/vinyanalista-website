@@ -86,7 +86,7 @@ Nesse caso, a própria janela de terminal na qual o comando é invocado passa a 
 
 O terminal deve exibir uma saída parecida com essa, resultado da inicialização do servidor:
 
-<script type="syntaxhighlighter" class="brush: text"><![CDATA[
+```
 =========================================================================
 
 JBoss Bootstrap Environment
@@ -126,7 +126,7 @@ JAVA_OPTS:  -server -XX:+TieredCompilation -Xms64m -Xmx512m -XX:MaxPermSize=256m
 04:35:36,270 INFO  [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-2) JBAS010400: Bound data source 1
 04:35:36,294 INFO  [org.jboss.as] (Controller Boot Thread) JBAS015951: Admin console listening on http://127.0.0.1:9990
 04:35:36,295 INFO  [org.jboss.as] (Controller Boot Thread) JBAS015874: JBoss AS 7.1.1.Final "Brontes" started in 8025ms - Started 133 of 208 services (74 services are passive or on-demand)
-]]></script>
+```
 
 Tanto no Windows quanto no Linux, após iniciado o servidor, abra seu navegador de preferência e acesse o endereço “[http://localhost:8080](http://localhost:8080)” (a porta 8080 é a utilizada pelo JBoss AS por padrão, mas essa porta pode ser alterada na configuração do servidor). Você deve ver a tela de boas vindas do JBoss AS:
 
@@ -164,7 +164,7 @@ $ mvn package jboss-as:deploy
 
 Ao final do processo, o console do Maven deve mostrar uma saída parecida com essa, informando que tudo ocorreu conforme o esperado:
 
-<script type="syntaxhighlighter" class="brush: text"><![CDATA[
+```
 Jul 18, 2012 1:50:00 PM org.xnio.Xnio
 INFO: XNIO Version 3.0.3.GA
 Jul 18, 2012 1:50:00 PM org.xnio.nio.NioXnio
@@ -178,11 +178,11 @@ INFO: JBoss Remoting version 3.2.3.GA
 [INFO] Finished at: Wed Jul 18 13:50:14 GMT+00:00 2012
 [INFO] Final Memory: 9M/41M
 [INFO] ------------------------------------------------------------------------
-]]></script>
+```
 
 O console do JBoss AS deve mostrar que o deploy da aplicação foi realizado com sucesso:
 
-<script type="syntaxhighlighter" class="brush: text"><![CDATA[
+```
 13:50:04,206 INFO  [org.jboss.as.repository] (management-handler-thread - 2) JBAS014900: Content added at location /root/jboss-as/standalone/data/content/1d/9f4c3c67cd2fb194ee4aacb3d990ab70da0b48/content
 13:50:04,261 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-2) JBAS015876: Starting deployment of "jboss-as-helloworld-jsf.war"
 13:50:06,650 INFO  [org.jboss.weld.deployer] (MSC service thread 1-2) JBAS016002: Processing weld deployment jboss-as-helloworld-jsf.war
@@ -199,7 +199,7 @@ O console do JBoss AS deve mostrar que o deploy da aplicação foi realizado com
 13:50:14,435 INFO  [javax.enterprise.resource.webcontainer.jsf.config] (MSC service thread 1-2) Monitoring jndi:/default-host/jboss-as-helloworld-jsf/WEB-INF/faces-config.xml for modifications
 13:50:14,487 INFO  [org.jboss.web] (MSC service thread 1-2) JBAS018210: Registering web context: /jboss-as-helloworld-jsf
 13:50:14,539 INFO  [org.jboss.as.server] (management-handler-thread - 2) JBAS018559: Deployed "jboss-as-helloworld-jsf.war"
-]]></script>
+```
 
 Feito isso, podemos acessar a aplicação usando o navegador através do endereço “[http://localhost:8080/jboss-as-helloworld-jsf/](http://localhost:8080/jboss-as-helloworld-jsf/)“:
 

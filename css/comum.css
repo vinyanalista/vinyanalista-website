@@ -79,8 +79,7 @@ h2.blog-post-titulo {
 
 /* https://demisx.github.io/jekyll/2014/01/13/improve-code-highlighting-in-jekyll.html */
 
-.highlight .lineno,
-.syntaxhighlighter td.number {
+.highlight .lineno {
     -moz-user-select: none;
     -o-user-select: none;
     -webkit-user-select: none;
@@ -88,9 +87,7 @@ h2.blog-post-titulo {
 }
 
 .highlight .lineno::-moz-selection,
-.highlight .lineno::selection,
-.syntaxhighlighter td.number::-moz-selection,
-.syntaxhighlighter td.number::selection {
+.highlight .lineno::selection {
     background-color: transparent;
 }
 
@@ -110,7 +107,7 @@ h2.blog-post-titulo {
 /* http://zpao.com/posts/adding-line-highlights-to-markdown-code-fences/ */
 
 .highlight .hll {
-    background-color: #ffffcc;
+    background-color: #FFFF96;
 }
 
 .lattes {
@@ -130,11 +127,6 @@ h2.blog-post-titulo {
   -webkit-box-sizing: content-box;
      -moz-box-sizing: content-box;
           box-sizing: content-box;
-}
-
-.syntaxhighlighter {
-    border: 1px solid #DDD !important;
-    border-radius: 3px;
 }
 
 #blog-lateral h4 {
