@@ -34,7 +34,7 @@ layout: default
             <div class='col-sm-6'>
                 <div class='blog-post-redes-sociais'>
                     <!-- AddThis Button BEGIN -->
-                    <div class="addthis_toolbox addthis_default_style"  addthis:url="{{ post.url }}" addthis:title="{{ post.title }}" addthis:description="{{ post.excerpt | strip_html | strip_html | truncatewords: 50 }}">
+                    <div class="addthis_toolbox addthis_default_style">
                         <a class="addthis_button_facebook"></a>
                         <a class="addthis_button_twitter" data-via="{{ site.twitter_username }}"></a>
                         <a class="addthis_button_google_plusone_share"></a>
@@ -71,6 +71,7 @@ layout: default
         <script type="text/javascript">
             /* * * CONFIGURATION VARIABLES * * */
             var disqus_shortname = 'vinyanalista';
+            var disqus_url = '{{ page.url | prepend: site.baseurl | replace: '//', '/' | prepend: site.url }}';
 
             /* * * DON'T EDIT BELOW THIS LINE * * */
             (function() {

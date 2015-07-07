@@ -3,7 +3,7 @@ title: "Antônio Vinícius"
 email: vinyanalista@gmail.com
 description: "Aqui tento compartilhar um pouco das minhas experiências como estudante e profissional de TI :)"
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://www.vinyanalista.com.br" # the base hostname & protocol for your site
+url: "https://vinyanalista.github.io" # the base hostname & protocol for your site
 addthis_profile_id: ra-4f7774466af48b4f
 adsense_editor_id: ca-pub-5193467168351289
 adsense_ad_unit_1: 4511719452
