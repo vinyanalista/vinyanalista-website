@@ -20,6 +20,9 @@ linkedin_username: vinyanalista
 twitter_username: vinyanalista
 youtube_username: viniciusifse
 
+# do not include protocol, just the domain
+enforce_ssl: vinyanalista.github.io
+
 # Plugins
 gems:
     - jekyll-archives
