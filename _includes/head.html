@@ -28,6 +28,10 @@
     <meta property="og:title" content="{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}" />
     <meta property="og:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncatewords: 55 }}{% else %}{{ site.description }}{% endif %}" />
     <meta property="og:image" content="{{ page.image | prepend: site.baseurl | replace: '//', '/' | prepend: site.url }}" />
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="{{ site.twitter_username | prepend: "@" }}" />
 
     <!-- Favicons (by realfavicongenerator.net) -->
     <link rel="apple-touch-icon" sizes="57x57" href="{{ "/apple-touch-icon-57x57.png?v=2" | prepend: site.baseurl }}">
