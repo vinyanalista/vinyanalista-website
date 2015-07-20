@@ -4,13 +4,13 @@ layout: default
 
 <div class="blog-post panel panel-default">
     <div class="panel-heading">
-        <h2 class="blog-post-titulo">
-            <a href="{{ post.url | prepend: site.baseurl }}">{{ page.title }}</a>
+        <h2 class="blog-post-titulo" itemprop="headline name">
+            <a href="{{ page.url | prepend: site.baseurl }}" itemprop="url">{{ page.title }}</a>
         </h2>
         <div class="blog-post-meta row">
             <div class='col-sm-6'>
                 <div class='blog-post-data'>
-                    <p>
+                    <p itemprop="datePublished" content="{{ page.date | date: "%Y-%m-%d" }}">
                         {{ page.date | date: "%d de" }}
                         {% assign m = page.date | date: "%-m" %}
                         {% case m %}
@@ -48,7 +48,9 @@ layout: default
         </div>
     </div>
     <div class="blog-post-conteudo panel-body">
-        {{ content }}
+        <div itemprop="articleBody">
+            {{ content }}
+        </div>
         <div class="gap"></div>
         
         <h3>Gostou? Então compartilha!</h3>

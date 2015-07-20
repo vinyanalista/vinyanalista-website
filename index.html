@@ -2,16 +2,18 @@
 layout: default
 ---
 
+<meta itemprop="headline name" content="{{ site.title }}">
+<link href="{{ page.url | replace:'index.html', '' | prepend: site.baseurl | replace: '//', '/' | prepend: site.url }}" itemprop="url">
 {% for post in paginator.posts %}
-<div class="blog-post panel panel-default">
+<div class="blog-post panel panel-default" itemscope itemtype="http://schema.org/BlogPosting">
     <div class="panel-heading">
-        <h3 class="blog-post-titulo">
-            <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">{{ post.title }}</a>
+        <h3 class="blog-post-titulo" itemprop="headline name">
+            <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}" itemprop="url">{{ post.title }}</a>
         </h3>
         <div class="blog-post-meta row">
             <div class='col-sm-6'>
                 <div class='blog-post-data'>
-                    <p>
+                    <p itemprop="datePublished" content="{{ post.date | date: "%Y-%m-%d" }}">
                         {{ post.date | date: "%d de" }}
                         {% assign m = post.date | date: "%-m" %}
                         {% case m %}
@@ -46,15 +48,23 @@ layout: default
                     <!-- AddThis Button END -->
                 </div>
             </div>
+            <div itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <meta itemprop="name" content="{{ site.author }}">
+                <link itemprop="url" href="{{ site.baseurl | prepend: site.url }}">
+            </div>
         </div>
     </div>
     <div class="blog-post-conteudo panel-body">
         <div class='row'>
             <div class='col-sm-4'>
-                {% include image.html src=post.image %}
+                <p class='text-center'>
+                    <a href='{{ post.url | prepend: site.baseurl | replace: '//', '/' }}'>
+                        <img src='{{ post.image }}' class='img-responsive img-thumbnail' itemprop="image">
+                    </a>
+                </p>
             </div>
             <div class='col-sm-8'>
-                <p>{{ post.excerpt | strip_html | strip_newlines | truncatewords: 55 }}</p>
+                <p itemprop="description">{{ post.excerpt | strip_html | strip_newlines | truncatewords: 55 }}</p>
                 <a class='btn btn-primary pull-right' href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">Leia mais ></a>
             </div>
         </div>

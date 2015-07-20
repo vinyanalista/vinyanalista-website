@@ -6,3 +6,5 @@
 {% if page.is_post %}
 <input type="hidden" id="is_post" value="true">
 {% endif %}
+<meta itemprop="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncatewords: 55 }}{% else %}{{ site.description }}{% endif %}">
+<meta itemprop="image" content="{{ page.image | prepend: site.baseurl | replace: '//', '/' | prepend: site.url }}">

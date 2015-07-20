@@ -1,32 +1,35 @@
 <div class="panel panel-default" id='sobre'>
-    <div class="panel-heading">
-        <h4>Sobre mim</h4>
-    </div>
-    <div class="panel-body">
-	<p class='text-center'>
-	    <a href='{{ site.gravatar_email | to_secure_gravatar }}' title='{{ site.author }}'>
-		<img src='{{ site.gravatar_email | to_secure_gravatar }}' alt='{{ site.author }}' class='avatar img-responsive img-thumbnail'>
-	    </a>
-	</p>
-        <p class='text-center'>
-            <strong>{{ site.author }}</strong>
-        </p>
-        <p class='text-center'>
-            <a href='http://lattes.cnpq.br/2162371468280338' title='Currículo Lattes'>
-		<img src='{{ "/img/curriculo_lattes.png" | prepend: site.baseurl | replace: '//', '/' }}' alt='Currículo Lattes' class='img-responsive lattes'>
-	    </a>
-        </p>
-        <!-- AddThis Follow BEGIN -->
-        <div class="addthis_toolbox addthis_32x32_style addthis_default_style center-block">
-            <a class="addthis_button_facebook_follow" addthis:userid="{{ site.facebook_username }}"></a>
-            <a class="addthis_button_twitter_follow" addthis:userid="{{ site.twitter_username }}"></a>
-            <a class="addthis_button_linkedin_follow" addthis:userid="{{ site.linkedin_username }}"></a>
-            <a class="addthis_button_google_follow" addthis:userid="{{ site.google_userid }}"></a>
-            <a class="addthis_button_youtube_follow" addthis:userid="{{ site.youtube_username }}"></a>
-            <a class="addthis_button_foursquare_follow" addthis:userid="{{ site.foursquare_username }}"></a>
-            <a class="addthis_button_github_follow" addthis:userid="{{ site.github_username }}"></a>
+    <div itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <div class="panel-heading">
+            <h4>Sobre mim</h4>
         </div>
-        <!-- AddThis Follow END -->
+        <div class="panel-body">
+            <p class='text-center'>
+                <a href='{{ site.gravatar_email | to_secure_gravatar }}' title='{{ site.author }}'>
+                    <img src='{{ site.gravatar_email | to_secure_gravatar }}' alt='{{ site.author }}' class='avatar img-responsive img-thumbnail'>
+                </a>
+            </p>
+            <p class='text-center' itemprop="name">
+                <strong>{{ site.author }}</strong>
+            </p>
+            <p class='text-center'>
+                <a href='http://lattes.cnpq.br/2162371468280338' title='Currículo Lattes' itemprop='sameAs'>
+                    <img src='{{ "/img/curriculo_lattes.png" | prepend: site.baseurl | replace: '//', '/' }}' alt='Currículo Lattes' class='img-responsive lattes'>
+                </a>
+            </p>
+            <link itemprop="url" href="{{ site.baseurl | prepend: site.url }}">
+            <!-- AddThis Follow BEGIN -->
+            <div class="addthis_toolbox addthis_32x32_style addthis_default_style center-block">
+                <a class="addthis_button_facebook_follow" addthis:userid="{{ site.facebook_username }}" itemprop="sameAs"></a>
+                <a class="addthis_button_twitter_follow" addthis:userid="{{ site.twitter_username }}" itemprop="sameAs"></a>
+                <a class="addthis_button_linkedin_follow" addthis:userid="{{ site.linkedin_username }}" itemprop="sameAs"></a>
+                <a class="addthis_button_google_follow" addthis:userid="{{ site.google_userid }}" itemprop="sameAs"></a>
+                <a class="addthis_button_youtube_follow" addthis:userid="{{ site.youtube_username }}" itemprop="sameAs"></a>
+                <a class="addthis_button_foursquare_follow" addthis:userid="{{ site.foursquare_username }}" itemprop="sameAs"></a>
+                <a class="addthis_button_github_follow" addthis:userid="{{ site.github_username }}" itemprop="sameAs"></a>
+            </div>
+            <!-- AddThis Follow END -->
+        </div>
     </div>
 </div>
 
