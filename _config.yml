@@ -27,6 +27,7 @@ enforce_ssl: vinyanalista.github.io
 gems:
     - jekyll-archives
     - jekyll-auto-image
+    - jekyll-sitemap
 jekyll-archives:
     enabled:
         - year
