@@ -83,14 +83,17 @@
         };
     </script>
 
-    <!-- AdSense -->
+    <!-- Google AdSense + Google Analytics -->
     <script type="text/javascript">
         var adsense_editor_id = "{{ site.adsense_editor_id }}",
             adsense_ad_units = [
                 "{{ site.adsense_ad_unit_1 }}",
                 "{{ site.adsense_ad_unit_2 }}",
                 "{{ site.adsense_ad_unit_3 }}"
-            ];
+            ],
+            analytics_property_id = "{{ site.analytics_property_id }}",
+            page_url = "{{ page.url | replace:'index.html', '' | prepend: site.baseurl | replace: '//', '/' | prepend: site.url }}",
+            page_title = "{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}";
     </script>
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 

@@ -21,7 +21,7 @@ html {
     display: block;
 }
 
-.adsbygoogle.anuncio-na-pagina {
+.adsbygoogle.anuncio-na-pagina, #ad_unit_1 {
     margin-top: 1em;
 }
 
