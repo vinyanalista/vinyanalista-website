@@ -67,25 +67,14 @@
     <link href="{{ "/css/syntax.css" | prepend: site.baseurl }}" rel="stylesheet">
     <link href="{{ "/css/comum.css" | prepend: site.baseurl }}" rel="stylesheet">
 
-    <!-- Bootstrap JS -->
-    <script src="{{ "/lib/jquery/1.11.3/jquery-1.11.3.min.js" | prepend: site.baseurl }}"></script>
-    <script src="{{ "/lib/bootstrap/3.3.4/js/bootstrap.min.js" | prepend: site.baseurl }}"></script>
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="{{ "/lib/bootstrap/3.3.4/js/ie10-viewport-bug-workaround.js" | prepend: site.baseurl }}"></script>
-
-    <!-- AddThis -->
-    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid={{ site.addthis_profile_id }}" async="async"></script>
+    <!-- AddThis + Google AdSense + Google Analytics -->
     <script type="text/javascript">
-        var addthis_share = {
-            url: "{{ page.url | prepend: site.baseurl | replace: '//', '/' | prepend: site.url }}",
-            title: document.title,
-            description: "{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncatewords: 55 }}{% else %}{{ site.description }}{% endif %}"
-        };
-    </script>
-
-    <!-- Google AdSense + Google Analytics -->
-    <script type="text/javascript">
-        var adsense_editor_id = "{{ site.adsense_editor_id }}",
+            var addthis_share = {
+                url: "{{ page.url | prepend: site.baseurl | replace: '//', '/' | prepend: site.url }}",
+                title: document.title,
+                description: "{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncatewords: 55 }}{% else %}{{ site.description }}{% endif %}"
+            },
+            adsense_editor_id = "{{ site.adsense_editor_id }}",
             adsense_ad_units = [
                 "{{ site.adsense_ad_unit_1 }}",
                 "{{ site.adsense_ad_unit_2 }}",
@@ -95,9 +84,8 @@
             page_url = "{{ page.url | replace:'index.html', '' | prepend: site.baseurl | replace: '//', '/' | prepend: site.url }}",
             page_title = "{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}";
     </script>
+    <script async src="//s7.addthis.com/js/300/addthis_widget.js#pubid={{ site.addthis_profile_id }}"></script>
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-
-    <!-- Comum -->
-    <script src="{{ "/js/comum.js" | prepend: site.baseurl }}"></script>
-    <script src="{{ "/js/adsense.js" | prepend: site.baseurl }}"></script>
+    <!-- jQuery + Bootstrap + comum -->
+    <script src="{{ "/js/all.min.js" | prepend: site.baseurl }}"></script>
 </head>
