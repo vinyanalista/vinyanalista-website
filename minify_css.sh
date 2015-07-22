@@ -1,0 +1,10 @@
+#!/bin/sh
+STYLESHEETS=""
+STYLESHEETS="$STYLESHEETS lib/paper/3.3.4/css/bootstrap.css"
+STYLESHEETS="$STYLESHEETS css/syntax.css"
+STYLESHEETS="$STYLESHEETS css/comum.css"
+
+STYLESHEETS_FOLDER="css"
+FINAL_STYLESHEET="all.min.css"
+
+cleancss --source-map -o "$STYLESHEETS_FOLDER/$FINAL_STYLESHEET" $STYLESHEETS

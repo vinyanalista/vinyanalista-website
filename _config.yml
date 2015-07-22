@@ -45,7 +45,7 @@ image: "/favicon.png"
 
 # Build settings
 excerpt_separator: <!--more-->
-exclude: [online]
+exclude: [online, minify]
 markdown: redcarpet
 
 # Paginação
