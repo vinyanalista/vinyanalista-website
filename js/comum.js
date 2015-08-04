@@ -18,9 +18,15 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
 $(document).ready(function(){
+    // Google Analytics
     ga('create', analytics_property_id, 'auto');
     ga('send', 'pageview', {
         'page': page_url,
         'title': page_title
     });
+    
+    // Realça links externos
+    $('div.blog-post a').filter(function() {
+        return (this.hostname && (this.hostname != location.hostname));
+    }).append(' <span class="glyphicon glyphicon-new-window"></span>').attr('target', '_blank');
 });
