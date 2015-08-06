@@ -3,7 +3,7 @@ date: '2015-08-06 02:00:00 GMT-3'
 layout: post
 published: true
 title: Como criar um tema responsivo do WordPress com o Bootstrap
-image: /files/2015/08/wordpress-bootstrap-1.png
+image: /files/2015/08/wordpress-bootstrap-0.png
 ---
 
 Nesse tutorial, você aprenderá a criar um tema responsivo do [WordPress](https://br.wordpress.org/) usando o [Bootstrap](http://getbootstrap.com/). Com um tema responsivo, seu *blog* ou *site* com WordPress aparecerá bem na grande variedade de dispositivos (computadores, *smartphones* e *tablets*) e navegadores existentes.
