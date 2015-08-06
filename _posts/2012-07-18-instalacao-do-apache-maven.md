@@ -36,7 +36,7 @@ $ wget http://ftp.unicamp.br/pub/apache/maven/binaries/apache-maven-3.0.4-bin.ta
 
 ### Instalação do Maven
 
-Tanto no Windows quanto no Linux basta descompactar o arquivo baixado que o Maven já pode ser executado a partir daquele local. Assim como acontece com o [JDK](http://www.vinyanalista.com.br/blog/2012/07/18/instalacao-do-apache-maven/www.vinyanalista.com.br/blog/2012/07/10/instalacao-do-java-development-kit-jdk/), é possível instalar em uma localização visível a todos os usuários (como “C:\” no Windows ou “/opt/” no Linux) ou visível apenas ao seu usuário (no meu caso, “C:\Users\Vinicius\Documents” ou “/home/vinicius”). Em ambos os casos, o arquivo descompactado gera uma pasta chamada “apache-maven-3.0.4″ e pode ser excluído após a extração.
+Tanto no Windows quanto no Linux basta descompactar o arquivo baixado que o Maven já pode ser executado a partir daquele local. Assim como acontece com o [JDK]({% post_url 2012-07-10-instalacao-do-java-development-kit-jdk %}), é possível instalar em uma localização visível a todos os usuários (como “C:\” no Windows ou “/opt/” no Linux) ou visível apenas ao seu usuário (no meu caso, “C:\Users\Vinicius\Documents” ou “/home/vinicius”). Em ambos os casos, o arquivo descompactado gera uma pasta chamada “apache-maven-3.0.4″ e pode ser excluído após a extração.
 
 É necessário prestar atenção a esse local pois, assim como fizemos na [instalação do JDK]({% post_url 2012-07-10-instalacao-do-java-development-kit-jdk %}), aqui vamos configurar uma variável de ambiente que aponte para a localização do Maven, chamada de M2_HOME.
 
