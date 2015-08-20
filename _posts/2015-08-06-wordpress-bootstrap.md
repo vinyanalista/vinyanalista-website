@@ -578,7 +578,7 @@ Finalmente, clique em **Publicar**.
 
 Para incluir o conteúdo da página que criamos agora no nosso tema dinamicamente, vamos usar a função provavelmente mais famosa do WordPress, chamada *loop* (laço).
 
-O *loop* do WordPress faz exatamente o que parece. Ele itera pelas páginas ou *posts* a serem exibidos e obtém seus títulos e conteúdos, assim como várias outras informações, como a data de publicação e o autor, e até mesmo os comentários, se houver.
+O [*loop* do WordPress](https://codex.wordpress.org/pt-br:O_Loop) faz exatamente o que parece. Ele itera pelas páginas ou *posts* a serem exibidos e obtém seus títulos e conteúdos, assim como várias outras informações, como a data de publicação e o autor, e até mesmo os comentários, se houver.
 
 Modifique seu arquivo `index.php` para realizar o *loop* entre as chamadas às funções `get_header()` e `get_footer()`:
 
