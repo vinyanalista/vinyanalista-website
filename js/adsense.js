@@ -1,5 +1,15 @@
 adsbygoogle = window.adsbygoogle || [];
 
+var html_1 = '<div class="row">' +
+    '<div class="col-xs-12">' +
+    '<ins class="adsbygoogle" id="ad_unit_2" data-ad-format="auto"></ins>' +
+    '</div></div>';
+
+var html_2 = '<div class="row">' +
+    '<div class="col-xs-12">' +
+    '<ins class="adsbygoogle" id="ad_unit_3" data-ad-format="auto"></ins>' +
+    '</div></div>';
+
 $(document).ready(function(){
     if ($('#is_post').length > 0) {
         // Anúncios nas postagens ficam entre os parágrafos
@@ -20,14 +30,14 @@ $(document).ready(function(){
             paragrafo1 = 1;
         }
         
-        var $anuncio_1 = $('<ins class="adsbygoogle anuncio-no-post" id="ad_unit_2" data-ad-format="auto"></ins>');
+        var $anuncio_1 = $(html_1);
         $paragrafos.eq(paragrafo1 - 1).after($anuncio_1);
         
         if (quantidade_de_paragrafos < 2) {
             return;
         }
         
-        var $anuncio_2 = $('<ins class="adsbygoogle anuncio-no-post" id="ad_unit_3" data-ad-format="auto"></ins>');
+        var $anuncio_2 = $(html_2);
         $paragrafos.eq(paragrafo2 - 1).after($anuncio_2);
     } else {
         // Anúncios nas páginas ficam entre as postagens
@@ -48,14 +58,14 @@ $(document).ready(function(){
             post1 = 1;
         }
         
-        var $anuncio_1 = $('<ins class="adsbygoogle anuncio-na-pagina" id="ad_unit_2" data-ad-format="auto"></ins>');
+        var $anuncio_1 = $(html_1);
         $posts.eq(post1 - 1).find('.blog-post-conteudo .row').after($anuncio_1);
         
         if (quantidade_de_posts < 2) {
             return;
         }
         
-        var $anuncio_2 = $('<ins class="adsbygoogle anuncio-na-pagina" id="ad_unit_3" data-ad-format="auto"></ins>');
+        var $anuncio_2 = $(html_2);
         $posts.eq(post2 - 1).find('.blog-post-conteudo .row').after($anuncio_2);
     }
     
