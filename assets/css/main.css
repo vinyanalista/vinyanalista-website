@@ -42,7 +42,7 @@ h6, .h6 {
 /* Footer */
 
 .footer {
-    background-color: #009688;
+    background-color: #2196F3;
     bottom: 0;
     position: absolute;
     width: 100%;
@@ -115,7 +115,7 @@ h6, .h6 {
 }
 
 #search-form {
-    background: #009688;
+    background: #2196F3;
     box-shadow: none;
     position: absolute;
     top: 0;
