@@ -1,10 +1,82 @@
 <footer class="footer">
-    <div class="container text-center">
-        Copyright &copy; {{ site.time | date: '%Y' }}. <a href='#sobre'>{{ site.author }}</a>. Todos os direitos reservados. Blog construído sobre o <a href="http://jekyllrb.com/" target='_blank'>Jekyll</a>. Tema <a href="https://bootswatch.com/paper/" target='_blank'>Paper</a>.
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <p class="text-center">
+                    Copyright &copy; {{ site.time | date: '%Y' }} {% if site.author.name %}<a href='#author'>{{ site.author.name }}</a>{% else %}<a href='#about'>{{ site.title }}</a>{% endif %}. Todos os direitos reservados. Baseado no <a href='https://github.com/vinyanalista/material-jekyll-plus'>Material site template for Jekyll PLUS</a>.
+                </p>
+            </div>
+        </div>
     </div>
 </footer>
-{% if page.is_post %}
-<input type="hidden" id="is_post" value="true">
-{% endif %}
+
 <meta itemprop="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncatewords: 55 }}{% else %}{{ site.description }}{% endif %}">
-<meta itemprop="image" content="{{ page.image | prepend: site.baseurl | replace: '//', '/' | prepend: site.url }}">
+
+{% if page.image %}
+    <meta itemprop="image" content="{{ page.image | prepend: site.baseurl | replace: '//', '/' | prepend: site.url }}">
+{% endif %}
+
+{% if site.disqus_shortname %}
+    <!-- Disqus -->
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES * * */
+        var disqus_shortname = '{{ site.disqus_shortname }}';
+        
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function () {
+            var s = document.createElement('script'); s.async = true;
+            s.type = 'text/javascript';
+            s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+            (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+        }());
+    </script>
+    <!-- Disqus End -->
+{% endif %}
+
+{% if site.google.adsense.publisher_id %}
+    <!-- Google AdSense -->
+    {% if site.google.adsense.content_ad_unit_2 %}
+        {% include adsense.html id="content_ad_unit_2" ad_slot=site.google.adsense.content_ad_unit_2 %}
+    {% endif %}
+
+    <script type="text/javascript">
+        adsbygoogle = window.adsbygoogle || [];
+
+        $(document).ready(function(){
+            {% if site.google.adsense.content_ad_unit_2 %}
+                var $ad = $('#content_ad_unit_2').closest('.row');
+                if (($('.blog-post').length > 1) || ($('.blog-archive-title').length > 0)) {
+                    // Post listing
+                    var $posts = $('.blog-post');
+                    if ($posts.length < 2) {
+                        return;
+                    }
+                    var post;
+                    if ($posts.length > 1) {
+                        post = random_number(2, $posts.length);
+                    } else {
+                        post = 2;
+                    }
+                    $posts.eq(post - 1).find('.blog-post-content .row').after($ad);
+                } else {
+                    // Page or post
+                    var $paragraphs = $('.blog-post-content p');
+                    if ($paragraphs.length == 0) {
+                        return;
+                    }
+                    var paragraph;
+                    if ($paragraphs.length > 1) {
+                        paragraph = random_number(1, $paragraphs.length);
+                    } else {
+                        paragraph = 1;
+                    }
+                    $paragraphs.eq(paragraph - 1).after($ad);
+                }
+            {% endif %}
+            $('.adsbygoogle').each(function(index, element){
+                adsbygoogle.push({});
+            });
+        });
+    </script>
+    <!-- Google AdSense End -->
+{% endif %}

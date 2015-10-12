@@ -1,89 +1,137 @@
 <head>
-    <meta charset="utf-8">
+    <meta charset="{{ site.encoding }}">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    
-    {% if site.enforce_ssl %}
-        <!--
-            redirect users to the https version of the website.
-            but: only check when on the production domain, as set in _config.yml.
-        -->
+
+    {% if site.enforce_https %}
         <script type="text/javascript">
-            if (("{{ site.enforce_ssl }}" == window.location.host) && (window.location.protocol != "https:"))
+            if (("{{ site.enforce_https }}" == window.location.host) && (window.location.protocol != "https:")) {
                 window.location = window.location.toString().replace(/^http:/, "https:");
+            }
         </script>
     {% endif %}
-    
-    <meta name="author" content="{{ site.author }}">
-    <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncatewords: 55 }}{% else %}{{ site.description }}{% endif %}">
-    <link rel="canonical" href="{{ page.url | replace:'index.html', '' | prepend: site.baseurl | replace: '//', '/' | prepend: site.url }}">
-    <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
 
     <title>{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+    <meta name="author" content="{{ site.author.name }}">
+    <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | replace: '//', '/' | prepend: site.url }}">
+    <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
 
-    <!-- Facebook -->
+    <!-- OpenSearch -->
+    <link rel="search" type="application/opensearchdescription+xml" title="Pesquisar em {{ site.title }}" href="{{ '/opensearch.xml' | prepend: site.baseurl | replace: '//', '/' | prepend: site.url }}" />
+
+    <!-- Open Graph -->
+    {% if page.is_post %}
+        <meta property="article:published_time" content="{{ page.date }}"/>
+    {% endif %}
+    {% if site.facebook.app_id %}
+        <meta property="fb:app_id" content="{{ site.facebook.app_id }}" />
+    {% endif %}
+    {% if site.facebook.page_id %}
+        <meta property="fb:page_id" content="{{ site.facebook.page_id }}" />
+    {% endif %}
+    {% if site.author.name %}
+        <meta property="og:author" content="{{ site.author.name }}" />
+    {% endif %}
+    <meta property="og:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}" />
+    {% if page.image %}
+        <meta property="og:image" content="{{ page.image | prepend: site.baseurl | replace: '//', '/' | prepend: site.url }}" />
+    {% endif %}
+    <meta property="og:site_name" content="{{ site.title }}" />
+    <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}" />
+    <meta property="og:type" content="{% if page.is_post %}{{ "article" }}{% else %}{{ "website" }}{% endif %}" />
     <meta property="og:url" content="{{ page.url | replace:'index.html', '' | prepend: site.baseurl | replace: '//', '/' | prepend: site.url }}" />
-    <meta property="og:type" content="{% if page.is_post %}{{ "article" }}{% else %}{{ "website" }}{% endif %}"/>
-    <meta property="og:title" content="{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}" />
-    <meta property="og:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncatewords: 55 }}{% else %}{{ site.description }}{% endif %}" />
-    <meta property="og:image" content="{{ page.image | prepend: site.baseurl | replace: '//', '/' | prepend: site.url }}" />
-    
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary" />
-    <meta name="twitter:site" content="{{ site.twitter_username | prepend: "@" }}" />
 
-    <!-- Favicons (by realfavicongenerator.net) -->
-    <link rel="apple-touch-icon" sizes="57x57" href="{{ "/apple-touch-icon-57x57.png?v=2" | prepend: site.baseurl }}">
-    <link rel="apple-touch-icon" sizes="60x60" href="{{ "/apple-touch-icon-60x60.png?v=2" | prepend: site.baseurl }}">
-    <link rel="apple-touch-icon" sizes="72x72" href="{{ "/apple-touch-icon-72x72.png?v=2" | prepend: site.baseurl }}">
-    <link rel="apple-touch-icon" sizes="76x76" href="{{ "/apple-touch-icon-76x76.png?v=2" | prepend: site.baseurl }}">
-    <link rel="apple-touch-icon" sizes="114x114" href="{{ "/apple-touch-icon-114x114.png?v=2" | prepend: site.baseurl }}">
-    <link rel="apple-touch-icon" sizes="120x120" href="{{ "/apple-touch-icon-120x120.png?v=2" | prepend: site.baseurl }}">
-    <link rel="apple-touch-icon" sizes="144x144" href="{{ "/apple-touch-icon-144x144.png?v=2" | prepend: site.baseurl }}">
-    <link rel="apple-touch-icon" sizes="152x152" href="{{ "/apple-touch-icon-152x152.png?v=2" | prepend: site.baseurl }}">
-    <link rel="apple-touch-icon" sizes="180x180" href="{{ "/apple-touch-icon-180x180.png?v=2" | prepend: site.baseurl }}">
-    <link rel="icon" type="image/png" href="{{ "/favicon-32x32.png?v=2" | prepend: site.baseurl }}" sizes="32x32">
-    <link rel="icon" type="image/png" href="{{ "/favicon-194x194.png?v=2" | prepend: site.baseurl }}" sizes="194x194">
-    <link rel="icon" type="image/png" href="{{ "/favicon-96x96.png?v=2" | prepend: site.baseurl }}" sizes="96x96">
-    <link rel="icon" type="image/png" href="{{ "/android-chrome-192x192.png?v=2" | prepend: site.baseurl }}" sizes="192x192">
-    <link rel="icon" type="image/png" href="{{ "/favicon-16x16.png?v=2" | prepend: site.baseurl }}" sizes="16x16">
-    <link rel="manifest" href="{{ "/manifest.json?v=2" | prepend: site.baseurl }}">
-    <link rel="shortcut icon" href="{{ "/favicon.ico?v=2" | prepend: site.baseurl }}">
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary" />
+    {% if site.twitter_username %}
+        <meta name="twitter:site" content="{{ site.twitter_username | prepend: "@" }}" />
+    {% endif %}
+
+    <!-- Favicons (made with RealFaviconGenerator.net) -->
+    <link rel="apple-touch-icon" sizes="57x57" href="{{ "/apple-touch-icon-57x57.png?v=2" | prepend: site.baseurl | replace: '//', '/' | prepend: site.url }}">
+    <link rel="apple-touch-icon" sizes="60x60" href="{{ "/apple-touch-icon-60x60.png?v=2" | prepend: site.baseurl | replace: '//', '/' | prepend: site.url }}">
+    <link rel="apple-touch-icon" sizes="72x72" href="{{ "/apple-touch-icon-72x72.png?v=2" | prepend: site.baseurl | replace: '//', '/' | prepend: site.url }}">
+    <link rel="apple-touch-icon" sizes="76x76" href="{{ "/apple-touch-icon-76x76.png?v=2" | prepend: site.baseurl | replace: '//', '/' | prepend: site.url }}">
+    <link rel="apple-touch-icon" sizes="114x114" href="{{ "/apple-touch-icon-114x114.png?v=2" | prepend: site.baseurl | replace: '//', '/' | prepend: site.url }}">
+    <link rel="apple-touch-icon" sizes="120x120" href="{{ "/apple-touch-icon-120x120.png?v=2" | prepend: site.baseurl | replace: '//', '/' | prepend: site.url }}">
+    <link rel="apple-touch-icon" sizes="144x144" href="{{ "/apple-touch-icon-144x144.png?v=2" | prepend: site.baseurl | replace: '//', '/' | prepend: site.url }}">
+    <link rel="apple-touch-icon" sizes="152x152" href="{{ "/apple-touch-icon-152x152.png?v=2" | prepend: site.baseurl | replace: '//', '/' | prepend: site.url }}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ "/apple-touch-icon-180x180.png?v=2" | prepend: site.baseurl | replace: '//', '/' | prepend: site.url }}">
+    <link rel="icon" type="image/png" href="{{ "/favicon-32x32.png?v=2" | prepend: site.baseurl | replace: '//', '/' | prepend: site.url }}" sizes="32x32">
+    <link rel="icon" type="image/png" href="{{ "/favicon-194x194.png?v=2" | prepend: site.baseurl | replace: '//', '/' | prepend: site.url }}" sizes="194x194">
+    <link rel="icon" type="image/png" href="{{ "/favicon-96x96.png?v=2" | prepend: site.baseurl | replace: '//', '/' | prepend: site.url }}" sizes="96x96">
+    <link rel="icon" type="image/png" href="{{ "/android-chrome-192x192.png?v=2" | prepend: site.baseurl | replace: '//', '/' | prepend: site.url }}" sizes="192x192">
+    <link rel="icon" type="image/png" href="{{ "/favicon-16x16.png?v=2" | prepend: site.baseurl | replace: '//', '/' | prepend: site.url }}" sizes="16x16">
+    <link rel="manifest" href="{{ "/manifest.json?v=2" | prepend: site.baseurl | replace: '//', '/' | prepend: site.url }}">
+    <link rel="shortcut icon" href="{{ "/favicon.ico?v=2" | prepend: site.baseurl | replace: '//', '/' | prepend: site.url }}">
     <meta name="msapplication-TileColor" content="#2d89ef">
-    <meta name="msapplication-TileImage" content="{{ "/mstile-144x144.png?v=2" | prepend: site.baseurl }}">
-    <meta name="theme-color" content="#2196f3">
-    
+    <meta name="msapplication-TileImage" content="{{ "/mstile-144x144.png?v=2" | prepend: site.baseurl | replace: '//', '/' | prepend: site.url }}">
+    <meta name="msapplication-config" content="{{ "/browserconfig.xml?v=1" | prepend: site.baseurl | replace: '//', '/' | prepend: site.url }}">
+    <meta name="theme-color" content="#009688">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.3.0/css/roboto.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.3.0/css/material.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.3.0/css/ripples.min.css">
+    <link rel="stylesheet" href="{{ "/assets/css/syntax.css" | prepend: site.baseurl }}">
+    <link rel="stylesheet" href="{{ "/assets/css/main.css" | prepend: site.baseurl }}">
+
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
-        <script src="{{ "/lib/html5shiv/3.7.2/html5shiv.min.js" | prepend: site.baseurl }}"></script>
-        <script src="{{ "/lib/respond/1.4.2/respond.min.js" | prepend: site.baseurl }}"></script>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-    <!-- CSS -->
-    <link href="{{ "/css/all.min.css" | prepend: site.baseurl }}" rel="stylesheet">
+    <!-- JS -->
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.3.0/js/ripples.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.3.0/js/material.min.js"></script>
+    <script src="{{ "/assets/js/main.js" | prepend: site.baseurl }}"></script>
 
-    <!-- AddThis + Google AdSense + Google Analytics -->
-    <script type="text/javascript">
+    {% if site.google.analytics_property_id %}
+        <!-- Google Analytics -->
+        <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', '{{ site.google.analytics_property_id }}', 'auto');
+        ga('send', 'pageview', {
+            'page': '{{ page.url | replace:"index.html","" | prepend: site.baseurl | replace: "//", "/" | prepend: site.url }}',
+            'title': '{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}'
+        });
+
+        </script>
+        <!-- End Google Analytics -->
+    {% endif %}
+
+    {% if site.google.adsense.publisher_id %}
+        <!-- Google AdSense -->
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    {% endif %}
+
+    {% if site.addthis_profile_id %}
+        <!-- AddThis -->
+        <script async src="//s7.addthis.com/js/300/addthis_widget.js#pubid={{ site.addthis_profile_id }}"></script>
+        <script type="text/javascript">
+            var addthis_config = {
+                data_track_clickback: true,
+                data_track_addressbar: true,
+                ui_language: '{{ site.lang }}'
+            };
             var addthis_share = {
-                url: "{{ page.url | prepend: site.baseurl | replace: '//', '/' | prepend: site.url }}",
+                url: '{{ page.url | prepend: site.baseurl | replace: "//", "/"" | prepend: site.url }}',
                 title: document.title,
-                description: "{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncatewords: 55 }}{% else %}{{ site.description }}{% endif %}"
-            },
-            adsense_editor_id = "{{ site.adsense_editor_id }}",
-            adsense_ad_units = [
-                "{{ site.adsense_ad_unit_1 }}",
-                "{{ site.adsense_ad_unit_2 }}",
-                "{{ site.adsense_ad_unit_3 }}"
-            ],
-            analytics_property_id = "{{ site.analytics_property_id }}",
-            page_url = "{{ page.url | replace:'index.html', '' | prepend: site.baseurl | replace: '//', '/' | prepend: site.url }}",
-            page_title = "{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}";
-    </script>
-    <script async src="//s7.addthis.com/js/300/addthis_widget.js#pubid={{ site.addthis_profile_id }}"></script>
-    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    
-    <!-- jQuery + Bootstrap + comum -->
-    <script src="{{ "/js/all.min.js" | prepend: site.baseurl }}"></script>
+                description: '{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncatewords: 55 }}{% else %}{{ site.description }}{% endif %}'
+            };
+        </script>
+        <!-- End AddThis -->
+    {% endif %}
 </head>
