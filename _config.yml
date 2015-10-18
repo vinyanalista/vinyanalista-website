@@ -270,7 +270,7 @@ facebook:
 # Foursquare username
 # Example: username, if your Foursquare URL is https://foursquare.com/username
 # Default: not set (Foursquare URL is not displayed)
-foursquare_username: "vinyanalista"
+# foursquare_username: "vinyanalista"
 
 # GitHub username
 # Example: jekyll, if your GitHub URL is https://github.com/jekyll
