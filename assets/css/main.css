@@ -271,3 +271,7 @@ em.caption {
 h2.blog-archive-title a {
     color: #FFF;
 }
+
+.atualizacao a {
+    text-decoration: underline;
+}
