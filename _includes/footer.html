@@ -16,10 +16,19 @@
     <meta itemprop="image" content="{{ page.image | prepend: site.baseurl | replace: '//', '/' | prepend: site.url }}">
 {% endif %}
 
+{% if site.lang %}
+    <meta itemprop="inLanguage" content="{{ site.lang }}"/>
+{% endif %}
+
 {% if site.disqus_shortname %}
     <!-- Disqus -->
     <script type="text/javascript">
         /* * * CONFIGURATION VARIABLES * * */
+        {% if site.lang %}
+            var disqus_config = function () {
+                this.language = "{{ site.lang }}";
+            };
+        {% endif %}
         var disqus_shortname = '{{ site.disqus_shortname }}';
         
         /* * * DON'T EDIT BELOW THIS LINE * * */
