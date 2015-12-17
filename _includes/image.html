@@ -1,5 +1,5 @@
 <p class='text-center'>
-    <a href='{{ include.src }}' title='{{ include.caption }}'>
+    <a href='{% if include.link %}{{ include.link }}{% else %}{{ include.src }}{% endif %}' title='{{ include.caption }}'>
         <img src='{{ include.src }}' alt='{{ include.caption }}' class='img-responsive img-thumbnail'>
     </a>
     {% if include.caption %}

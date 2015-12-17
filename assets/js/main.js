@@ -54,6 +54,6 @@ $(document).ready(function(){
 
     // Realça links externos
     $('div.blog-post a').filter(function() {
-        return (this.hostname && (this.hostname != location.hostname));
+        return (this.hostname && (this.hostname != location.hostname) && ($(this).find('img').length == 0));
     }).append(' <span class="glyphicon glyphicon-new-window"></span>').attr('target', '_blank');
 });
