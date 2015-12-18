@@ -3,7 +3,7 @@ date: '2015-12-17 08:00:00 GMT-3'
 layout: post
 published: true
 title: Acesse sites e aplicativos censurados com o Psiphon
-image: /files/2015/12/psiphon-00.png
+image: /files/2015/12/vpn.png
 ---
 
 De uma hora para outra, [o WhatsApp foi bloqueado no Brasil][noticia-whatsapp]. Mas há artifícios que possibilitam a utilização do aplicativo, mesmo com o bloqueio das operadoras. Aqui veremos um deles: o aplicativo [Psiphon][psiphon].
@@ -23,6 +23,8 @@ Uma solução para quem não deseja ficar sem usar o serviço de mensagens é ut
 ## Como funciona o Psiphon?
 
 O Psiphon burla a censura ou bloqueio imposta ao seu computador ou dispositivo móvel (*smartphone* ou *tablet*) por meio de uma conexão em forma de [túnel][vpn] que ele estabelece com algum outro computador anônimo em algum outro lugar do mundo. Ele atravessa os dados que chegam e saem de você por esse túnel. Dessa maneira, os dados evitam o caminho comum, que está bloqueado, e passam por outro caminho, que não está censurado.
+
+{% include image.html src="/files/2015/12/vpn.png" %}
 
 ## Instalando e usando o Psiphon no Android
 
