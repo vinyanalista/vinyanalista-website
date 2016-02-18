@@ -56,7 +56,7 @@ Quando não quiser usar mais o túnel, volte ao aplicativo e clique em **Stop**:
 
 No computador, não é necessário instalar o Psiphon: basta baixar e começar a usar.
 
-Acesse o [site do Psiphon][psiphon] e clique em **Download**, em seguida clique no *link* do Psiphon para Windows:
+Acesse o [site do Psiphon][psiphon] e clique em **Download**, em seguida clique no *link* do Psiphon para [Windows][windows]:
 
 {% include image.html src="/files/2015/12/psiphon-05.jpg" %}
 
@@ -88,6 +88,7 @@ Espero que possa ter ajudado! Dúvidas nos comentários!
 [vpn]:                      http://www.tecmundo.com.br/1427-o-que-e-vpn-.htm
 [android]:                  https://www.android.com/intl/pt-BR_br/
 [play-store]:               https://play.google.com/store/apps?hl=pt_BR
+[windows]:                  https://www.microsoft.com/pt-br/windows/
 [tor]:                      https://www.torproject.org/download/download.html
 [hola]:                     https://hola.org/
 [linux]:                    https://www.vivaolinux.com.br/linux/
