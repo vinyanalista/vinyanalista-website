@@ -86,8 +86,8 @@ Podemos então classificar o software de um computador em dois grupos, diferente
 
 Os **softwares básicos** de um computador são aqueles essenciais ao seu funcionamento, como o sistema operacional, o BIOS e os programas fornecidos pelo fabricante junto com a máquina. Já os **softwares aplicativos**, ou simplesmente aplicativos, são desenvolvidos para auxiliar o usuário na execução de alguma tarefa ou na obtenção da solução para algum problema, ou seja, são softwares desenvolvidos para uma aplicação específica. Quase todos os programas que não são softwares básicos são softwares aplicativos.
 
-{% capture mensagem_novo_post %}agora que você já conhece os componentes básicos dos computadores, que tal aprender <a href="{% post_url 2015-11-27-como-escolher-um-bom-computador-para-comprar %}">como escolher um bom computador para comprar</a>?{% endcapture %}
-{% include atualizacao.html data="27/11/2015" mensagem=mensagem_novo_post %}
+{% capture mensagem_novo_post %}Agora que você já conhece os componentes básicos dos computadores, que tal aprender [como escolher um bom computador para comprar]({% post_url 2015-11-27-como-escolher-um-bom-computador-para-comprar %})?{% endcapture %}
+{% include update.html date="27/11/2015" message=mensagem_novo_post %}
 
 ### Referências
 

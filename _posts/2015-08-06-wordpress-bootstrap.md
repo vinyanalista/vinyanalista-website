@@ -28,7 +28,7 @@ Antes de começarmos a desenvolver o tema propriamente dito, você precisa baixa
 
 Em nosso tema, utilizaremos o Bootstrap a partir de uma [CDN (*Content Delivery Network*)](http://www.baboo.com.br/internet/entenda-o-que-e-cdn-ou-content-delivery-network/). No entanto, você pode [baixar o Bootstrap](http://getbootstrap.com/getting-started/#download) se desejar servi-lo com seu *site*.
 
-Se for desenvolver esse tema utilizando um *site* do WordPress que já está no ar, recomendo que você utilize o [*plugin* Theme Test Drive para WordPress](https://wordpress.org/plugins/theme-test-drive/) para que seus visitantes não vejam o tema enquanto desenvolve. 
+Se for desenvolver esse tema utilizando um *site* do WordPress que já está no ar, recomendo que você utilize o [*plugin* Theme Test Drive para WordPress](https://wordpress.org/plugins/theme-test-drive/) para que seus visitantes não vejam o tema enquanto desenvolve.
 
 ### Começando
 
@@ -304,9 +304,9 @@ Então, adicione o seguinte ao final do arquivo `style.css` (ele deve ficar [ass
 
 /* Custom styles for this template */
 
-body { 
-    padding-top: 60px; 
-    padding-bottom: 40px; 
+body {
+    padding-top: 60px;
+    padding-bottom: 40px;
 }
 ```
 
@@ -337,7 +337,7 @@ Seu arquivo `header.php` deve ficar [assim](https://github.com/vinyanalista/wpbo
             <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
             <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
-        
+
         <?php wp_head(); ?>
     </head>
 
@@ -441,7 +441,7 @@ Por último, vamos rever nossos arquivos `header.php`, `index.php` e `footer.php
             <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
             <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
-        
+
         <?php wp_head(); ?>
     </head>
 
@@ -639,8 +639,7 @@ Agora, visite o *site*. Você perceberá as alterações que fez no editor.
 
 Gostou? Está começando a funcionar? Como esse tutorial é muito grande, decidi dividi-lo em partes. Não deixe de acompanhar o *blog* para ver as próximas partes!
 
-{% capture mensagem_2a_parte %}a segunda parte do tutorial já se encontra disponível <a href="{% post_url 2015-08-20-wordpress-bootstrap-parte2 %}">aqui</a>.{% endcapture %}
-{% include atualizacao.html data="20/08/2015" mensagem=mensagem_2a_parte %}
+{% include update.html date="20/08/2015" message="A segunda parte do tutorial já se encontra disponível [aqui]({% post_url 2015-08-20-wordpress-bootstrap-parte2 %})." %}
 
 Se você teve problemas em seguir o tutorial, pode verificar o que fizemos até agora [aqui](https://github.com/vinyanalista/wpbootstrap/tree/af163c63bcffdfe256e66c30f3bd18b2e03fba72). Também pode deixar sua dúvida nos comentários.
 
