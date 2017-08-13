@@ -639,7 +639,8 @@ Agora, visite o *site*. Você perceberá as alterações que fez no editor.
 
 Gostou? Está começando a funcionar? Como esse tutorial é muito grande, decidi dividi-lo em partes. Não deixe de acompanhar o *blog* para ver as próximas partes!
 
-{% include update.html date="20/08/2015" message="A segunda parte do tutorial já se encontra disponível [aqui]({% post_url 2015-08-20-wordpress-bootstrap-parte2 %})." %}
+{% capture mensagem_2a_parte %}A segunda parte do tutorial já se encontra disponível [aqui]({% post_url 2015-08-20-wordpress-bootstrap-parte2 %}).{% endcapture %}
+{% include update.html date="20/08/2015" message=mensagem_2a_parte %}
 
 Se você teve problemas em seguir o tutorial, pode verificar o que fizemos até agora [aqui](https://github.com/vinyanalista/wpbootstrap/tree/af163c63bcffdfe256e66c30f3bd18b2e03fba72). Também pode deixar sua dúvida nos comentários.
 
