@@ -34,7 +34,7 @@ body {
 
 /* Header */
 
-@media (min-width: 350px) {
+@media (min-width: 320px) {
     a.navbar-brand {
         background: url(../../favicon-32x32.png) 0px no-repeat;
         padding-left: 45px !important;
