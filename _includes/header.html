@@ -1,50 +1,38 @@
 <!-- Fixed navbar -->
-<nav class="navbar navbar-default navbar-fixed-top navbar-with-search" role="navigation">
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-primary">
     <div class="container">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed pull-left" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                <span class="sr-only">Exibir/esconder navegação</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="{{ site.baseurl }}/">{{ site.title }}</a>
-        </div><!--.navbar-header-->
+        <a class="navbar-brand" href="{{ site.baseurl }}/">{{ site.title }}</a>
 
-        <a class="pull-right" id="search-button" title="Pesquisar">
-            <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
-        </a>
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar" aria-label="Exibir/esconder navegação">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
         <div class="collapse navbar-collapse" id="navbar">
-            <ul class="nav navbar-nav navbar-right">
-                <li>
-                    <a href="{{ site.baseurl }}/">Blog</a>
+            <ul class="navbar-nav m-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ site.baseurl }}/">Blog</a>
                 </li>
-                <li>
-                    <a href="{{ site.baseurl }}/blog/category/trabalhos/">Trabalhos</a>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ site.baseurl }}/blog/category/trabalhos/">Trabalhos</a>
                 </li>
-                <li>
-                    <a href="http://lattes.cnpq.br/2162371468280338">Currículo</a>
+                <li class="nav-item">
+                    <a class="nav-link" href="http://lattes.cnpq.br/2162371468280338">Currículo</a>
                 </li>
             </ul>
-        </div><!--#navbar-->
-    </div><!--.container-->
-
-    <div id="search-bar">
-        <div class="container">
-            <form action="{% if site.google.cse_id %}{{ "/search/" | prepend: site.baseurl }}{% else %}https://www.google.com/search{% endif %}" id="search-form" method="get" role="search">
+            <form action="{% if site.google.cse_id %}{{ "/search/" | prepend: site.baseurl }}{% else %}https://www.google.com/search{% endif %}" class="form-inline" id="search-form" method="get" role="search">
                 {% if site.google.cse_id %}
                 {% else %}
                     <input type="hidden" name="as_sitesearch" value="{{ site.baseurl | prepend: site.url }}" />
                 {% endif %}
                 <div class="input-group">
-                    <input  class="form-control" id="search-input" type="text"name="q" placeholder="Pesquisar" />
-                    <span class="input-group-btn">
-                        <button type="submit" class="btn btn-primary" id="submit-search-button"><span class="glyphicon glyphicon-search"></span></button>
-                        <button type="reset" class="btn btn-danger" id="reset-search-button"><span class="glyphicon glyphicon-remove"></span></button>
-                    </span>
+                    <input class="form-control" id="search-field" name="q" placeholder="Pesquisar" type="text"  aria-label="Pesquisar">
+                    <div class="input-group-append">
+                        <button class="btn btn-secondary btn-number" id="search-button" type="submit">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
                 </div>
             </form>
-        </div>
-    </div><!--#search-bar-->
+        </div><!--#navbar-->
+    </div><!--.container-->
 </nav>
