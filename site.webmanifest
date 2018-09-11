@@ -2,8 +2,8 @@
 layout: null
 ---
 {
-    "name": "vinyanalista.com.br",
-    "short_name": "vinyanalista.com.br",
+    "name": "{{ site.title }}",
+    "short_name": "{{ site.title }}",
     "icons": [
         {
             "src": "{{ "/android-chrome-192x192.png?v=4" | prepend: site.baseurl | replace: '//', '/' | prepend: site.url }}",
