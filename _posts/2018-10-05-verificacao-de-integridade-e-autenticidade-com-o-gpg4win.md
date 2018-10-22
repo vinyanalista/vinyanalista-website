@@ -3,7 +3,6 @@ date: 2018-10-05 18:30:00 GMT-3
 image: '/files/2018/10/gpg4win.png'
 layout: post
 published: true
-nickname: 'gpg4win'
 title: 'Verificação de integridade e autenticidade com o Gpg4win'
 excerpt: 'Por vezes pode ser importante verificar um arquivo obtido da Internet. Duas verificações comuns que reduzem a quase zero as chances de usar um arquivo corrompido ou adulterado são a soma de verificação e a assinatura digital. Nesse post, você verá como fazê-las com o Gpg4win, um software livre gratuito para Windows. Como exemplo, verificaremos uma imagem ISO da distribuição openSUSE Leap.'
 ---
