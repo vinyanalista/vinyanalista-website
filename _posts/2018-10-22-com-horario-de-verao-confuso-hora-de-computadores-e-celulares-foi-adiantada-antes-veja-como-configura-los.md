@@ -100,6 +100,10 @@ Normalmente, o Windows já instala quaisquer atualizações disponíveis em um h
 
 Para verificar se há atualizações disponíveis, clique no **menu Iniciar**, depois em **Configurações**. Na tela **Configurações do Windows**, clique em **Atualização e Segurança**.
 
+Instale todas as atualizações disponíveis até que o Windows informe **Você está atualizado**:
+
+{% include image.html src="/files/2018/10/windows-atualizado.jpg" %}
+
 ## Windows na empresa
 
 No caso de computadores Windows em empresas, se esses computadores estão ingressados em um domínio do [Active Directory (AD)][ad], por padrão eles sincronizam a data e a hora com o servidor controlador do domínio, então não há o que configurar.
