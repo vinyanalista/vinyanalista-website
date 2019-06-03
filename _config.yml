@@ -132,7 +132,7 @@ google:
         # Google AdSense publisher ID
         # Your publisher ID is the unique identifier for your AdSense account.
         # Default: not set (Google AdSense is not used to show ads)
-        publisher_id: "ca-pub-5193467168351289"
+        publisher_id: "pub-5193467168351289"
 
         # If you do not know your publisher ID, take a look at
         # https://support.google.com/adsense/answer/105516
