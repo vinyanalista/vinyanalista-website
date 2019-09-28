@@ -350,12 +350,6 @@ facebook:
 # Default: not set (GitHub URL is not displayed)
 github_username: "vinyanalista"
 
-# Google Plus user ID
-# Example: 123456789098765432123, if your Google Plus URL is
-# https://plus.google.com/123456789098765432123
-# Default: not set (Google Plus URL is not displayed)
-google_plus_user_id: 112036205302761713933
-
 # LinkedIn username
 # Example: username, if your LinkedIn public profile URL is
 # https://www.linkedin.com/in/username

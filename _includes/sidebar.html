@@ -36,9 +36,6 @@
                 {% if site.linkedin_username %}
                     <a href="https://www.linkedin.com/in/{{ site.linkedin_username }}" class="addthis_button_linkedin_follow" addthis:userid="{{ site.linkedin_username }}" itemprop="sameAs"></a>
                 {% endif %}
-                {% if site.google_plus_user_id %}
-                    <a href="https://plus.google.com/{{ site.google_plus_user_id }}" class="addthis_button_google_follow" addthis:userid="{{ site.google_plus_user_id }}" itemprop="sameAs"></a>
-                {% endif %}
                 {% if site.youtube.profile and site.youtube.name %}
                     <a href="https://youtube.com/{{ site.youtube.profile }}/{{ site.youtube.name }}" class="addthis_button_youtube_follow" addthis:userid="{{ site.youtube.name }}" itemprop="sameAs"></a>
                 {% endif %}
@@ -71,13 +68,6 @@
                     <li>
                         <a href="https://www.linkedin.com/in/{{ site.linkedin_username }}" itemprop="sameAs">
                             <i class="fab fa-linkedin"></i> {{ site.linkedin_username }}
-                        </a>
-                    </li>
-                {% endif %}
-                {% if site.google.user_id %}
-                    <li>
-                        <a href="https://plus.google.com/{{ site.google.user_id }}" itemprop="sameAs">
-                            <i class="fab fa-google-plus"></i> {{ site.google.user_id }}
                         </a>
                     </li>
                 {% endif %}
