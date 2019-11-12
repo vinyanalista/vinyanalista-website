@@ -350,6 +350,11 @@ facebook:
 # Default: not set (GitHub URL is not displayed)
 github_username: "vinyanalista"
 
+# Instagram username
+# Example: username, if your Instagram URL is https://instagram.com/username
+# Default: not set (Instagram URL is not displayed)
+# instagram_username: "username"
+
 # LinkedIn username
 # Example: username, if your LinkedIn public profile URL is
 # https://www.linkedin.com/in/username

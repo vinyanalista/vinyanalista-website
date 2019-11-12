@@ -1,0 +1,33 @@
+<!-- Navigation drawer -->
+<div id="drawer" class="bmd-layout-drawer bg-faded">
+    <header>
+        <a class="navbar-brand" href="{{ site.baseurl }}/">{{ site.title }}</a>
+    </header>
+    <form action="{% if site.google.cse_id %}{{ "/search/" | prepend: site.baseurl }}{% else %}https://www.google.com/search{% endif %}" class="form-inline border-top" id="drawer-search-form" method="get" role="search">
+        {% if site.google.cse_id %}
+        {% else %}
+            <input type="hidden" name="as_sitesearch" value="{{ site.baseurl | prepend: site.url }}" />
+        {% endif %}
+        <div class="bmd-form-group-sm">
+            <div class="input-group">
+                <input class="form-control search-field" id="drawer-search-field" name="q" placeholder="Pesquisar" type="text" aria-label="Pesquisar">
+                <div class="input-group-append">
+                    <button class="btn btn-secondary btn-number search-button" id="drawer-search-button" type="submit">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </div>
+            </div><!-- .input-group -->
+        </div><!-- .bmd-form-group-sm -->
+    </form>
+    <ul class="list-group list-group-flush border-top" id="drawer-links">
+        <li class="list-group-item">
+            <a class="nav-link" href="{{ site.baseurl }}/">Blog</a>
+        </li>
+        <li class="list-group-item">
+            <a class="nav-link" href="{{ site.baseurl }}/blog/category/trabalhos/">Trabalhos</a>
+        </li>
+        <li class="list-group-item">
+            <a class="nav-link" href="http://lattes.cnpq.br/2162371468280338">Currículo</a>
+        </li>
+    </ul>
+</div>
