@@ -12,6 +12,18 @@ body {
     margin-bottom: 70px;
 }
 
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin-bottom: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+td, th {
+    border: 1px lightgray solid;
+    padding: 0.25rem;
+}
+
 @media (min-width: 992px) {
     .container {
         max-width: 970px;
