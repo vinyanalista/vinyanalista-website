@@ -57,7 +57,7 @@ O navegador vai baixar um arquivo chamado `GatewaySettings.bin`. Salve esse arqu
 
 ### Desativando a rede Wi-Fi do modem
 
-Na interface _web_ do modem, selecione **Sem fio** no menu à esquerda. À direita, marque a opção **Inválido** e depois clique em **aplicar**:
+Na interface _web_ do modem, selecione **Sem fio** no menu à esquerda, depois **Rede Primária**. À direita, marque a opção **Inválido** e depois clique em **aplicar**:
 
 {% include image.html src="/files/2020/08/modem-bridge-04.jpg" %}
 
