@@ -1,22 +1,22 @@
 ---
-date: 2020-08-14 00:15:00 GMT-3
-image: '/files/2020/08/modem-bridge.jpg'
+date: 2021-03-01 01:00:00 GMT-3
+image: '/files/2021/03/modem-bridge-sagemcom.jpg'
 layout: post
 published: true
-title: 'Configurando o modem HUMAX HG100R-L4 em modo bridge'
+title: 'Configurando o modem Sagemcom F@ST 3486 em modo bridge'
 ---
 
 Uma _**[bridge]**_ ("ponte", em inglês) é um dispositivo de rede que une duas redes a nível de camada 2 do [modelo OSI][osi] (camada de enlace). Normalmente, o modem da operadora atua como **[roteador]** (_router_), ou seja, atua na camada 3 (camada de rede), separando a rede de casa e a rede da operadora em espaços de endereços IP diferentes.
 
-Se você tem outro roteador, como o [MikroTik] do qual tenho falado nos meus últimos _posts_, pode ser interessante mudar o modem da operadora para o modo _bridge_, o que faz com que seu outro roteador entre em contato direto com a rede da operadora, recebendo um endereço IP desta, e sendo o único responsável por gerenciar toda a rede da sua casa.
+Se você tem outro roteador, como o [MikroTik] do qual já falei aqui em alguns _posts_, pode ser interessante mudar o modem da operadora para o modo _bridge_, o que faz com que seu outro roteador entre em contato direto com a rede da operadora, recebendo um endereço IP desta, e sendo o único responsável por gerenciar toda a rede da sua casa.
 
 Tentando usar uma linguagem menos técnica, tornar o modem da operadora uma _bridge_ na prática seria como anulá-lo, ele passa a fazer apenas o "leva e traz" de dados na rede, enquanto quem faz o "trabalho pesado" mesmo é o roteador conectado a ele.
 
-{% include image.html src="/files/2020/08/modem-bridge.jpg" %}
+{% include image.html src="/files/2021/03/modem-bridge-sagemcom.jpg" %}
 
 Se você, assim como eu, confia mais no seu roteador do que no equipamento da operadora, configurar o modem em modo _bridge_ pode trazer mais segurança para a rede da sua casa.
 
-Hoje eu sou cliente da [Claro] e tenho em minha casa o modem HUMAX HG100R-L4 e o roteador [MikroTik hAP ac lite TC][mikrotik]. Vou mostrar como deixar o modem HG100R-L4 em modo _bridge_ e o MikroTik como único roteador da casa.
+Hoje eu sou cliente da [Claro] e tenho em minha casa o modem Sagemcom F@ST 3486 e o roteador [MikroTik hAP ac lite TC][mikrotik]. Vou mostrar como deixar o modem Sagemcom em modo _bridge_ e o MikroTik como único roteador da casa.
 
 <div class="alert alert-warning" role="alert">
 {% markdown %}
@@ -39,35 +39,45 @@ Caso seu roteador seja um MikroTik como o meu e você tenha caído nessa página
 
 Abra o navegador e acesse a interface _web_ do _modem_ da operadora. O endereço IP, assim como o _login_ e senha que você vai usar para acessar essa interface comumente podem ser encontrados em uma etiqueta no próprio modem ou fazendo uma pesquisa na Internet.
 
-No caso do modem HUMAX HG100R-L4, o endereço IP é [192.168.0.1](http://192.168.0.1) e o _login_ e senha estão em uma etiqueta no próprio modem:
+No caso do modem Sagemcom F@ST 3486, o endereço IP é [192.168.0.1](http://192.168.0.1), o _login_ é `admin` e a senha também é `admin`:
 
-{% include image.html src="/files/2020/08/modem-bridge-01.png" %}
+{% include image.html src="/files/2021/03/modem-bridge-01.jpg" %}
 
-A tela inicial resume as informações da conexão e traz as configurações mais comuns, que são o nome e a senha da rede Wi-Fi. Acesse as configurações avançadas clicando em **Advanced Network Settings** (configurações avançadas de rede):
+A tela inicial resume as informações da conexão e traz as configurações mais comuns, que são o nome e a senha da rede Wi-Fi. Clique em **Configurações avançadas**, no canto superior direito da tela:
 
-{% include image.html src="/files/2020/08/modem-bridge-02.jpg" %}
+{% include image.html src="/files/2021/03/modem-bridge-02.jpg" %}
 
 ### Fazendo backup da configuração atual
 
-Nas configurações avançadas, selecione **básico** no menu à esquerda, depois **Back Up**. Selecione **Salve Status Atual** e clique em **aplicar** para baixar a configuração atual do modem:
+Clique em **Menu**, no canto superior esquerdo da tela, expanda **Administração** e clique em **Backup**:
 
-{% include image.html src="/files/2020/08/modem-bridge-03.jpg" %}
+{% include image.html src="/files/2021/03/modem-bridge-03.jpg" %}
 
-O navegador vai baixar um arquivo chamado `GatewaySettings.bin`. Salve esse arquivo em um local seguro, que você se lembre depois, pro caso de precisar restaurar o _backup_.
+Clique em **Backup** para baixar a configuração atual do modem:
+
+{% include image.html src="/files/2021/03/modem-bridge-04.jpg" %}
+
+O navegador vai baixar um arquivo chamado `backupsettings.conf`. Salve esse arquivo em um local seguro, que você se lembre depois, pro caso de precisar restaurar o _backup_.
 
 ### Desativando a rede Wi-Fi do modem
 
-Na interface _web_ do modem, selecione **Sem fio** no menu à esquerda, depois **Rede Primária**. À direita, marque a opção **Inválido** e depois clique em **aplicar**:
+Na interface _web_ do modem, abra o **Menu**, expanda **Wi-Fi** e clique em **Rádio**.
 
-{% include image.html src="/files/2020/08/modem-bridge-04.jpg" %}
+A rede de **2.4 GHz** já vem selecionada por padrão, desmarque a opção **Ativar**:
+
+{% include image.html src="/files/2021/03/modem-bridge-05.jpg" %}
+
+Depois, selecione a rede de **5 GHz** e também desmarque a opção **Ativar**.
+
+Desça até o final da página e clique em **Aplicar Ajustes**.
 
 ### Ativando o modo bridge
 
-Ainda nas configurações avançadas do modem, selecione **básico** no menu à esquerda, depois **Definir**. Role a página à direita até encontrar a opção **Modo Switch** e defina-a como **Bridge**:
+Abra o **Menu**, expanda **Rede** e clique em **Configurações Básicas**. Role a página até encontrar a opção **Tipo de conexão WAN** e defina-a como **Bridge Mode**:
 
-{% include image.html src="/files/2020/08/modem-bridge-05.jpg" %}
+{% include image.html src="/files/2021/03/modem-bridge-06.jpg" %}
 
-Chegamos ao ponto de não retorno. Clique em **aplicar** para ativar o modo _bridge_.
+Chegamos ao ponto de não retorno. Clique em **Aplicar Ajustes** para ativar o modo _bridge_.
 
 O modem será reiniciado. Você pode fechar a janela do navegador.
 
@@ -76,13 +86,11 @@ Abra uma janela do terminal e deixe um **[ping]** rodando para algum endereço I
 ```
 $ ping 8.8.8.8
 ...
-From 10.0.0.1 icmp_seq=95 Destination Net Unreachable
-From 10.0.0.1 icmp_seq=96 Destination Net Unreachable
-From 10.0.0.1 icmp_seq=97 Destination Net Unreachable
-64 bytes from 8.8.8.8: icmp_seq=98 ttl=115 time=28.3 ms
-64 bytes from 8.8.8.8: icmp_seq=99 ttl=115 time=30.1 ms
-64 bytes from 8.8.8.8: icmp_seq=100 ttl=115 time=25.9 ms
-64 bytes from 8.8.8.8: icmp_seq=101 ttl=115 time=31.7 ms
+From 10.0.0.1 icmp_seq=156 Destination Net Unreachable
+64 bytes from 8.8.8.8: icmp_seq=157 ttl=114 time=49.0 ms
+64 bytes from 8.8.8.8: icmp_seq=158 ttl=114 time=194 ms
+64 bytes from 8.8.8.8: icmp_seq=159 ttl=114 time=138 ms
+64 bytes from 8.8.8.8: icmp_seq=160 ttl=114 time=52.0 ms
 ```
 
 ## Verificando a conexão do roteador
@@ -93,23 +101,17 @@ No caso do MikroTik, para verificar o endereço IP obtido, inicie o [WinBox][mik
 
 {% include image.html src="/files/2020/08/modem-bridge-06.jpg" %}
 
-No meu exemplo, o MikroTik obteve o endereço IP `100.64.198.110/19`:
+No meu exemplo, o MikroTik obteve o endereço IP `179.216.177.166/21`:
 
-{% include image.html src="/files/2020/08/modem-bridge-07.jpg" %}
+{% include image.html src="/files/2021/03/modem-bridge-07.jpg" %}
 
-(se a notação `/19` é nova para você — eu só a conheci quando tive a oportunidade de trabalhar com redes — ela quer dizer que os primeiros 19 _bits_ do endereço IP identificam a rede, para mais informações procure saber sobre [CIDR])
+(se a notação `/21` é nova para você — eu só a conheci quando tive a oportunidade de trabalhar com redes — ela quer dizer que os primeiros 21 _bits_ do endereço IP identificam a rede, para mais informações procure saber sobre [CIDR])
 
 ## Acessando a interface web da bridge
 
-No futuro, caso precise usar a interface _web_ do modem, que agora está em modo _bridge_ — por exemplo, para restaurar o _backup_ das configurações do modem, desativando assim o modo _bridge_ — abra o navegador e acesse o endereço IP [192.168.100.1](http://192.168.100.1).
+No futuro, caso precise usar a interface _web_ do modem, que agora está em modo _bridge_ — por exemplo, para restaurar o _backup_ das configurações do modem, desativando assim o modo _bridge_ — abra o navegador e acesse o mesmo endereço IP de antes: [192.168.0.1](http://192.168.0.1).
 
 Não sei como a _bridge_ responde por esse endereço IP, dado que ela não atua na camada 3 (camada de rede) do modelo OSI. Só sei que funciona. Parece mágica...
-
-## Notas sobre carrier-grade NAT
-
-O endereço IP `100.64.198.110/19` pertence à rede `100.64.192.0`. Não se trata de um endereço IP "real" (ou público), como seria de se esperar há alguns anos, mas de um [endereço IP privado][rede-privada] dentro da rede da operadora. Endereços IP como esse passaram a ser distribuídos para roteadores domésticos após o [esgotamento dos endereços IPv4][exaustao-ipv4]. As operadoras adotaram uma prática chamada de [_carrier-grade_ NAT (CGN)][cgn], que reserva o bloco `100.64.0.0/10` para a atribuição de endereços IP às residências.
-
-A _carrier-grade_ NAT impossibilita a hospedagem de serviços e o redirecionamento de portas (com isso, você não pode servir um _site_ para o mundo a partir do seu computador de casa, por exemplo), mas é um "mal necessário" para viabilizar o uso de redes IPv4 hoje em dia, dado que os endereços IPv4 já se esgotaram. Caso você precise de um endereço IP público, uma alternativa é verificar junto à operadora a possibilidade de alugar um (a um custo adicional). Outra alternativa é ativar o [IPv6], que veremos oportunamente como fazer.
 
 ## Por que eu uso o modo bridge
 
@@ -137,8 +139,8 @@ Desde 2016, quando comprei o MikroTik, já me mudei algumas vezes e sempre o dei
 
 ## Referências
 
-- [Manual de usuário do HG100R-L4][humax]
-- [Configurando Modem da NET em Bridge HUMAX HG100R-L4][youtube]
+- [Manual de usuário do Sagemcom Fast 3184][sagemcom] (modelo parecido)
+- [Colocar o modem da net Sagemcom F@ST3486 NET DOCSIS 3.0 em modo brigge][youtube]
 
 [bridge]:               https://pt.wikipedia.org/wiki/Bridge_(redes_de_computadores)
 [osi]:                  https://pt.wikipedia.org/wiki/Modelo_OSI
@@ -150,10 +152,6 @@ Desde 2016, quando comprei o MikroTik, já me mudei algumas vezes e sempre o dei
 [google-public-dns]:    https://developers.google.com/speed/public-dns/docs/using
 [dhcp]:                 https://pt.wikipedia.org/wiki/Dynamic_Host_Configuration_Protocol
 [cidr]:                 https://www.hardware.com.br/dicas/entendendo-cidr.html
-[rede-privada]:         https://pt.wikipedia.org/wiki/Rede_privada
-[exaustao-ipv4]:        https://pt.wikipedia.org/wiki/Exaustão_do_IPv4
-[cgn]:                  https://pt.wikipedia.org/wiki/Carrier_Grade_NAT
-[ipv6]:                 http://ipv6.br/
 [analytics]:            https://analytics.google.com/
 [google]:               https://google.com/
 [malware-1]:            https://www.tecmundo.com.br/malware/77194-novo-malware-sequestra-roteador-enche-sites-propagandas.htm
@@ -163,5 +161,5 @@ Desde 2016, quando comprei o MikroTik, já me mudei algumas vezes e sempre o dei
 [malware-5]:            https://www.hardware.com.br/comunidade/adware-redirecionando/1372966/
 [malware-6]:            https://www.theverge.com/2015/3/25/8290277/router-hack-adware-porn-security-ara-labs
 [malware-7]:            https://uwnthesis.wordpress.com/2015/03/26/ad-fraud-malware-hijacks-router-dns-injects-ads-via-google-analytics/
-[humax]:                https://www.net.com.br/documento/2019/07/01/hg100rl4_user_guide.pdf
+[sagemcom]:                https://www.net.com.br/documento/2019/07/01/hg100rl4_user_guide.pdf
 [youtube]:              https://www.youtube.com/watch?v=k7uDrhdEPTI
