@@ -22,7 +22,7 @@
 author:
     # Site's author name
     # Default: not set (author name is not displayed)
-    name: "Antônio Vinícius"
+    name: "Antônio Medeiros"
 
     # Site's author email
     # Default: not set (author email is not displayed)
@@ -30,7 +30,7 @@ author:
 
     # Site's author website, profile
     # Default: not set (author site is not displayed)
-    site: "https://vinyanalista.github.io"
+    site: "https://antoniomedeiros.dev"
 
 ############
 # Building #
